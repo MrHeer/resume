@@ -1,0 +1,16 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "show resume",
+  "main": "index.js",
+  "repository": "git@github.com:MrHeer/resume.git",
+  "author": "MrHeer <hlm52pk@163.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^2.2.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "marked": "^0.8.2"
+  }
+}
