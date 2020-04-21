@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "description": "Display resume in markdown format",
   "repository": "git@github.com:MrHeer/resume.git",
+  "homepage": "https://MrHeer.github.io/resume",
   "author": "MrHeer <hlm52pk@163.com>",
   "license": "MIT",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
