@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,KACE,QAAS,CACT,mJAEY,CACZ,kCAAmC,CACnC,iCACF,CAEA,KACE,yEAEF,CAZA,eACI,qBAAsB,CACzB,eAAgB,CAChB,eAAgB,CAChB,aAAc,CACd,YACD","file":"main.3ce446a8.chunk.css","sourcesContent":[".markdown-body {\n    box-sizing: border-box;\n\tmin-width: 200px;\n\tmax-width: 980px;\n\tmargin: 0 auto;\n\tpadding: 45px;\n}\n"]}
