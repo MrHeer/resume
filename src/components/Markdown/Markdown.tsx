@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import marked from 'marked';
+import 'github-markdown-css';
+import './style'
 
 interface MarkdownProps {
     filePath: string;
@@ -21,7 +23,8 @@ const Markdown: React.SFC<MarkdownProps> = (props) => {
     const createMarkup = () => {
         return { __html: marked(markdown) }
     }
-    return (<div dangerouslySetInnerHTML={createMarkup()} />);
+
+    return (<article className="markdown-body" dangerouslySetInnerHTML={createMarkup()} />);
 }
 
 export default Markdown;
