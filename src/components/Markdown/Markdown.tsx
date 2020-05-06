@@ -18,7 +18,7 @@ const Markdown: React.SFC<MarkdownProps> = (props) => {
         }).catch(reason => {
             console.error(reason);
         });
-    })
+    }, [props.filePath])
 
     const createMarkup = () => {
         return { __html: marked(markdown) }

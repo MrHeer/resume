@@ -4,7 +4,7 @@ import { Markdown } from './components'
 function App() {
   return (
     <div className="App">
-      <Markdown filePath="./resume.md" />
+      <Markdown filePath="/resume/resume.md" />
     </div>
   );
 }
