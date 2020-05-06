@@ -1,7 +1,7 @@
 ### 联系方式
 
 - 手机：17623030229
-- Email：hlm52pk@163.com 
+- Email：hlm52pk@163.com
 - 微信号：Mr__Heer
 
 ---
@@ -11,10 +11,10 @@
 - 何林明/男/1996
 - 本科/长沙理工大学/电子信息科学与技术
 - 工作年限：2年
-- Github：https://github.com/MrHeer
-- Responsive Web Design Developer Certification
-- JavaScript Algorithms and Data Structures Developer Certification
-- 清华大学《算法设计与分析》课程考核优秀
+- Github：[https://github.com/MrHeer](https://github.com/MrHeer)
+- [Responsive Web Design Developer Certification](https://www.freecodecamp.org/certification/mrheer/responsive-web-design)
+- [JavaScript Algorithms and Data Structures Developer Certification](https://www.freecodecamp.org/certification/mrheer/javascript-algorithms-and-data-structures)
+- 清华大学[《算法设计与分析》](https://www.xuetangx.com/download_credential/pYMHZiT-EZF.pdf)课程考核优秀
 - 期望职位：Web前端程序员
 - 期望薪资：税前月薪6k~10k，特别喜欢的公司可例外
 - 期望城市：杭州
@@ -37,7 +37,7 @@
 
 经过在安徽的成长，我在此项目中可以独立负责前端的开发任务，我和后端人员通过 `RESTful` 风格的接口来让前后分离，我利用 `Ant Design` 快速的开发了前端界面，并且尝试使用 `TypeScript` 来开发。我喜欢尝试，挑战，学习新的技术，往往能够提高开发效率，完善代码质量。
 
-#### 湖南索思科技开发有限公司 （ 2018年1月 ~ 2019年7月 ）
+#### 湖南索思科技开发有限公司 （ 2018年1月 ~ 2018年7月 ）
 
 我在此公司主要负责公司运营平台的开发和维护。公司的运营平台主要是由 Web 端提供后台管理，手机 App 主要是用来任务分发以及定位打卡等。在此之前这些工作都是让其他公司开发的，但是并没有完全开发，App 的核心功能都没有完成。基于我对安卓开发有一定了解，所以很快就完成了安卓这边的开发任务。但第一次接触苹果开发，通过不断的学习，最终成功的完成了核心功能的开发。期间公司还有同事通过技术手段虚拟定位，我快速采取了措施，使用开源技术及时解决了该问题。在该公司我学习了大量开发经验，包括 `Java Web`，`Android`，`iOS` 等等。
 
