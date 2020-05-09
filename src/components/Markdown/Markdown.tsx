@@ -24,7 +24,7 @@ const Markdown: React.SFC<MarkdownProps> = (props) => {
         return { __html: marked(markdown) }
     }
 
-    return (<article className="markdown-body" dangerouslySetInnerHTML={createMarkup()} />);
+    return (<article className='markdown-body' dangerouslySetInnerHTML={createMarkup()} />);
 }
 
 export default Markdown;
