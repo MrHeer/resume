@@ -6,6 +6,11 @@ Display resume in markdown format.
 
 In the project directory, you can run:
 
+### `yarn deploy`
+
+Deploy the app to a `gh-pages` branch on GitHub.
+See the section about [gh-pages](https://github.com/tschaub/gh-pages) for more information.
+
 ### `yarn start`
 
 Runs the app in the development mode.
