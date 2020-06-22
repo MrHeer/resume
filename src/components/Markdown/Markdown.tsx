@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import marked from 'marked';
 import 'github-markdown-css';
 import './style'
@@ -8,23 +8,25 @@ interface MarkdownProps {
 }
 
 const Markdown: React.SFC<MarkdownProps> = (props) => {
+    const { filePath } = props;
     const [markdown, setMarkdown] = useState("");
 
     useEffect(() => {
-        fetch(props.filePath).then(res => {
+        fetch(filePath).then(res => {
             return res.text();
         }).then(cxt => {
             setMarkdown(cxt);
         }).catch(reason => {
             console.error(reason);
         });
-    }, [props.filePath])
 
-    const createMarkup = () => {
+    }, [filePath]);
+
+    const innerMarkHTML = useMemo(() => {
         return { __html: marked(markdown) }
-    }
+    }, [markdown])
 
-    return (<article className='markdown-body' dangerouslySetInnerHTML={createMarkup()} />);
+    return (<article className='markdown-body' dangerouslySetInnerHTML={innerMarkHTML} />);
 }
 
 export default Markdown;
