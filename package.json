@@ -47,7 +47,7 @@
   "dependencies": {
     "antd": "^4.2.0",
     "github-markdown-css": "^4.0.0",
-    "marked": "^0.8.2",
+    "marked": "^4.0.10",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
