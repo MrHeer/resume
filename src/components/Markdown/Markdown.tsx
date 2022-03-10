@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
-import marked from "marked";
+import { marked } from "marked";
 import "github-markdown-css";
 import "./style";
 
@@ -7,21 +7,15 @@ interface MarkdownProps {
   filePath: string;
 }
 
-const Markdown: React.SFC<MarkdownProps> = (props) => {
+const Markdown: React.FC<MarkdownProps> = (props) => {
   const { filePath } = props;
   const [markdown, setMarkdown] = useState("");
 
   useEffect(() => {
     fetch(filePath)
-      .then((res) => {
-        return res.text();
-      })
-      .then((cxt) => {
-        setMarkdown(cxt);
-      })
-      .catch((reason) => {
-        console.error(reason);
-      });
+      .then((res) => res.text())
+      .then(setMarkdown)
+      .catch(console.error);
   }, [filePath]);
 
   const innerMarkHTML = useMemo(() => {
