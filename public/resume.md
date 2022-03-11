@@ -15,13 +15,14 @@
 - [Responsive Web Design Developer Certification](https://www.freecodecamp.org/certification/mrheer/responsive-web-design)
 - [JavaScript Algorithms and Data Structures Developer Certification](https://www.freecodecamp.org/certification/mrheer/javascript-algorithms-and-data-structures)
 - 清华大学[《算法设计与分析》](https://www.xuetangx.com/download_credential/pYMHZiT-EZF.pdf)课程考核优秀
-- 期望职位：Web前端程序员
-- 期望薪资：税前月薪6k~10k，特别喜欢的公司可例外
-- 期望城市：杭州
 
 ---
 
 ### 工作经历
+
+#### 杭州数建科技有限公司 （ 2020年5月 ~ 至今 ）
+
+TODO
 
 #### 杭州童学码科技有限公司 （ 2019年9月 ~ 2020年4月 ）
 
@@ -55,8 +56,8 @@
 
 以下均为我熟练使用的技能
 
-- Web开发：Java/JavaScript/TypeScript
-- Web框架：SpringBoot/SpringMVC
+- Web 开发：Java/JavaScript/TypeScript
+- Web 框架：SpringBoot/SpringMVC
 - 前端框架：React/Ant Design/Bootstrap
 - 前端工具：yarn/npm
 - 数据库相关：MySQL/Oracle/SQLite
