@@ -1,14 +1,15 @@
-@import "~antd/dist/antd.css";
-
-.download {
-  position: fixed;
-  right: 50px;
-  bottom: 50px;
+@media (prefers-color-scheme: light) {
+  .App {
+    --color-canvas-default: #ffffff;
+  }
 }
 
-@media only screen and (max-width: 600px) {
-  .download {
-    right: 20px;
-    bottom: 20px;
+@media (prefers-color-scheme: dark) {
+  .App {
+    --color-canvas-default: #0d1117;
   }
+}
+
+.App {
+  background-color: var(--color-canvas-default);
 }

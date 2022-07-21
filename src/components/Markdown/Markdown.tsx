@@ -1,33 +1,29 @@
-import React, { useState, useMemo, useEffect } from "react";
-import { marked } from "marked";
-import "github-markdown-css";
-import "./style";
+import React, { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+
+import "./style.css";
 
 interface MarkdownProps {
-  filePath: string;
+  url: string;
 }
 
-const Markdown: React.FC<MarkdownProps> = (props) => {
-  const { filePath } = props;
+export function Markdown(props: MarkdownProps) {
+  const { url } = props;
   const [markdown, setMarkdown] = useState("");
 
   useEffect(() => {
-    fetch(filePath)
+    fetch(url)
       .then((res) => res.text())
       .then(setMarkdown)
       .catch(console.error);
-  }, [filePath]);
-
-  const innerMarkHTML = useMemo(() => {
-    return { __html: marked(markdown) };
-  }, [markdown]);
+  }, [url]);
 
   return (
-    <article
-      className="markdown-body"
-      dangerouslySetInnerHTML={innerMarkHTML}
-    />
+    <ReactMarkdown className="markdown-body" remarkPlugins={[remarkGfm]}>
+      {markdown}
+    </ReactMarkdown>
   );
-};
+}
 
 export default Markdown;
