@@ -18,23 +18,11 @@
 
 ---
 
-### 阅读清单
-
-- [x] Clean Code: A Handbook of Agile Software Craftsmanship
-- [x] DDIA
-- [x] Dive Into Design Patterns
-- [x] Dive Into Refactoring
-- [x] Mostly adequate guide to FP
-- [ ] Algorithms
-- [ ] Code Complete: A Practical Handbook of Software Construction
-
----
-
 ### 工作经历
 
 #### 杭州数建科技有限公司 （ 2020 年 5 月 ~ 至今 ）
 
-我在公司成长极大，参与了核心产品的研发。为了支持大数据，使用了 `虚拟滚动` 技术。通过 `D3.js` 来绘制 `Gantt` 图。我们为了优化软件体验，使用了 `Recoil / Jotai` 来管理全局状态，原子化更新，使用了 `RxDB` 和 `Electron` 来提升本地化的体验。和同事一起设计了 `UndoManager` 用来管理状态历史，从而实现 `undo / redo`。在工作期间封装了常用的 `Components` 和 `Hook`。为了一些高级用户提供了类似于 `Notion` 的高级筛选功能。
+我在公司成长极大，参与了核心产品的研发。为了支持大数据，使用了 `虚拟滚动` 技术。通过 `D3.js` 来绘制 `Gantt` 图。我们为了优化软件体验，使用了 `Recoil / Jotai` 来管理全局状态，原子化更新，使用了 `RxDB` 和 `Electron` 来提升本地化的体验。和同事一起设计了 `UndoManager` 用来管理状态历史，从而实现 `undo / redo` 等功能，在设计上完全和 `useAtomCallback` 一致，开发体验十分不错。在工作期间封装了常用的 `Components` 和 `Hook`。为了一些深度用户还提供了类似于 `Notion` 的高级筛选功能，这个功能在现实上比较复杂，我为此还专门参考 `Notion API` 建立了设计了 `ADT`，为了更好等表达数据，大量采用了 `Rescript Variant`。为了提高用户体验，还使用了 `framer-motion / react-spring / FLIP` 等动效技术。
 
 #### 杭州童学码科技有限公司 （ 2019 年 9 月 ~ 2020 年 4 月 ）
 
@@ -60,7 +48,19 @@
 
 - [FileDistributor](https://github.com/MrHeer/FileDistributor)：这个项目是方便把文件快速分发至一组服务器。整个项目由我一个人独立开发完成，使用了前后分离的开发技术。`Spring Boot`作为后端框架提供 API，前端使用`Ant Design`开发。
 - [Mark Text](https://github.com/marktext/marktext)：一个简单而优雅的开源 `Markdown` 编辑器，专注于速度和可用性。可用于 Linux、macOS 和 Windows。我长期关注该项目，持续解决问题，目前贡献排名位于前 10。
-- [Ant Design](https://github.com/ant-design/ant-design)：一套企业级 UI 设计语言和 `React` 组件库。提炼自企业级中后台产品的交互语言和视觉风格。开箱即用的高质量 `React` 组件。我长期关注该项目，持续解决问题，目前贡献排名位于前 50。
+- [Ant Design](https://github.com/ant-design/ant-design)：一套企业级 UI 设计语言和 `React` 组件库。提炼自企业级中后台产品的交互语言和视觉风格。开箱即用的高质量 `React` 组件。我长期关注该项目，持续解决问题，目前贡献排名位于前 50。曾经很荣幸的成为了该库的 `Collaborator`。
+
+---
+
+### 阅读清单
+
+- [x] Clean Code: A Handbook of Agile Software Craftsmanship
+- [x] DDIA
+- [x] Dive Into Design Patterns
+- [x] Dive Into Refactoring
+- [x] Mostly adequate guide to FP
+- [ ] Algorithms
+- [ ] Code Complete: A Practical Handbook of Software Construction
 
 ---
 
@@ -68,7 +68,8 @@
 
 以下均为我熟练使用的技能
 
-- 编程语言：TypeScript
+- 编程语言：TypeScript / Rescript
+- 编程思想：OOP / FP
 - 前端框架：React
 - 状态管理：Recoil / Jotai
 - 前端工具：pnpm / yarn / npm
