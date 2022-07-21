@@ -2,15 +2,15 @@
 
 - 手机：17623030229
 - Email：hlm52pk@163.com
-- 微信号：Mr__Heer
+- 微信号：Mr\_\_Heer
 
 ---
 
 ### 个人信息
 
-- 何林明/男/1996
-- 本科/长沙理工大学/电子信息科学与技术
-- 工作年限：2年
+- 何林明 / 男 / 1996
+- 本科 / 长沙理工大学 / 电子信息科学与技术
+- 工作年限：5 年
 - Github：[https://github.com/MrHeer](https://github.com/MrHeer)
 - [Responsive Web Design Developer Certification](https://www.freecodecamp.org/certification/mrheer/responsive-web-design)
 - [JavaScript Algorithms and Data Structures Developer Certification](https://www.freecodecamp.org/certification/mrheer/javascript-algorithms-and-data-structures)
@@ -18,17 +18,29 @@
 
 ---
 
+### 阅读清单
+
+- [x] Clean Code: A Handbook of Agile Software Craftsmanship
+- [x] DDIA
+- [x] Dive Into Design Patterns
+- [x] Dive Into Refactoring
+- [x] Mostly adequate guide to FP
+- [ ] Algorithms
+- [ ] Code Complete: A Practical Handbook of Software Construction
+
+---
+
 ### 工作经历
 
-#### 杭州数建科技有限公司 （ 2020年5月 ~ 至今 ）
+#### 杭州数建科技有限公司 （ 2020 年 5 月 ~ 至今 ）
 
-TODO
+我在公司成长极大，参与了核心产品的研发。为了支持大数据，使用了 `虚拟滚动` 技术。通过 `D3.js` 来绘制 `Gantt` 图。我们为了优化软件体验，使用了 `Recoil / Jotai` 来管理全局状态，原子化更新，使用了 `RxDB` 和 `Electron` 来提升本地化的体验。和同事一起设计了 `UndoManager` 用来管理状态历史，从而实现 `undo / redo`。在工作期间封装了常用的 `Components` 和 `Hook`。为了一些高级用户提供了类似于 `Notion` 的高级筛选功能。
 
-#### 杭州童学码科技有限公司 （ 2019年9月 ~ 2020年4月 ）
+#### 杭州童学码科技有限公司 （ 2019 年 9 月 ~ 2020 年 4 月 ）
 
-我在此公司负责日常教学工作，主要教学的内容为 `C++/Scratch/算法`。在上课也善于使用 `可视化` 技术来展示算法的原理，使得学生更加容易理解。每天都会坚持刷算法题，提升算法能力。在公司中，我最困难的问题是和家长沟通，我给自己自定目标，坚持每周和家长沟通，探讨学生的学习情况。在这个公司中，我最自豪的是得到了学生和家长的认可，学生认为我上课有趣，提高了学生学习兴趣，家长看到学生回家自觉学习的行为，觉得我这个老师有独特的魅力。
+我在此公司负责日常教学工作，主要教学的内容为 `C++ / Scratch / 算法`。在上课也善于使用 [`可视化`](https://visualgo.net/en) 技术来展示算法的原理，使得学生更加容易理解。每天都会坚持刷算法题，提升算法能力。在公司中，我最困难的问题是和家长沟通，于是我给自己自定目标，坚持每周和家长沟通，探讨学生的学习情况。在这个公司中，我最自豪的是得到了学生和家长的认可，学生认为我上课有趣，提高了学生的学习兴趣，家长看到学生回家自觉学习的行为，认为我这个老师有独特的魅力。
 
-#### 拓维信息系统股份有限公司 （ 2018年7月 ~ 2019年7月 ）
+#### 拓维信息系统股份有限公司 （ 2018 年 7 月 ~ 2019 年 7 月 ）
 
 ##### 安微联通大数据项目
 
@@ -36,19 +48,19 @@ TODO
 
 ##### 湖南移动爬虫项目
 
-经过在安徽的成长，我在此项目中可以独立负责前端的开发任务，我和后端人员通过 `RESTful` 风格的接口来让前后分离，我利用 `Ant Design` 快速的开发了前端界面，并且尝试使用 `TypeScript` 来开发。我喜欢尝试，挑战，学习新的技术，往往能够提高开发效率，完善代码质量。
+经过在安徽的成长，我在此项目中可以独立负责前端的开发任务，我和后端人员通过 `RESTful` 风格的接口来让前后分离，我利用 `Ant Design` 快速的开发了前端界面，并且尝试使用 `TypeScript` 来开发。我喜欢尝试，挑战，学习新的技术，这样往往能够提高开发效率和代码质量。
 
-#### 湖南索思科技开发有限公司 （ 2018年1月 ~ 2018年7月 ）
+#### 湖南索思科技开发有限公司 （ 2018 年 1 月 ~ 2018 年 7 月 ）
 
-我在此公司主要负责公司运营平台的开发和维护。公司的运营平台主要是由 Web 端提供后台管理，手机 App 主要是用来任务分发以及定位打卡等。在此之前这些工作都是让其他公司开发的，但是并没有完全开发，App 的核心功能都没有完成。基于我对安卓开发有一定了解，所以很快就完成了安卓这边的开发任务。但第一次接触苹果开发，通过不断的学习，最终成功的完成了核心功能的开发。期间公司还有同事通过技术手段虚拟定位，我快速采取了措施，使用开源技术及时解决了该问题。在该公司我学习了大量开发经验，包括 `Java Web`，`Android`，`iOS` 等等。
+我在此公司主要负责公司运营平台的开发和维护。公司的运营平台主要是由 Web 端提供后台管理，手机 App 主要是用来任务分发以及定位打卡等。在此之前这些工作都是让其他公司开发的，但是并没有完全开发（当时只有一个壳，没有可用性），App 的核心功能都没有完成。基于我对安卓开发有一定了解，所以很快就完成了安卓这边的开发任务。由于第一次接触苹果开发，我只能通过不断的学习，最终成功的完成了核心功能的开发。期间公司还有同事通过技术手段虚拟定位，我快速采取了措施，使用开源技术及时解决了该问题。在该公司我学习了大量开发经验，包括 `Java Web`，`Android`，`iOS` 等等。
 
 ---
 
 ### 开源项目
 
-- [FileDistributor](https://github.com/MrHeer/FileDistributor)：这个项目是方便把文件快速分发至一组服务器。整个项目由我一个人独立开发完成，使用了前后分离的开发技术。`Spring Boot`作为后端框架提供API，前端使用`Ant Design`开发。
-- [Mark Text](https://github.com/marktext/marktext)：一个简单而优雅的开源 `Markdown` 编辑器，专注于速度和可用性。可用于 Linux、macOS 和 Windows。我长期关注该项目，持续解决问题，目前贡献排名位于前10。
-- [Ant Design](https://github.com/ant-design/ant-design)：一套企业级 UI 设计语言和 `React` 组件库。提炼自企业级中后台产品的交互语言和视觉风格。开箱即用的高质量 `React` 组件。我长期关注该项目，持续解决问题，目前贡献排名位于前50。
+- [FileDistributor](https://github.com/MrHeer/FileDistributor)：这个项目是方便把文件快速分发至一组服务器。整个项目由我一个人独立开发完成，使用了前后分离的开发技术。`Spring Boot`作为后端框架提供 API，前端使用`Ant Design`开发。
+- [Mark Text](https://github.com/marktext/marktext)：一个简单而优雅的开源 `Markdown` 编辑器，专注于速度和可用性。可用于 Linux、macOS 和 Windows。我长期关注该项目，持续解决问题，目前贡献排名位于前 10。
+- [Ant Design](https://github.com/ant-design/ant-design)：一套企业级 UI 设计语言和 `React` 组件库。提炼自企业级中后台产品的交互语言和视觉风格。开箱即用的高质量 `React` 组件。我长期关注该项目，持续解决问题，目前贡献排名位于前 50。
 
 ---
 
@@ -56,10 +68,9 @@ TODO
 
 以下均为我熟练使用的技能
 
-- Web 开发：Java/JavaScript/TypeScript
-- Web 框架：SpringBoot/SpringMVC
-- 前端框架：React/Ant Design/Bootstrap
-- 前端工具：yarn/npm
-- 数据库相关：MySQL/Oracle/SQLite
+- 编程语言：TypeScript
+- 前端框架：React
+- 状态管理：Recoil / Jotai
+- 前端工具：pnpm / yarn / npm
 - 版本管理：Git
-- 单元测试：Jest/Enzyme
+- 单元测试：Jest / Enzyme

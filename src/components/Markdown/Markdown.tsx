@@ -20,7 +20,11 @@ export function Markdown(props: MarkdownProps) {
   }, [url]);
 
   return (
-    <ReactMarkdown className="markdown-body" remarkPlugins={[remarkGfm]}>
+    <ReactMarkdown
+      className="markdown-body"
+      remarkPlugins={[remarkGfm]}
+      linkTarget="_blank"
+    >
       {markdown}
     </ReactMarkdown>
   );
