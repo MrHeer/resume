@@ -22,18 +22,18 @@
 
 #### 杭州数建科技有限公司 （ 2020 年 5 月 ~ 至今 ）
 
-- 设计类似于 `Notion` 的高级筛选功能（高级动态表单和复杂数据结构，利用 `Rescript Variant`）
-- 设计 `UndoManager` 用来管理状态历史，从而实现 `undo / redo` 功能
+- 设计类似于 **Notion** 的高级筛选功能（高级动态表单和复杂数据结构，利用 `Rescript Variant`）
+- 设计 `UndoManager` 用来管理状态历史，从而实现 `undo` `redo` 功能
 - 封装了常用的 `Hook` 和 `Component`
   - `useResize` - 处理拖动事件，通过它实现了 ResizableLayout
   - `useSyncScroll` - 同步滚动多个容器，API 十分简洁
-  - `useObserver` - 通过观察者模式实现了一个跨组件通信动功能
+  - `useObserver` - 通过观察者模式实现了一个跨组件通信的功能
   - `MotionList` - 带有动效的 `List`，具有删除增加移动等动效
 - 使用 `虚拟滚动` 技术来提高性能
 - 使用 `D3.js` 来绘制 `Gantt` 图
-- 使用 `Recoil / Jotai` 来管理全局状态，原子化更新 UI
-- 使用 `RxDB` 和 `Electron` 来提升本地化的体验
-- 使用 `framer-motion / react-spring / FLIP` 等动效技术来提升用户体验
+- 使用 `Recoil` `Jotai` 来管理全局状态，原子化更新 UI
+- 使用 `RxDB` `Electron` 来提升本地化的体验
+- 使用 `framer-motion` `react-spring` [`FLIP`](https://aerotwist.com/blog/flip-your-animations/) 等动效技术来提升用户体验
 
 #### 杭州童学码科技有限公司 （ 2019 年 9 月 ~ 2020 年 4 月 ）
 
@@ -44,7 +44,7 @@
 ##### 安微联通大数据项目
 
 - 我在此项目中主要负责维护大数据平台，我在期间开发了一个平台监控工具，在华为领导人的帮助下，我能够读取平台的相关数据，然后通过 `Python` 分析数据，最后生成网页，通过这个监控工具能够极大的提升运维效率
-- 安徽移动向我提出一个可视化数据页面的需求，通过自学 `React / Ant Design`，能够快速的开发前端页面。我还利用 `Echart` 来解决了领导提出的数据可视化的需求
+- 安徽移动向我提出一个可视化数据页面的需求，通过自学 `React` `Ant Design`，能够快速的开发前端页面。我还利用 `Echart` 来解决了领导提出的数据可视化的需求
 
 ##### 湖南移动爬虫项目
 
@@ -53,15 +53,15 @@
 
 #### 湖南索思科技开发有限公司 （ 2018 年 1 月 ~ 2018 年 7 月 ）
 
-- 维护`Jave Web / Spring` Web 平台
-- 开发 `Android` 和 `iOS` 平台的 `任务分发` 和 `定位打卡`功能
+- 维护 `Jave Web / Spring` Web 平台
+- 开发 `Android` 和 `iOS` 平台的 `任务分发` 和 `定位打卡` 功能
 
 ---
 
 ### 开源项目
 
-- [Ant Design](https://github.com/ant-design/ant-design)：一套企业级 UI 设计语言和 `React` 组件库。提炼自企业级中后台产品的交互语言和视觉风格。开箱即用的高质量 `React` 组件。我长期关注该项目，持续解决问题，目前贡献排名位于前 50。曾经很荣幸的成为了该库的 `Collaborator`。
-- [Mark Text](https://github.com/marktext/marktext)：一个简单而优雅的开源 `Markdown` 编辑器，专注于速度和可用性。可用于 Linux、macOS 和 Windows。我长期关注该项目，持续解决问题，目前贡献排名位于前 10。
+- [Ant Design](https://github.com/ant-design/ant-design)：一套企业级 UI 设计语言和 `React` 组件库。提炼自企业级中后台产品的交互语言和视觉风格。开箱即用的高质量 `React` 组件。我长期关注该项目，持续解决问题，目前贡献排名位于前 **50**。曾经很荣幸的成为了该库的 **Collaborator**。
+- [Mark Text](https://github.com/marktext/marktext)：一个简单而优雅的开源 `Markdown` 编辑器，专注于速度和可用性。可用于 Linux、macOS 和 Windows。我长期关注该项目，持续解决问题，目前贡献排名位于前 **10**。
 
 ---
 
@@ -78,8 +78,6 @@
 ---
 
 ### 技能清单
-
-以下均为我熟练使用的技能
 
 - 编程语言：TypeScript / Rescript
 - 编程思想：OOP / FP
