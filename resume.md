@@ -22,10 +22,10 @@
 
 #### 杭州数建科技有限公司 （ 2020 年 5 月 ~ 至今 ）
 
-- 设计类似于 **Notion** 的高级筛选功能（高级动态表单和复杂数据结构，利用 `Rescript Variant`）
+- 设计类似于 **Notion** 的高级筛选功能（高级动态表单和复杂数据结构 [Rescript Variant](https://rescript-lang.org/docs/manual/latest/variant)）
 - 设计 `UndoManager` 用来管理状态历史，从而实现 `undo` `redo` 功能
-- 封装了常用的 `Hook` 和 `Component`
-  - `useResize` - 处理拖动事件，通过它实现了 ResizableLayout
+- 封装了常用的 Hook 和 Component
+  - `useResize` - 处理拖动事件，通过它实现了 `ResizableLayout`
   - `useSyncScroll` - 同步滚动多个容器，API 十分简洁
   - `useObserver` - 通过观察者模式实现了一个跨组件通信的功能
   - `MotionList` - 带有动效的 `List`，具有删除增加移动等动效
@@ -60,8 +60,8 @@
 
 ### 开源项目
 
-- [Ant Design](https://github.com/ant-design/ant-design)：一套企业级 UI 设计语言和 `React` 组件库。提炼自企业级中后台产品的交互语言和视觉风格。开箱即用的高质量 `React` 组件。我长期关注该项目，持续解决问题，目前贡献排名位于前 **50**。曾经很荣幸的成为了该库的 **Collaborator**。
-- [Mark Text](https://github.com/marktext/marktext)：一个简单而优雅的开源 `Markdown` 编辑器，专注于速度和可用性。可用于 Linux、macOS 和 Windows。我长期关注该项目，持续解决问题，目前贡献排名位于前 **10**。
+- [Ant Design](https://github.com/ant-design/ant-design)：一套企业级 UI 设计语言和 `React` 组件库。提炼自企业级中后台产品的交互语言和视觉风格。开箱即用的高质量 `React` 组件。我长期关注该项目，持续解决问题，目前贡献排名位于前 **50**。曾经很荣幸的成为了该库的 **Collaborator**
+- [Mark Text](https://github.com/marktext/marktext)：一个简单而优雅的开源 `Markdown` 编辑器，专注于速度和可用性。可用于 Linux、macOS 和 Windows。我长期关注该项目，持续解决问题，目前贡献排名位于前 **5**
 
 ---
 
