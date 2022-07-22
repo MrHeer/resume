@@ -28,12 +28,12 @@
   - `useResize` - 处理拖动事件，通过它实现了 `ResizableLayout`
   - `useSyncScroll` - 同步滚动多个容器，API 十分简洁
   - `useObserver` - 通过观察者模式实现了一个跨组件通信的功能
-  - `MotionList` - 带有动效的 `List`，具有删除增加移动等动效
+  - `MotionList` - 带有动效的列表，具有删除增加移动等动效
 - 使用 `framer-motion` `react-spring` [`FLIP`](https://aerotwist.com/blog/flip-your-animations/) 等动效技术来提升用户体验
 - 使用 `Recoil` `Jotai` 来管理全局状态，原子化更新 UI
 - 使用 `RxDB` `Electron` 来提升本地化的体验
-- 使用 `D3.js` 来绘制 `Gantt` 图
-- 使用 `虚拟滚动` 技术来提高性能
+- 使用 `D3.js` 来绘制 Gantt 图
+- 使用 [`Virtual`](https://tanstack.com/virtual/v3) 技术来提高滚动性能
 
 #### 杭州童学码科技有限公司 （ 2019 年 9 月 ~ 2020 年 4 月 ）
 
@@ -44,7 +44,7 @@
 ##### 安微联通大数据项目
 
 - 我在此项目中主要负责维护大数据平台，我在期间开发了一个平台监控工具，在华为领导人的帮助下，我能够读取平台的相关数据，然后通过 `Python` 分析数据，最后生成网页，通过这个监控工具能够极大的提升运维效率
-- 安徽移动向我提出一个可视化数据页面的需求，通过自学 `React` `Ant Design`，能够快速的开发前端页面。我还利用 `Echart` 来解决了领导提出的数据可视化的需求
+- 安徽移动向我提出一个可视化数据页面的需求，通过自学 `React` `Ant Design`，能够快速的开发前端页面。我还利用 `EChart` 来解决了领导提出的数据可视化的需求
 
 ##### 湖南移动爬虫项目
 
