@@ -1,13 +1,21 @@
 import React from "react";
-import { Markdown } from "./components";
+import { ChakraProvider, Container } from "@chakra-ui/react";
 
-import "./App.css";
+import { Markdown } from "./components";
+import { theme } from "./theme";
 
 function App() {
   return (
-    <div className="App">
-      <Markdown url="/resume/resume.md" />
-    </div>
+    <ChakraProvider theme={theme}>
+      <Container
+        minW={200}
+        maxW={980}
+        m="0 auto"
+        p={[15, 15, 45]}
+      >
+        <Markdown url="/resume/resume.md" />
+      </Container>
+    </ChakraProvider>
   );
 }
 
