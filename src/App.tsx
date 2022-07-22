@@ -1,7 +1,6 @@
-import React from "react";
 import { ChakraProvider, Container } from "@chakra-ui/react";
 
-import { Markdown } from "./components";
+import { DownloadButton, Markdown } from "./components";
 import { theme } from "./theme";
 
 function App() {
@@ -14,6 +13,7 @@ function App() {
         p={[15, 15, 45]}
       >
         <Markdown url="/resume/resume.md" />
+        <DownloadButton />
       </Container>
     </ChakraProvider>
   );

@@ -3,7 +3,7 @@
     "browser": true,
     "es2020": true
   },
-  "extends": ["plugin:react/recommended", "google", "prettier"],
+  "extends": ["plugin:react/recommended", "plugin:react/jsx-runtime", "prettier"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -19,7 +19,7 @@
   },
   "settings": {
     "react": {
-      "version": "detect" // React version. "detect" automatically picks the version you have installed.
+      "version": "detect"
     }
   }
 }
