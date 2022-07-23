@@ -7,6 +7,7 @@ export function DownloadButton() {
       aria-label="Download resume"
       onClick={window.print}
       icon={<DownloadIcon />}
+      variant="ghost"
     />
   );
 }

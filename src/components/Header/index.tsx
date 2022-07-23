@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Box } from "@chakra-ui/react";
 
+import ColorSwitchButton from "../ColorSwitchButton";
 import DownloadButton from "../DownloadButton";
 
 function Header() {
@@ -33,6 +34,7 @@ function Header() {
       right={0}
       p={5}
     >
+      <ColorSwitchButton />
       <DownloadButton />
     </Box>
   );
