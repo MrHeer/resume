@@ -1,2 +1,2 @@
-export { default as DownloadButton } from "./DownloadButton";
-export { default as Markdown } from "./Markdown";
+export { default as Main } from "./Main";
+export { default as Header } from "./Header";
