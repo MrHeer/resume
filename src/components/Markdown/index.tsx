@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import ChakraUIRenderer from "chakra-ui-markdown-renderer";
+import { theme } from "./theme";
 
 interface MarkdownProps {
   url: string;
@@ -20,7 +21,7 @@ export function Markdown(props: MarkdownProps) {
 
   return (
     <ReactMarkdown
-      components={ChakraUIRenderer()}
+      components={ChakraUIRenderer(theme)}
       remarkPlugins={[remarkGfm]}
       linkTarget="_blank"
     >
