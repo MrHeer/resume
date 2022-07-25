@@ -1,5 +1,5 @@
 import { Components } from "react-markdown";
-import { ListItem } from "@chakra-ui/react";
+import { Code, Divider, ListItem } from "@chakra-ui/react";
 
 type GetCoreProps = {
   children?: React.ReactNode;
@@ -13,6 +13,28 @@ function getCoreProps(props: GetCoreProps): any {
 }
 
 export const theme: Components = {
+  code: (props) => {
+    const { inline, children, className } = props;
+
+    if (inline) {
+      return <Code>{children}</Code>;
+    }
+
+    return (
+      <Code
+        className={className}
+        whiteSpace="break-spaces"
+        display="block"
+        w="full"
+        p={2}
+      >
+        {children}
+      </Code>
+    );
+  },
+  hr: (props) => {
+    return <Divider {...getCoreProps(props)} p={2} />;
+  },
   li: (props) => {
     const { checked, children } = props;
     return (
