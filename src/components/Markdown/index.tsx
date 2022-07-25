@@ -4,6 +4,8 @@ import remarkGfm from "remark-gfm";
 import ChakraUIRenderer from "chakra-ui-markdown-renderer";
 import { theme } from "./theme";
 
+import "./style.css";
+
 interface MarkdownProps {
   url: string;
 }
