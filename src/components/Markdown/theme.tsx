@@ -1,5 +1,5 @@
 import { Components } from "react-markdown";
-import { Code, Divider, ListItem } from "@chakra-ui/react";
+import { Code, Divider, Link, ListItem } from "@chakra-ui/react";
 
 type GetCoreProps = {
   children?: React.ReactNode;
@@ -13,6 +13,10 @@ function getCoreProps(props: GetCoreProps): any {
 }
 
 export const theme: Components = {
+  a: (props) => {
+    const { children } = props;
+    return <Link color="blue.500" {...getCoreProps(props)}>{children}</Link>;
+  },
   code: (props) => {
     const { inline, children, className } = props;
 
