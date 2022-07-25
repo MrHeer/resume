@@ -1,8 +1,21 @@
-import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
+import {
+  ComponentStyleConfig,
+  extendTheme,
+  type ThemeConfig,
+} from "@chakra-ui/react";
 
 const config: ThemeConfig = {
   initialColorMode: "system",
   useSystemColorMode: false,
 };
 
-export const theme = extendTheme({ config });
+const Button: ComponentStyleConfig = {
+  variants: {
+    ghost: {
+      backdropFilter: "auto",
+      backdropBlur: "8px",
+    },
+  },
+};
+
+export const theme = extendTheme({ config, components: { Button } });

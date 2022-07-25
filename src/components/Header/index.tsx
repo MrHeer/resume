@@ -33,6 +33,7 @@ function Header() {
       left={0}
       right={0}
       p={5}
+      gap={2}
     >
       <ColorSwitchButton />
       <DownloadButton />
