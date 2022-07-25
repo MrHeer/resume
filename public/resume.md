@@ -22,7 +22,7 @@
 
 ##### 杭州数建科技有限公司 （ 2020 年 5 月 ~ 至今 ）
 
-- 设计类似于 **Notion** 的高级筛选功能（高级动态表单和复杂数据结构 [Rescript Variant](https://rescript-lang.org/docs/manual/latest/variant)）
+- 设计类似于 **Notion** 的高级筛选功能（高级动态表单和复杂数据结构 [ReScript Variant](https://rescript-lang.org/docs/manual/latest/variant)）
 - 设计 `UndoManager` 用来管理状态历史，从而实现 `undo` `redo` 功能
 - 封装了常用的 Hook 和 Component
   - `useResize` - 处理拖动事件，通过它实现了 `ResizableLayout`
@@ -79,7 +79,7 @@
 
 #### 技能清单
 
-- 编程语言：TypeScript / Rescript
+- 编程语言：TypeScript / ReScript
 - 编程思想：OOP / FP
 - 前端框架：React
 - 状态管理：Recoil / Jotai
