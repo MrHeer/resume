@@ -1,26 +1,28 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { Flex } from "@chakra-ui/react";
+import { useEvent } from "react-use";
 
 import ColorSwitchButton from "../ColorSwitchButton";
 import DownloadButton from "../DownloadButton";
 
+function visible(ele: HTMLElement) {
+  ele.style.visibility = "visible";
+}
+
+function hidden(ele: HTMLElement) {
+  ele.style.visibility = "hidden";
+}
+
 function Header() {
   const headerRef = useRef<HTMLDivElement>(null!);
 
-  useEffect(() => {
-    const onBeforePrint = () => {
-      headerRef.current.style.visibility = "hidden";
-    };
-    const onAfterPrint = () => {
-      headerRef.current.style.visibility = "visible";
-    };
-    window.addEventListener("beforeprint", onBeforePrint);
-    window.addEventListener("afterprint", onAfterPrint);
-    () => {
-      window.removeEventListener("beforeprint", onBeforePrint);
-      window.removeEventListener("afterprint", onAfterPrint);
-    };
-  }, []);
+  useEvent("beforeprint", () => {
+    hidden(headerRef.current);
+  });
+
+  useEvent("afterprint", () => {
+    visible(headerRef.current);
+  });
 
   return (
     <Flex

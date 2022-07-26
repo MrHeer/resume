@@ -6,7 +6,6 @@ import ChakraUIRenderer from "chakra-ui-markdown-renderer";
 import { theme } from "./theme";
 
 import "./style.css";
-import { useEffect } from "react";
 
 interface MarkdownProps {
   url: string;
