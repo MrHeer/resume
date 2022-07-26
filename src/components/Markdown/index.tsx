@@ -1,4 +1,11 @@
-import { useEffect, useState } from "react";
+import { useAsync } from "react-use";
+import {
+  Alert,
+  AlertDescription,
+  AlertIcon,
+  AlertTitle,
+  SkeletonText,
+} from "@chakra-ui/react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import ChakraUIRenderer from "chakra-ui-markdown-renderer";
@@ -12,23 +19,42 @@ interface MarkdownProps {
 
 export function Markdown(props: MarkdownProps) {
   const { url } = props;
-  const [markdown, setMarkdown] = useState("");
 
-  useEffect(() => {
-    fetch(url)
-      .then((res) => res.text())
-      .then(setMarkdown)
-      .catch(console.error);
+  const {
+    value: markdown,
+    loading,
+    error,
+  } = useAsync(async () => {
+    const response = await fetch(url);
+    const text = response.text();
+    return text;
   }, [url]);
 
+  if (error !== undefined) {
+    return (
+      <Alert status="error">
+        <AlertIcon />
+        <AlertTitle>Error</AlertTitle>
+        <AlertDescription>{error.message}</AlertDescription>
+      </Alert>
+    );
+  }
+
   return (
-    <ReactMarkdown
-      components={ChakraUIRenderer(theme)}
-      remarkPlugins={[remarkGfm]}
-      linkTarget="_blank"
+    <SkeletonText
+      isLoaded={!loading}
+      p={[45, 45, 15]}
+      noOfLines={50}
+      spacing="5"
     >
-      {markdown}
-    </ReactMarkdown>
+      <ReactMarkdown
+        components={ChakraUIRenderer(theme)}
+        remarkPlugins={[remarkGfm]}
+        linkTarget="_blank"
+      >
+        {markdown!}
+      </ReactMarkdown>
+    </SkeletonText>
   );
 }
 
