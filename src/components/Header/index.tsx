@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Box } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 
 import ColorSwitchButton from "../ColorSwitchButton";
 import DownloadButton from "../DownloadButton";
@@ -16,19 +16,18 @@ function Header() {
     };
     window.addEventListener("beforeprint", onBeforePrint);
     window.addEventListener("afterprint", onAfterPrint);
-    (() => {
+    () => {
       window.removeEventListener("beforeprint", onBeforePrint);
       window.removeEventListener("afterprint", onAfterPrint);
-    });
+    };
   }, []);
 
   return (
-    <Box
+    <Flex
       ref={headerRef}
       as="header"
       position="fixed"
-      display="flex"
-      justifyContent="end"
+      justify="flex-end"
       top={0}
       left={0}
       right={0}
@@ -37,7 +36,7 @@ function Header() {
     >
       <ColorSwitchButton />
       <DownloadButton />
-    </Box>
+    </Flex>
   );
 }
 
