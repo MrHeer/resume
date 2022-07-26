@@ -23,7 +23,7 @@ export function Markdown(props: MarkdownProps) {
   return (
     <SkeletonText
       isLoaded={!loading}
-      p={[45, 45, 15]}
+      p={loading ? [45, 45, 15] : undefined}
       noOfLines={50}
       spacing="5"
     >
