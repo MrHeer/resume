@@ -1,17 +1,12 @@
 import { useAsync } from "react-use";
-import {
-  Alert,
-  AlertDescription,
-  AlertIcon,
-  AlertTitle,
-  SkeletonText,
-} from "@chakra-ui/react";
+import { SkeletonText } from "@chakra-ui/react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import ChakraUIRenderer from "chakra-ui-markdown-renderer";
 import { theme } from "./theme";
 
 import "./style.css";
+import { useEffect } from "react";
 
 interface MarkdownProps {
   url: string;
@@ -20,25 +15,11 @@ interface MarkdownProps {
 export function Markdown(props: MarkdownProps) {
   const { url } = props;
 
-  const {
-    value: markdown,
-    loading,
-    error,
-  } = useAsync(async () => {
+  const { value: markdown, loading } = useAsync(async () => {
     const response = await fetch(url);
     const text = response.text();
     return text;
   }, [url]);
-
-  if (error !== undefined) {
-    return (
-      <Alert status="error">
-        <AlertIcon />
-        <AlertTitle>Error</AlertTitle>
-        <AlertDescription>{error.message}</AlertDescription>
-      </Alert>
-    );
-  }
 
   return (
     <SkeletonText

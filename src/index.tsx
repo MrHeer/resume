@@ -12,7 +12,7 @@ root.render(
   <>
     <ColorModeScript initialColorMode={theme.config.initialColorMode} />
     <App />
-  </>,
+  </>
 );
 
 // If you want your app to work offline and load faster, you can change
