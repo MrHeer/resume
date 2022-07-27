@@ -1,10 +1,10 @@
 import { Flex } from "@chakra-ui/react";
 import { useEvent } from "react-use";
+import { useTwemoji } from "useTwemoji";
 
 import ColorSwitchButton from "../ColorSwitchButton";
 import DownloadButton from "../DownloadButton";
 import LanguageMenu from "../LanguageMenu";
-import { useTwemoji } from "useTwemoji";
 
 function visible(ele: HTMLElement) {
   ele.style.visibility = "visible";
