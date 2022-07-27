@@ -3,29 +3,24 @@ import { SkeletonText } from "@chakra-ui/react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import ChakraUIRenderer from "chakra-ui-markdown-renderer";
-import twemoji from "twemoji";
+import { useTwemoji } from "useTwemoji";
 import { theme } from "./theme";
 
 import "./style.css";
-import { useEffect, useRef } from "react";
 
 interface MarkdownProps {
   url: string;
 }
 
-export function Markdown(props: MarkdownProps) {
+function Markdown(props: MarkdownProps) {
   const { url } = props;
-  const ref = useRef<HTMLDivElement>(null!);
+  const ref = useTwemoji<HTMLDivElement>();
 
   const { value: markdown, loading } = useAsync(async () => {
     const response = await fetch(url);
     const text = await response.text();
     return text;
   }, [url]);
-
-  useEffect(() => {
-    twemoji.parse(ref.current, { folder: "svg", ext: ".svg" });
-  });
 
   return (
     <SkeletonText

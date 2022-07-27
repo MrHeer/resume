@@ -5,6 +5,8 @@ import { Header, Main } from "./components";
 import ErrorFallback from "./ErrorFallback";
 import { theme } from "./theme";
 
+import "./App.css";
+
 function App() {
   return (
     <ChakraProvider theme={theme}>

@@ -18,7 +18,7 @@
 
 ---
 
-#### Experience
+#### 🌈 Experience
 
 ##### 杭州数建科技有限公司 （ 2020 年 5 月 ~ 至今 ）
 
@@ -58,26 +58,26 @@
 
 ---
 
-#### Contributions
+#### ❤️ Contributions
 
 - [Ant Design](https://github.com/ant-design/ant-design)：一套企业级 UI 设计语言和 `React` 组件库。提炼自企业级中后台产品的交互语言和视觉风格。开箱即用的高质量 `React` 组件。我长期关注该项目，持续解决问题，目前贡献排名位于前 **50**。曾经很荣幸的成为了该库的 **Collaborator**
 - [Mark Text](https://github.com/marktext/marktext)：一个简单而优雅的开源 `Markdown` 编辑器，专注于速度和可用性。可用于 Linux、macOS 和 Windows。我长期关注该项目，持续解决问题，目前贡献排名位于前 **5**
 
 ---
 
-#### Reading
+#### 📖 Reading
 
-- [x] *Clean Code: A Handbook of Agile Software Craftsmanship*
-- [x] *Designing Data-Intensive Applications*
-- [x] *Dive Into Design Patterns*
-- [x] *Dive Into Refactoring*
-- [x] *Mostly adequate guide to FP*
-- [ ] *Algorithms*
-- [ ] *Code Complete: A Practical Handbook of Software Construction*
+- [x] _Clean Code: A Handbook of Agile Software Craftsmanship_
+- [x] _Designing Data-Intensive Applications_
+- [x] _Dive Into Design Patterns_
+- [x] _Dive Into Refactoring_
+- [x] _Mostly adequate guide to FP_
+- [ ] _Algorithms_
+- [ ] _Code Complete: A Practical Handbook of Software Construction_
 
 ---
 
-#### Skills
+#### 🛠 Skills
 
 - 编程语言：TypeScript / ReScript
 - 编程思想：OOP / FP

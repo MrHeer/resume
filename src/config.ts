@@ -4,7 +4,8 @@ export type Language = typeof LANGUAGES[number];
 
 export type LanguageOption = {
   resumeUrl: string;
-  text: string;
+  icon: string;
+  description: string;
   language: Language;
 };
 
@@ -18,12 +19,14 @@ export const CONFIG: Config = {
   languages: [
     {
       resumeUrl: "/resume/resume_zh_CN.md",
-      text: "简体中文",
+      icon: "🇨🇳",
+      description: "简体中文",
       language: "zh_CN",
     },
     {
       resumeUrl: "/resume/resume_en_US.md",
-      text: "English(US)",
+      icon: "🇺🇸",
+      description: "English",
       language: "en_US",
     },
   ],

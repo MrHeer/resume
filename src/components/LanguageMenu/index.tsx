@@ -3,17 +3,23 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 
 import { CONFIG } from "config";
 
-export function LanguageMenu() {
+function LanguageMenu() {
   const { languages } = CONFIG;
 
   return (
     <Menu>
       <MenuButton as={Button} variant="ghost" rightIcon={<ChevronDownIcon />}>
-        Actions
+        🇨🇳
       </MenuButton>
-      <MenuList>
-        {languages.map(({ language, text }) => (
-          <MenuItem key={language}>{text}</MenuItem>
+      <MenuList minW="120">
+        {languages.map(({ language, icon, description }) => (
+          <MenuItem
+            display="flex"
+            justifyContent="space-between"
+            key={language}
+          >
+            {`${icon} ${description}`}
+          </MenuItem>
         ))}
       </MenuList>
     </Menu>
