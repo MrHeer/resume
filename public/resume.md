@@ -67,13 +67,13 @@
 
 #### 阅读清单
 
-- [x] Clean Code: A Handbook of Agile Software Craftsmanship
-- [x] DDIA
-- [x] Dive Into Design Patterns
-- [x] Dive Into Refactoring
-- [x] Mostly adequate guide to FP
-- [ ] Algorithms
-- [ ] Code Complete: A Practical Handbook of Software Construction
+- [x] *Clean Code: A Handbook of Agile Software Craftsmanship*
+- [x] *Designing Data-Intensive Applications*
+- [x] *Dive Into Design Patterns*
+- [x] *Dive Into Refactoring*
+- [x] *Mostly adequate guide to FP*
+- [ ] *Algorithms*
+- [ ] *Code Complete: A Practical Handbook of Software Construction*
 
 ---
 
