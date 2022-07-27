@@ -3,9 +3,11 @@ import { SkeletonText } from "@chakra-ui/react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import ChakraUIRenderer from "chakra-ui-markdown-renderer";
+import twemoji from "twemoji";
 import { theme } from "./theme";
 
 import "./style.css";
+import { useEffect, useRef } from "react";
 
 interface MarkdownProps {
   url: string;
@@ -13,12 +15,17 @@ interface MarkdownProps {
 
 export function Markdown(props: MarkdownProps) {
   const { url } = props;
+  const ref = useRef<HTMLDivElement>(null!);
 
   const { value: markdown, loading } = useAsync(async () => {
     const response = await fetch(url);
-    const text = response.text();
+    const text = await response.text();
     return text;
   }, [url]);
+
+  useEffect(() => {
+    twemoji.parse(ref.current, { folder: "svg", ext: ".svg" });
+  });
 
   return (
     <SkeletonText
@@ -27,13 +34,15 @@ export function Markdown(props: MarkdownProps) {
       noOfLines={50}
       spacing="5"
     >
-      <ReactMarkdown
-        components={ChakraUIRenderer(theme)}
-        remarkPlugins={[remarkGfm]}
-        linkTarget="_blank"
-      >
-        {markdown!}
-      </ReactMarkdown>
+      <div ref={ref}>
+        <ReactMarkdown
+          components={ChakraUIRenderer(theme)}
+          remarkPlugins={[remarkGfm]}
+          linkTarget="_blank"
+        >
+          {markdown!}
+        </ReactMarkdown>
+      </div>
     </SkeletonText>
   );
 }
