@@ -15,7 +15,11 @@ function getCoreProps(props: GetCoreProps): any {
 export const theme: Components = {
   a: (props) => {
     const { children } = props;
-    return <Link color="blue.500" {...getCoreProps(props)}>{children}</Link>;
+    return (
+      <Link color="blue.500" {...getCoreProps(props)}>
+        {children}
+      </Link>
+    );
   },
   code: (props) => {
     const { inline, children, className } = props;
@@ -37,7 +41,7 @@ export const theme: Components = {
     );
   },
   hr: (props) => {
-    return <Divider {...getCoreProps(props)} p={2} />;
+    return <Divider {...getCoreProps(props)} w="full" my={5} />;
   },
   li: (props) => {
     const { checked, children } = props;
