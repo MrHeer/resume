@@ -1,8 +1,14 @@
 import {
   ComponentStyleConfig,
   extendTheme,
+  type SystemStyleObject,
   type ThemeConfig,
 } from "@chakra-ui/react";
+
+const blurStyle: SystemStyleObject = {
+  backdropFilter: "auto",
+  backdropBlur: "8px",
+};
 
 const config: ThemeConfig = {
   initialColorMode: "system",
@@ -11,11 +17,17 @@ const config: ThemeConfig = {
 
 const Button: ComponentStyleConfig = {
   variants: {
-    ghost: {
-      backdropFilter: "auto",
-      backdropBlur: "8px",
+    ghost: blurStyle,
+  },
+};
+
+const Menu: ComponentStyleConfig = {
+  baseStyle: {
+    list: {
+      background: "inhert",
+      ...blurStyle,
     },
   },
 };
 
-export const theme = extendTheme({ config, components: { Button } });
+export const theme = extendTheme({ config, components: { Button, Menu } });

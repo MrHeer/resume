@@ -4,6 +4,7 @@ import { useEvent } from "react-use";
 
 import ColorSwitchButton from "../ColorSwitchButton";
 import DownloadButton from "../DownloadButton";
+import LanguageMenu from "../LanguageMenu";
 
 function visible(ele: HTMLElement) {
   ele.style.visibility = "visible";
@@ -36,6 +37,7 @@ function Header() {
       p={5}
       gap={2}
     >
+      <LanguageMenu />
       <ColorSwitchButton />
       <DownloadButton />
     </Flex>
