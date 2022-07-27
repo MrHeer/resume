@@ -8,7 +8,7 @@ import { theme } from "./theme";
 import "./style.css";
 
 interface MarkdownProps {
-  url: string;
+  url: URL;
 }
 
 export function Markdown(props: MarkdownProps) {
