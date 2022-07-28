@@ -1,24 +1,30 @@
-import { Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
-import { ChevronDownIcon } from "@chakra-ui/icons";
+import {
+  Box,
+  IconButton,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+} from "@chakra-ui/react";
 
 import { CONFIG } from "config";
+
+import "./style.css"
 
 function LanguageMenu() {
   const { languages } = CONFIG;
 
   return (
     <Menu>
-      <MenuButton as={Button} variant="ghost" rightIcon={<ChevronDownIcon />}>
-        🇨🇳
-      </MenuButton>
+      <MenuButton
+        as={IconButton}
+        variant="ghost"
+        icon={<Box className="twemoji-icon" as="span">🇨🇳</Box>}
+      />
       <MenuList minW="120">
         {languages.map(({ language, icon, description }) => (
-          <MenuItem
-            display="flex"
-            justifyContent="space-between"
-            key={language}
-          >
-            {`${icon} ${description}`}
+          <MenuItem icon={<Box as="span">{icon}</Box>} key={language}>
+            {description}
           </MenuItem>
         ))}
       </MenuList>
