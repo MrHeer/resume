@@ -1,6 +1,6 @@
+import { useRef } from "react";
 import { Flex } from "@chakra-ui/react";
 import { useEvent } from "react-use";
-import { useTwemoji } from "useTwemoji";
 
 import ColorSwitchButton from "../ColorSwitchButton";
 import DownloadButton from "../DownloadButton";
@@ -15,7 +15,7 @@ function hidden(ele: HTMLElement) {
 }
 
 function Header() {
-  const headerRef = useTwemoji<HTMLDivElement>();
+  const headerRef = useRef<HTMLDivElement>(null!);
 
   useEvent("beforeprint", () => {
     hidden(headerRef.current);

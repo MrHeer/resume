@@ -1,20 +1,21 @@
-import { useAsync } from "react-use";
 import { SkeletonText } from "@chakra-ui/react";
 import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import ChakraUIRenderer from "chakra-ui-markdown-renderer";
+import remarkGfm from "remark-gfm";
 import { useTwemoji } from "useTwemoji";
-
+import { useTranslation } from "react-i18next";
+import { useAsync } from "react-use";
 import { theme } from "./theme";
+import { LANGUAGE_MAP } from "config";
+
 import "./style.css";
 
-interface MarkdownProps {
-  url: string;
-}
-
-function Markdown(props: MarkdownProps) {
-  const { url } = props;
+function Markdown() {
   const ref = useTwemoji<HTMLDivElement>();
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+
+  const url = LANGUAGE_MAP.get(currentLanguage)!.resumeUrl;
 
   const { value: markdown, loading } = useAsync(async () => {
     const response = await fetch(url);

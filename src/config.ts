@@ -31,3 +31,8 @@ export const CONFIG: Config = {
     },
   ],
 };
+
+export const LANGUAGE_MAP = CONFIG.languages.reduce(
+  (map, option) => map.set(option.language, option),
+  new Map<string, LanguageOption>()
+);

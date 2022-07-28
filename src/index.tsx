@@ -5,6 +5,7 @@ import * as serviceWorker from "./serviceWorker";
 import { theme } from "./theme";
 
 import App from "./App";
+import "./i18n";
 
 const container = document.getElementById("root");
 const root = createRoot(container!);

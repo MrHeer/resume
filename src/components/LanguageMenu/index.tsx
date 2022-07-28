@@ -6,29 +6,45 @@ import {
   MenuItem,
   MenuList,
 } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
+import { CONFIG, LANGUAGE_MAP } from "config";
+import { useTwemoji } from "useTwemoji";
 
-import { CONFIG } from "config";
+import "./style.css";
 
-import "./style.css"
+const { languages } = CONFIG;
 
 function LanguageMenu() {
-  const { languages } = CONFIG;
+  const menuRef = useTwemoji<HTMLDivElement>();
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
 
   return (
-    <Menu>
-      <MenuButton
-        as={IconButton}
-        variant="ghost"
-        icon={<Box className="twemoji-icon" as="span">🇨🇳</Box>}
-      />
-      <MenuList minW="120">
-        {languages.map(({ language, icon, description }) => (
-          <MenuItem icon={<Box as="span">{icon}</Box>} key={language}>
-            {description}
-          </MenuItem>
-        ))}
-      </MenuList>
-    </Menu>
+    <Box ref={menuRef}>
+      <Menu autoSelect={false}>
+        <MenuButton
+          as={IconButton}
+          variant="ghost"
+          icon={
+            <Box className="twemoji-icon" as="span">
+              {LANGUAGE_MAP.get(currentLanguage)?.icon}
+            </Box>
+          }
+        />
+        <MenuList minW="120">
+          {languages.map(({ language, icon, description }) => (
+            <MenuItem
+              icon={<Box as="span">{icon}</Box>}
+              key={language}
+              bg={language === currentLanguage ? "gray.200" : "unset"}
+              onClick={() => i18n.changeLanguage(language)}
+            >
+              {description}
+            </MenuItem>
+          ))}
+        </MenuList>
+      </Menu>
+    </Box>
   );
 }
 
