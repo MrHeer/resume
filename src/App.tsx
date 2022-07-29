@@ -1,7 +1,7 @@
 import { ChakraProvider, Progress } from "@chakra-ui/react";
 import { ErrorBoundary } from "react-error-boundary";
 
-import { Header, Main } from "./components";
+import { Header, KBar, Main } from "./components";
 import ErrorFallback from "./ErrorFallback";
 import { theme } from "./theme";
 
@@ -13,8 +13,10 @@ function App() {
     <ChakraProvider theme={theme}>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <Suspense fallback={<Progress size="xs" isIndeterminate />}>
-          <Header />
-          <Main />
+          <KBar>
+            <Header />
+            <Main />
+          </KBar>
         </Suspense>
       </ErrorBoundary>
     </ChakraProvider>
