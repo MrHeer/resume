@@ -36,6 +36,7 @@ function Header() {
       right={0}
       p={5}
       gap={2}
+      zIndex={2}
     >
       <LanguageMenu />
       <ColorSwitchButton />
