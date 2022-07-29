@@ -36,7 +36,11 @@ function LanguageMenu() {
             <MenuItem
               icon={<Box as="span">{icon}</Box>}
               key={language}
-              bg={language === currentLanguage ? "gray.200" : "unset"}
+              bg={language === currentLanguage ? "gray.200" : undefined}
+              _dark={{
+                background:
+                  language === currentLanguage ? "whiteAlpha.200" : undefined,
+              }}
               onClick={() => i18n.changeLanguage(language)}
             >
               {description}
