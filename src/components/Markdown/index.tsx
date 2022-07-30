@@ -14,7 +14,6 @@ function Markdown() {
   const ref = useTwemoji<HTMLDivElement>();
   const { i18n } = useTranslation();
   const currentLanguage = i18n.language;
-
   const url = LANGUAGE_MAP.get(currentLanguage)!.resumeUrl;
 
   const { value: markdown, loading } = useAsync(async () => {
