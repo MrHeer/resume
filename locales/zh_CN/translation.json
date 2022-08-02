@@ -1,3 +1,16 @@
 {
-  "tryAgain": "重试"
+  "tryAgain": "重试",
+  "navigation": "导航",
+  "contact": "联系",
+  "twitter": "Twitter",
+  "github": "Github",
+  "command": "命令",
+  "print": "打印",
+  "preferences": "设置",
+  "changeTheme": "更改主题色…",
+  "toggleTheme": "切换主题色",
+  "light": "明亮",
+  "dark": "暗黑",
+  "changeLanguage": "更改语言…",
+  "kBarSearchDefaultPlaceholder": "输入一个命令或者搜索…"
 }

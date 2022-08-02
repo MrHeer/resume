@@ -1,3 +1,16 @@
 {
-  "tryAgain": "Try again"
+  "tryAgain": "Try again",
+  "navigation": "Navigation",
+  "contact": "Contact",
+  "twitter": "Twitter",
+  "github": "Github",
+  "command": "Conmmand",
+  "print": "Print",
+  "preferences": "Preferences",
+  "changeTheme": "Change theme…",
+  "toggleTheme": "Toggle theme",
+  "light": "Light",
+  "dark": "Darkt",
+  "changeLanguage": "Change language…",
+  "kBarSearchDefaultPlaceholder": "Type a command or search…"
 }
