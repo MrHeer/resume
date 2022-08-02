@@ -13,6 +13,7 @@ import "./style.css";
 function Markdown() {
   const ref = useTwemoji<HTMLDivElement>();
   const { i18n } = useTranslation();
+
   const currentLanguage = i18n.language;
   const url = LANGUAGE_MAP.get(currentLanguage)!.resumeUrl;
 
@@ -31,6 +32,7 @@ function Markdown() {
     >
       <div ref={ref}>
         <ReactMarkdown
+          key={markdown}
           components={ChakraUIRenderer(theme)}
           remarkPlugins={[remarkGfm]}
           linkTarget="_blank"
