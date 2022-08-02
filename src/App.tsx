@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { ChakraProvider, Progress } from "@chakra-ui/react";
 import { ErrorBoundary } from "react-error-boundary";
 
@@ -6,7 +7,6 @@ import ErrorFallback from "./ErrorFallback";
 import { theme } from "./theme";
 
 import "./App.css";
-import { Suspense } from "react";
 
 function App() {
   return (
