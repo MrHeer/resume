@@ -11,7 +11,7 @@ import {
   useMatches,
 } from "kbar";
 import useActions from "./useActions";
-import { Box, Kbd, useColorModeValue } from "@chakra-ui/react";
+import { Box, Kbd, Text, useColorModeValue } from "@chakra-ui/react";
 import { useTwemoji, useVisibilityWhilePrint } from "hooks";
 
 const searchStyle: CSSProperties = {
@@ -32,14 +32,14 @@ function RenderResults() {
       items={results}
       onRender={({ item, active }) =>
         typeof item === "string" ? (
-          <Box
+          <Text
+            color="GrayText"
             padding="8px 16px"
-            fontSize={10}
+            fontSize="smaller"
             textTransform="uppercase"
-            opacity={0.5}
           >
             {item}
-          </Box>
+          </Text>
         ) : (
           <ResultItem
             action={item}
@@ -89,7 +89,7 @@ const ResultItem = React.forwardRef(
         borderLeftColor={active ? borderLeftColor : "transparent"}
         p="12px 16px"
         alignItems="center"
-        justifyContent="space-around"
+        justifyContent="space-between"
         borderLeftWidth={2}
         cursor="pointer"
         borderLeftStyle="solid"
@@ -99,7 +99,7 @@ const ResultItem = React.forwardRef(
           display="flex"
           gap={2}
           alignItems="center"
-          fontSize="14px"
+          fontSize="smaller"
         >
           {action.icon && action.icon}
           <Box flex="flex" flexDirection="column">
