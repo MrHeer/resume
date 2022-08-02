@@ -1,84 +1,92 @@
 import { useColorMode } from "@chakra-ui/react";
 import { CONFIG } from "config";
-import { Action } from "kbar";
+import { Action, useRegisterActions } from "kbar";
 import { useTranslation } from "react-i18next";
 
 export default function useActions() {
-  const { setColorMode } = useColorMode();
-  const { i18n } = useTranslation();
+  const { colorMode, setColorMode, toggleColorMode } = useColorMode();
+  const { t, i18n } = useTranslation();
 
   const actions: Action[] = [
     {
-      id: "contactAction",
-      name: "Contact",
+      id: "contact",
+      name: t("contact"),
       shortcut: ["c"],
       keywords: "email hello",
-      section: "Navigation",
+      section: t("navigation"),
       perform: () => window.open("mailto:hlm52pk@163.com", "_blank"),
     },
     {
-      id: "twitterAction",
-      name: "Twitter",
-      shortcut: ["t"],
+      id: "twitter",
+      name: t("twitter"),
+      shortcut: ["g", "t"],
       keywords: "social contact twitter",
-      section: "Navigation",
+      section: t("navigation"),
       perform: () => window.open("https://twitter.com/MrHeer5", "_blank"),
     },
     {
-      id: "githubAction",
-      name: "Github",
-      shortcut: ["g"],
+      id: "github",
+      name: t("github"),
+      shortcut: ["g", "g"],
       keywords: "github code sourcecode",
-      section: "Navigation",
+      section: t("navigation"),
       perform: () => window.open("https://github.com/MrHeer", "_blank"),
     },
     {
-      id: "printAction",
-      name: "Print",
+      id: "print",
+      name: t("print"),
       shortcut: ["p"],
       keywords: "print save",
-      section: "Conmmand",
+      section: t("command"),
       perform: () => setTimeout(window.print, 300),
     },
     {
       id: "theme",
-      name: "Change theme…",
+      name: t("changeTheme"),
       keywords: "interface color dark light",
-      section: "Preferences",
+      section: t("preferences"),
+    },
+    {
+      id: "toggleTheme",
+      name: t("toggleTheme"),
+      shortcut: ["t", "t"],
+      keywords: "toggle theme",
+      perform: toggleColorMode,
+      parent: "theme",
     },
     {
       id: "lightTheme",
-      name: "Light",
-      shortcut: ["l"],
+      name: t("light"),
+      shortcut: ["t", "l"],
       keywords: "light theme",
       perform: () => setColorMode("light"),
       parent: "theme",
     },
     {
       id: "darkTheme",
-      name: "Dark",
-      shortcut: ["d"],
+      name: t("dark"),
+      shortcut: ["t", "d"],
       keywords: "dark theme",
       perform: () => setColorMode("dark"),
       parent: "theme",
     },
     {
       id: "language",
-      name: "Change language…",
+      name: t("changeLanguage"),
       keywords: "language i18n",
-      section: "Preferences",
+      section: t("preferences"),
     },
     ...CONFIG.languages.map(
       ({ language, icon, description }) =>
         ({
           id: language,
           name: `${icon} ${description}`,
-          keywords: `${language} language`,
+          keywords: `${description} language`,
           perform: () => i18n.changeLanguage(language),
           parent: "language",
         } as Action)
     ),
   ];
 
-  return actions;
+  useRegisterActions(actions, [colorMode, i18n.language]);
 }

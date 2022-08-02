@@ -13,6 +13,7 @@ import {
 import useActions from "./useActions";
 import { Box, Kbd, Text, useColorModeValue } from "@chakra-ui/react";
 import { useTwemoji, useVisibilityWhilePrint } from "hooks";
+import { useTranslation } from "react-i18next";
 
 const searchStyle: CSSProperties = {
   padding: "12px 16px",
@@ -136,6 +137,9 @@ ResultItem.displayName = "ResultItem";
 
 function CommandBar() {
   const kbarRef = useVisibilityWhilePrint<HTMLDivElement>();
+  const { t } = useTranslation();
+
+  useActions();
 
   return (
     <KBarPortal>
@@ -151,7 +155,10 @@ function CommandBar() {
           backdropBlur="8px"
         >
           <KBarAnimator>
-            <KBarSearch style={searchStyle} />
+            <KBarSearch
+              style={searchStyle}
+              defaultPlaceholder={t("kBarSearchDefaultPlaceholder")}
+            />
             <RenderResults />
           </KBarAnimator>
         </Box>
@@ -165,10 +172,8 @@ interface Props {
 }
 
 function KBar({ children }: Props) {
-  const actions = useActions();
-
   return (
-    <KBarProvider actions={actions}>
+    <KBarProvider>
       <CommandBar />
       {children}
     </KBarProvider>

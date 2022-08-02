@@ -8,8 +8,11 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { FallbackProps } from "react-error-boundary";
+import { useTranslation } from "react-i18next";
 
 function ErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
+  const { t } = useTranslation();
+
   return (
     <Container>
       <Stack pt={20}>
@@ -26,7 +29,7 @@ function ErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
           <AlertTitle>Error</AlertTitle>
           <AlertDescription>{error.message}</AlertDescription>
         </Alert>
-        <Button onClick={resetErrorBoundary}>Try again</Button>
+        <Button onClick={resetErrorBoundary}>{t("tryAgain")}</Button>
       </Stack>
     </Container>
   );

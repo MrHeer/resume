@@ -18,6 +18,10 @@ i18n
   .init({
     fallbackLng: CONFIG.defaultLanguate,
     supportedLngs: LANGUAGES,
+    debug: true,
+    backend: {
+      loadPath: `${process.env.PUBLIC_URL}/locales/{{lng}}/{{ns}}.json`,
+    },
 
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
