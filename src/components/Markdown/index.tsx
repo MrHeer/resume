@@ -2,7 +2,7 @@ import { SkeletonText } from "@chakra-ui/react";
 import ReactMarkdown from "react-markdown";
 import ChakraUIRenderer from "chakra-ui-markdown-renderer";
 import remarkGfm from "remark-gfm";
-import { useTwemoji } from "useTwemoji";
+import { useTwemoji } from "hooks";
 import { useTranslation } from "react-i18next";
 import { useAsync } from "react-use";
 import { theme } from "./theme";

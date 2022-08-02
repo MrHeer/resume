@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { CONFIG, LANGUAGE_MAP } from "config";
-import { useTwemoji } from "useTwemoji";
+import { useTwemoji } from "hooks";
 
 import "./style.css";
 

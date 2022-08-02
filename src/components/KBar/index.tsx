@@ -12,7 +12,7 @@ import {
 } from "kbar";
 import useActions from "./useActions";
 import { Box, Kbd, useColorModeValue } from "@chakra-ui/react";
-import { useTwemoji } from "useTwemoji";
+import { useTwemoji, useVisibilityWhilePrint } from "hooks";
 
 const searchStyle: CSSProperties = {
   padding: "12px 16px",
@@ -135,10 +135,13 @@ const ResultItem = React.forwardRef(
 ResultItem.displayName = "ResultItem";
 
 function CommandBar() {
+  const kbarRef = useVisibilityWhilePrint<HTMLDivElement>();
+
   return (
     <KBarPortal>
       <KBarPositioner>
         <Box
+          ref={kbarRef}
           shadow="dark-lg"
           maxWidth="600px"
           w="full"

@@ -1,29 +1,12 @@
-import { useRef } from "react";
 import { Flex } from "@chakra-ui/react";
-import { useEvent } from "react-use";
+import { useVisibilityWhilePrint } from "hooks";
 
-import ColorSwitchButton from "../ColorSwitchButton";
-import DownloadButton from "../DownloadButton";
 import LanguageMenu from "../LanguageMenu";
-
-function visible(ele: HTMLElement) {
-  ele.style.visibility = "visible";
-}
-
-function hidden(ele: HTMLElement) {
-  ele.style.visibility = "hidden";
-}
+import ColorSwitchButton from "../ColorSwitchButton";
+import CommandButton from "../CommandButton";
 
 function Header() {
-  const headerRef = useRef<HTMLDivElement>(null!);
-
-  useEvent("beforeprint", () => {
-    hidden(headerRef.current);
-  });
-
-  useEvent("afterprint", () => {
-    visible(headerRef.current);
-  });
+  const headerRef = useVisibilityWhilePrint<HTMLDivElement>();
 
   return (
     <Flex
@@ -40,7 +23,7 @@ function Header() {
     >
       <LanguageMenu />
       <ColorSwitchButton />
-      <DownloadButton />
+      <CommandButton />
     </Flex>
   );
 }

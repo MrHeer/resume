@@ -9,13 +9,6 @@ export default function useActions() {
 
   const actions: Action[] = [
     {
-      id: "homeAction",
-      name: "Home",
-      shortcut: ["h"],
-      keywords: "back",
-      section: "Navigation",
-    },
-    {
       id: "contactAction",
       name: "Contact",
       shortcut: ["c"],
@@ -35,7 +28,7 @@ export default function useActions() {
       id: "githubAction",
       name: "Github",
       shortcut: ["g"],
-      keywords: "sourcecode",
+      keywords: "github code sourcecode",
       section: "Navigation",
       perform: () => window.open("https://github.com/MrHeer", "_blank"),
     },
@@ -45,7 +38,7 @@ export default function useActions() {
       shortcut: ["p"],
       keywords: "print save",
       section: "Conmmand",
-      perform: () => window.print(),
+      perform: () => setTimeout(window.print, 300),
     },
     {
       id: "theme",
