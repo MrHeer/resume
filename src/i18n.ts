@@ -18,7 +18,6 @@ i18n
   .init({
     fallbackLng: CONFIG.defaultLanguate,
     supportedLngs: LANGUAGES,
-    debug: true,
     backend: {
       loadPath: `${process.env.PUBLIC_URL}/locales/{{lng}}/{{ns}}.json`,
     },

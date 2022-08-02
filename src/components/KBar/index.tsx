@@ -19,10 +19,7 @@ const searchStyle: CSSProperties = {
   padding: "12px 16px",
   background: "transparent",
   width: "100%",
-  boxSizing: "border-box",
   outline: "none",
-  border: "none",
-  borderRadius: 8,
 };
 
 function RenderResults() {
@@ -123,8 +120,8 @@ const ResultItem = React.forwardRef(
         </Box>
         {action.shortcut?.length ? (
           <Box display="grid" gridAutoFlow="column" gap={2} aria-hidden>
-            {action.shortcut.map((sc) => (
-              <Kbd key={sc}>{sc}</Kbd>
+            {action.shortcut.map((sc, index) => (
+              <Kbd key={`${action.id}.${sc}.${index}`}>{sc}</Kbd>
             ))}
           </Box>
         ) : null}
