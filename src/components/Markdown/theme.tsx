@@ -16,7 +16,7 @@ export const theme: Components = {
   a: (props) => {
     const { children } = props;
     return (
-      <Link color="blue.500" {...getCoreProps(props)}>
+      <Link color="blue.500" {...props}>
         {children}
       </Link>
     );
@@ -25,7 +25,7 @@ export const theme: Components = {
     const { inline, children, className } = props;
 
     if (inline) {
-      return <Code>{children}</Code>;
+      return <Code rounded="md">{children}</Code>;
     }
 
     return (
