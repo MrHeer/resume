@@ -1,7 +1,8 @@
 {
   "tryAgain": "重试",
   "navigation": "导航",
-  "contact": "联系",
+  "call": "电话",
+  "email": "电子邮件",
   "twitter": "Twitter",
   "github": "Github",
   "command": "命令",
