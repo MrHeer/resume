@@ -9,12 +9,20 @@ export default function useActions() {
 
   const actions: Action[] = [
     {
-      id: "contact",
-      name: t("contact"),
+      id: "call",
+      name: t("call"),
       shortcut: ["c"],
+      keywords: "call mobile hello",
+      section: t("navigation"),
+      perform: () => window.open(`tel:${CONFIG.mobile}`, "_blank"),
+    },
+    {
+      id: "email",
+      name: t("email"),
+      shortcut: ["e"],
       keywords: "email hello",
       section: t("navigation"),
-      perform: () => window.open("mailto:hlm52pk@163.com", "_blank"),
+      perform: () => window.open(`mailto:${CONFIG.email}`, "_blank"),
     },
     {
       id: "twitter",
@@ -22,7 +30,8 @@ export default function useActions() {
       shortcut: ["g", "t"],
       keywords: "social contact twitter",
       section: t("navigation"),
-      perform: () => window.open("https://twitter.com/MrHeer5", "_blank"),
+      perform: () =>
+        window.open(`https://twitter.com/${CONFIG.twitter}`, "_blank"),
     },
     {
       id: "github",
@@ -30,7 +39,8 @@ export default function useActions() {
       shortcut: ["g", "g"],
       keywords: "github code sourcecode",
       section: t("navigation"),
-      perform: () => window.open("https://github.com/MrHeer", "_blank"),
+      perform: () =>
+        window.open(`https://github.com/${CONFIG.github}`, "_blank"),
     },
     {
       id: "print",

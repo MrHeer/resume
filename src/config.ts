@@ -12,6 +12,10 @@ export type LanguageOption = {
 export type Config = {
   defaultLanguate: Language;
   languages: Array<LanguageOption>;
+  mobile: string;
+  email: string;
+  twitter: string;
+  github: string;
 };
 
 export const CONFIG: Config = {
@@ -30,6 +34,10 @@ export const CONFIG: Config = {
       language: "en_US",
     },
   ],
+  mobile: "(+86)17623030229",
+  email: "hlm52pk@163.com",
+  twitter: "MrHeer5",
+  github: "MrHeer",
 };
 
 export const LANGUAGE_MAP = CONFIG.languages.reduce(
