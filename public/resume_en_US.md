@@ -1,67 +1,66 @@
 #### 📧 Contract
 
-- 手机：17623030229
+- Mobile：17623030229
 - Email：hlm52pk@163.com
-- 微信号：Mr\_\_Heer
+- WeChat：Mr\_\_Heer
 
 ---
 
 #### 🧑‍💻 About me
 
-- 何林明 / 男 / 1996
-- 本科 / 长沙理工大学 / 电子信息科学与技术
-- 工作年限：5 年
+- He Linming / Male / 1996
+- Bachelor / Changsha University of Science & Technology / Electronic Information Science and Technology
+- Work experience: 5 years
 - Github：[https://github.com/MrHeer](https://github.com/MrHeer)
 - [Responsive Web Design Developer Certification](https://www.freecodecamp.org/certification/mrheer/responsive-web-design)
 - [JavaScript Algorithms and Data Structures Developer Certification](https://www.freecodecamp.org/certification/mrheer/javascript-algorithms-and-data-structures)
-- 清华大学[《算法设计与分析》](https://www.xuetangx.com/download_credential/pYMHZiT-EZF.pdf)课程考核优秀
 
 ---
 
 #### 🌈 Experience
 
-##### 杭州数建科技有限公司 （ 2020 年 5 月 ~ 至今 ）
+##### Hangzhou Shujian Technology Co., Ltd ( 2020-05 ~ Today )
 
-- 设计类似于 **Notion** 的高级筛选功能（高级动态表单和复杂数据结构 [ReScript Variant](https://rescript-lang.org/docs/manual/latest/variant)）
-- 设计 `UndoManager` 用来管理状态历史，从而实现 `undo` `redo` 功能
-- 封装了常用的 Hook 和 Component
-  - `useResize` - 处理拖动事件，通过它实现了 `ResizableLayout`
-  - `useSyncScroll` - 同步滚动多个容器，API 十分简洁
-  - `useObserver` - 通过观察者模式实现了一个跨组件通信的功能
-  - `MotionList` - 带有动效的列表，具有删除增加移动等动效
-- 使用 `framer-motion` `react-spring` [`FLIP`](https://aerotwist.com/blog/flip-your-animations/) 等动效技术来提升用户体验
-- 使用 `Recoil` `Jotai` 来管理全局状态，原子化更新 UI
-- 使用 `RxDB` `Electron` 来提升本地化的体验
-- 使用 `D3.js` 来绘制 Gantt 图
-- 使用 [`Virtual`](https://tanstack.com/virtual/v3) 技术来提高滚动性能
+- Design advanced filtering functionality similar to **Notion** (advanced dynamic forms and complex data structures [ReScript Variant](https://rescript-lang.org/docs/manual/latest/variant))
+- Design `UndoManager` to manage state history and thus implement `undo` `redo` functionality
+- Develop common Hooks and Components
+  - `useResize` - Handles drag events and implements `ResizableLayout` through it
+  - `useSyncScroll` - synchronous scrolling of multiple containers, very simple API
+  - `useObserver` - implements a cross-component communication via the observer pattern
+  - `MotionList` - a list with motion effects, with delete add move etc.
+- Use `framer-motion` `react-spring` [`FLIP`](https://aerotwist.com/blog/flip-your-animations/) and other motion technologies to enhance the user experience
+- Use `Recoil` `Jotai` to manage global state and update UI atomically
+- Use `RxDB` `Electron` to enhance the localization experience
+- Use `D3.js` to draw Gantt graphs
+- Use [`Virtual`](https://tanstack.com/virtual/v3) technology to improve scrolling performance
 
-##### 杭州童学码科技有限公司 （ 2019 年 9 月 ~ 2020 年 4 月 ）
+##### Hangzhou tongxuema Technology Co., Ltd ( 2019-09 ~ 2020-04 )
 
-- 我在此公司负责日常教学工作，主要教学的内容为 `C++ / Scratch / 算法`。在上课也善于使用 [`可视化`](https://visualgo.net/en) 技术来展示算法的原理，使得学生更加容易理解
+- I am in charge of daily teaching in this company, mainly in `C++ / Scratch / Algorithms`. I am also good at using [`visualization`](https://visualgo.net/en) techniques to show the principles of algorithms in my classes to make it easier for students to understand them.
 
-##### 拓维信息系统股份有限公司 （ 2018 年 7 月 ~ 2019 年 7 月 ）
+##### Tuowei Information System Co., Ltd ( 2018-07 ~ 2019-07 )
 
-###### 安微联通大数据项目
+###### Anwei Unicom Big Data
 
-- 我在此项目中主要负责维护大数据平台，我在期间开发了一个平台监控工具，在华为领导人的帮助下，我能够读取平台的相关数据，然后通过 `Python` 分析数据，最后生成网页，通过这个监控工具能够极大的提升运维效率
-- 安徽移动向我提出一个可视化数据页面的需求，通过自学 `React` `Ant Design`，能够快速的开发前端页面。我还利用 `EChart` 来解决了领导提出的数据可视化的需求
+- I was mainly responsible for maintaining the big data platform in this project, I developed a platform monitoring tool during the period, with the help of Huawei leaders, I was able to read the relevant data of the platform, then analyze the data through `Python`, and finally generate a web page, through this monitoring tool can greatly improve the efficiency of operation and maintenance
+- Anhui Mobile asked me for a visual data page, and through self-learning `React` and `Ant Design`, I was able to develop the front-end page quickly. I also used `EChart` to solve the data visualization requirement from the leader
 
-###### 湖南移动爬虫项目
+###### Hunan Mobile Crawler
 
-- 独立负责前端的开发任务，我和后端人员通过 `RESTful` 风格的接口来让前后分离
-- 使用 `Ant Design` 快速的开发了前端界面
+- Independent of the front-end development tasks, I worked with the back-end staff to keep the front and back separate through a `RESTful` style interface
+- Quickly developed the front-end interface using `Ant Design`.
 
-##### 湖南索思科技开发有限公司 （ 2018 年 1 月 ~ 2018 年 7 月 ）
+##### Hunan Source Technology Development Co., Ltd ( 2018-01 ~ 2018-07 )
 
-- 维护 `Jave Web / Spring` Web 平台
-- 开发 `Android` 和 `iOS` 平台的 `任务分发` 和 `定位打卡` 功能
+- Maintain the `Jave Web / Spring` web platform
+- Develop `task distribution` and `location punching` functions for `Android` and `iOS` platforms
 
 ---
 
 #### ❤️ Contributions
 
-- [Ant Design](https://github.com/ant-design/ant-design)：一套企业级 UI 设计语言和 `React` 组件库。提炼自企业级中后台产品的交互语言和视觉风格。开箱即用的高质量 `React` 组件。我长期关注该项目，持续解决问题，目前贡献排名位于前 **50**。曾经很荣幸的成为了该库的 **Collaborator**
-- [Mark Text](https://github.com/marktext/marktext)：一个简单而优雅的开源 `Markdown` 编辑器，专注于速度和可用性。可用于 Linux、macOS 和 Windows。我长期关注该项目，持续解决问题，目前贡献排名位于前 **5**
+- [Ant Design](https://github.com/ant-design/ant-design): a set of enterprise UI design language and `React` component library. Distilled from the interaction language and visual style of enterprise-class middle and backend products. High quality `React` components out of the box. I've been following the project for a long time, solving problems on an ongoing basis, and currently ranking in the top **50** contributors. I've had the pleasure of being a **Collaborator** of the library
+- [Mark Text](https://github.com/marktext/marktext): a simple and elegant open source `Markdown` editor, focused on speed and usability. Available for Linux, macOS and Windows. I've been following the project for a long time, consistently solving problems, and currently have a top **5** contribution ranking.
 
 ---
 
@@ -79,10 +78,10 @@
 
 #### 🛠 Skills
 
-- 编程语言：TypeScript / ReScript
-- 编程思想：OOP / FP
-- 前端框架：React
-- 状态管理：Recoil / Jotai
-- 前端工具：pnpm / yarn / npm
-- 版本管理：Git
-- 单元测试：Jest / Enzyme
+- Language：TypeScript / ReScript
+- Thought：OOP / FP
+- Framework：React
+- State：Recoil / Jotai
+- Tools：pnpm / yarn / npm
+- VCS：Git
+- Test：Jest / Enzyme

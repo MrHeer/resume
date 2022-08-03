@@ -14,7 +14,6 @@
 - Github：[https://github.com/MrHeer](https://github.com/MrHeer)
 - [Responsive Web Design Developer Certification](https://www.freecodecamp.org/certification/mrheer/responsive-web-design)
 - [JavaScript Algorithms and Data Structures Developer Certification](https://www.freecodecamp.org/certification/mrheer/javascript-algorithms-and-data-structures)
-- 清华大学[《算法设计与分析》](https://www.xuetangx.com/download_credential/pYMHZiT-EZF.pdf)课程考核优秀
 
 ---
 
