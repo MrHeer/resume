@@ -1,11 +1,11 @@
 import { useColorMode } from "@chakra-ui/react";
-import { CONFIG } from "config";
 import { Action, useRegisterActions } from "kbar";
 import { useTranslation } from "react-i18next";
 
 export default function useActions() {
   const { colorMode, setColorMode, toggleColorMode } = useColorMode();
   const { t, i18n } = useTranslation();
+  const { CONFIG } = window;
 
   const actions: Action[] = [
     {
@@ -90,7 +90,7 @@ export default function useActions() {
       keywords: "language i18n",
       section: t("preferences"),
     },
-    ...CONFIG.languages.map(
+    ...window.CONFIG.languages.map(
       ({ language, icon, description }) =>
         ({
           id: language,

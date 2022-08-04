@@ -1,5 +1,5 @@
 {
-  "defaultLanguate": "zh_CN",
+  "defaultLanguage": "zh_CN",
   "languages": [
     {
       "resumeUrl": "resume_zh_CN.md",

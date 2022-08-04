@@ -8,18 +8,18 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-import { CONFIG, LANGUAGE_MAP } from "config";
+import { getLanguageOption } from "config";
 import { useTwemoji } from "hooks";
 
 import "./style.css";
-
-const { languages } = CONFIG;
 
 function LanguageMenu() {
   const menuRef = useTwemoji<HTMLDivElement>();
   const { i18n } = useTranslation();
   const bg = useColorModeValue("gray.200", "whiteAlpha.200");
   const currentLanguage = i18n.language;
+  const { CONFIG } = window;
+  const { languages } = CONFIG;
 
   return (
     <Box ref={menuRef}>
@@ -29,7 +29,7 @@ function LanguageMenu() {
           variant="ghost"
           icon={
             <Box className="twemoji-icon" as="span">
-              {LANGUAGE_MAP.get(currentLanguage)?.icon}
+              {getLanguageOption(currentLanguage).icon}
             </Box>
           }
         />

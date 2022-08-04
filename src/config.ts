@@ -1,18 +1,14 @@
-import config from "config.json";
-
-export const LANGUAGES = ["en_US", "zh_CN"] as const;
-
-export type Language = typeof LANGUAGES[number];
+import { resolveURL } from "utils";
 
 export type LanguageOption = {
   resumeUrl: string;
   icon: string;
   description: string;
-  language: Language;
+  language: string;
 };
 
 export type Config = {
-  defaultLanguate: Language;
+  defaultLanguage: string;
   languages: Array<LanguageOption>;
   mobile: string;
   email: string;
@@ -20,9 +16,21 @@ export type Config = {
   github?: string;
 };
 
-export const CONFIG: Config = config as Config;
+export function getLanguageOption(language: string) {
+  const { CONFIG } = window;
+  const languageOption = CONFIG.languages.find(
+    (option) => option.language === language
+  );
+  if (languageOption !== undefined) {
+    return languageOption;
+  } else {
+    return CONFIG.languages[0];
+  }
+}
 
-export const LANGUAGE_MAP = CONFIG.languages.reduce(
-  (map, option) => map.set(option.language, option),
-  new Map<string, LanguageOption>()
-);
+export async function initConfig() {
+  const configURL = resolveURL("config.json");
+  const response = await fetch(configURL);
+  const config: Config = await response.json();
+  return config;
+}
