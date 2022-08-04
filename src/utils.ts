@@ -8,9 +8,10 @@ export function isAbsoluteURL(url: string) {
 }
 
 export function resolveURL(url: string) {
+  const { protocol, host } = window.location;
   if (isAbsoluteURL(url)) {
     return url;
   } else {
-    return `//${window.location.host}${PUBLIC_URL}/${url}`;
+    return `${protocol}//${host}${PUBLIC_URL}/${url}`;
   }
 }

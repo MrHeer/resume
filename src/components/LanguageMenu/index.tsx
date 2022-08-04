@@ -34,12 +34,12 @@ function LanguageMenu() {
           }
         />
         <MenuList minW="120">
-          {languages.map(({ language, icon, description }) => (
+          {languages.map(({ languageKey, icon, description }) => (
             <MenuItem
               icon={<Box as="span">{icon}</Box>}
-              key={language}
-              bg={language === currentLanguage ? bg : undefined}
-              onClick={() => i18n.changeLanguage(language)}
+              key={languageKey}
+              bg={languageKey === currentLanguage ? bg : undefined}
+              onClick={() => i18n.changeLanguage(languageKey)}
             >
               {description}
             </MenuItem>

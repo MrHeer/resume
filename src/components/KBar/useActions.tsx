@@ -91,12 +91,12 @@ export default function useActions() {
       section: t("preferences"),
     },
     ...window.CONFIG.languages.map(
-      ({ language, icon, description }) =>
+      ({ languageKey, icon, description }) =>
         ({
-          id: language,
+          id: languageKey,
           name: `${icon} ${description}`,
           keywords: `${description} language`,
-          perform: () => i18n.changeLanguage(language),
+          perform: () => i18n.changeLanguage(languageKey),
           parent: "language",
         } as Action)
     ),

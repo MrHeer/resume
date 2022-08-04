@@ -6,7 +6,7 @@ import { Config } from "config";
 import { PUBLIC_URL } from "env";
 
 export function initI18n(config: Config) {
-  const LANGUAGES = config.languages.map(({ language }) => language);
+  const LANGUAGE_KEYS = config.languages.map(({ languageKey }) => languageKey);
   i18n
     // load translation using http -> see /public/locales
     // learn more: https://github.com/i18next/i18next-http-backend
@@ -19,8 +19,8 @@ export function initI18n(config: Config) {
     // init i18next
     // for all options read: https://www.i18next.com/overview/configuration-options
     .init({
-      fallbackLng: config.defaultLanguage,
-      supportedLngs: LANGUAGES,
+      fallbackLng: config.defaultLanguageKey,
+      supportedLngs: LANGUAGE_KEYS,
       backend: {
         loadPath: `${PUBLIC_URL}/locales/{{lng}}/{{ns}}.json`,
       },

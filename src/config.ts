@@ -1,25 +1,25 @@
 import { resolveURL } from "utils";
 
-export type LanguageOption = {
+export type Language = {
   resumeUrl: string;
   icon: string;
   description: string;
-  language: string;
+  languageKey: string;
 };
 
 export type Config = {
-  defaultLanguage: string;
-  languages: Array<LanguageOption>;
+  defaultLanguageKey: string;
+  languages: Array<Language>;
   mobile: string;
   email: string;
   twitter?: string;
   github?: string;
 };
 
-export function getLanguageOption(language: string) {
+export function getLanguageOption(languageKey: string) {
   const { CONFIG } = window;
   const languageOption = CONFIG.languages.find(
-    (option) => option.language === language
+    (option) => option.languageKey === languageKey
   );
   if (languageOption !== undefined) {
     return languageOption;
