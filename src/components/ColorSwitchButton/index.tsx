@@ -4,12 +4,12 @@ import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 function ColorSwitchButton() {
   const { toggleColorMode: toggleMode } = useColorMode();
 
-  const text = useColorModeValue("dark", "light");
-  const SwitchIcon = useColorModeValue(MoonIcon, SunIcon);
+  const text = useColorModeValue("light", "dark");
+  const SwitchIcon = useColorModeValue(SunIcon, MoonIcon);
 
   return (
     <IconButton
-      aria-label={`Switch to ${text} mode`}
+      aria-label={`current is ${text} mode`}
       onClick={toggleMode}
       icon={<SwitchIcon />}
       variant="ghost"
