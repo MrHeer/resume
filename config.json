@@ -1,0 +1,21 @@
+{
+  "defaultLanguage": "zh_CN",
+  "languages": [
+    {
+      "resumeUrl": "resume_zh_CN.md",
+      "icon": "🇨🇳",
+      "description": "简体中文",
+      "language": "zh_CN"
+    },
+    {
+      "resumeUrl": "resume_en_US.md",
+      "icon": "🇺🇸",
+      "description": "English",
+      "language": "en_US"
+    }
+  ],
+  "mobile": "(+86)17623030229",
+  "email": "hlm52pk@163.com",
+  "twitter": "MrHeer5",
+  "github": "MrHeer"
+}
