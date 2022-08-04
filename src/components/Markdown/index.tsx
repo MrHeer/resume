@@ -5,8 +5,9 @@ import remarkGfm from "remark-gfm";
 import { useTwemoji } from "hooks";
 import { useTranslation } from "react-i18next";
 import { useAsync } from "react-use";
-import { theme } from "./theme";
+import { resolveURL } from "utils";
 import { LANGUAGE_MAP } from "config";
+import { theme } from "./theme";
 
 import "./style.css";
 
@@ -15,7 +16,7 @@ function Markdown() {
   const { i18n } = useTranslation();
 
   const currentLanguage = i18n.language;
-  const url = LANGUAGE_MAP.get(currentLanguage)!.resumeUrl;
+  const url = resolveURL(LANGUAGE_MAP.get(currentLanguage)!.resumeUrl);
 
   const { value: markdown, loading } = useAsync(async () => {
     const response = await fetch(url);

@@ -2,13 +2,13 @@
   "defaultLanguate": "zh_CN",
   "languages": [
     {
-      "resumeUrl": "/resume/resume_zh_CN.md",
+      "resumeUrl": "resume_zh_CN.md",
       "icon": "🇨🇳",
       "description": "简体中文",
       "language": "zh_CN"
     },
     {
-      "resumeUrl": "/resume/resume_en_US.md",
+      "resumeUrl": "resume_en_US.md",
       "icon": "🇺🇸",
       "description": "English",
       "language": "en_US"

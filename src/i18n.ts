@@ -3,6 +3,7 @@ import Backend from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 import { CONFIG, LANGUAGES } from "config";
+import { PUBLIC_URL } from "env";
 
 i18n
   // load translation using http -> see /public/locales
@@ -19,7 +20,7 @@ i18n
     fallbackLng: CONFIG.defaultLanguate,
     supportedLngs: LANGUAGES,
     backend: {
-      loadPath: `${process.env.PUBLIC_URL}/locales/{{lng}}/{{ns}}.json`,
+      loadPath: `${PUBLIC_URL}/locales/{{lng}}/{{ns}}.json`,
     },
 
     interpolation: {
