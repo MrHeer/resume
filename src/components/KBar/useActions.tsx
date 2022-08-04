@@ -24,24 +24,28 @@ export default function useActions() {
       section: t("navigation"),
       perform: () => window.open(`mailto:${CONFIG.email}`, "_blank"),
     },
-    {
-      id: "twitter",
-      name: t("twitter"),
-      shortcut: ["g", "t"],
-      keywords: "social contact twitter",
-      section: t("navigation"),
-      perform: () =>
-        window.open(`https://twitter.com/${CONFIG.twitter}`, "_blank"),
-    },
-    {
-      id: "github",
-      name: t("github"),
-      shortcut: ["g", "g"],
-      keywords: "github code sourcecode",
-      section: t("navigation"),
-      perform: () =>
-        window.open(`https://github.com/${CONFIG.github}`, "_blank"),
-    },
+    CONFIG.twitter === undefined
+      ? undefined
+      : {
+          id: "twitter",
+          name: t("twitter"),
+          shortcut: ["g", "t"],
+          keywords: "social contact twitter",
+          section: t("navigation"),
+          perform: () =>
+            window.open(`https://twitter.com/${CONFIG.twitter}`, "_blank"),
+        },
+    CONFIG.github === undefined
+      ? undefined
+      : {
+          id: "github",
+          name: t("github"),
+          shortcut: ["g", "g"],
+          keywords: "github code sourcecode",
+          section: t("navigation"),
+          perform: () =>
+            window.open(`https://github.com/${CONFIG.github}`, "_blank"),
+        },
     {
       id: "print",
       name: t("print"),
@@ -96,7 +100,7 @@ export default function useActions() {
           parent: "language",
         } as Action)
     ),
-  ];
+  ].filter((action): action is Action => action !== undefined);
 
   useRegisterActions(actions, [colorMode, i18n.language]);
 }

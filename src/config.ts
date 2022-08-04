@@ -16,8 +16,8 @@ export type Config = {
   languages: Array<LanguageOption>;
   mobile: string;
   email: string;
-  twitter: string;
-  github: string;
+  twitter?: string;
+  github?: string;
 };
 
 export const CONFIG: Config = config as Config;
