@@ -5,7 +5,7 @@ import { Input, InputProps } from "@chakra-ui/react";
 export const KBAR_LISTBOX = "kbar-listbox";
 export const getListboxItemId = (id: number) => `kbar-listbox-item-${id}`;
 
-export function SearchInput(
+function SearchInput(
   props: InputProps & {
     defaultPlaceholder?: string;
   }
@@ -26,13 +26,20 @@ export function SearchInput(
     showing: state.visualState === VisualState.showing,
   }));
 
+  const [input, setInput] = React.useState(search);
+
   const ownRef = React.useRef<HTMLInputElement>(null);
 
   const { defaultPlaceholder, ...rest } = props;
 
+  // avoid chinese input exception
+  React.useEffect(() => {
+    setInput(search);
+  }, [search]);
+
   React.useEffect(() => {
     query.setSearch("");
-    ownRef.current!.focus();
+    ownRef.current?.focus();
     return () => query.setSearch("");
   }, [currentRootActionId, query]);
 
@@ -43,34 +50,27 @@ export function SearchInput(
       : defaultText;
   }, [actions, currentRootActionId, defaultPlaceholder]);
 
-  // const searchStyle: CSSProperties = {
-  //   padding: "12px 16px",
-  //   background: "transparent",
-  //   width: "100%",
-  //   outline: "none",
-  // };
-
   return (
     <Input
       {...rest}
       ref={ownRef}
       autoFocus
-      _focus={{ outline: "none" }}
-      bg="transparent"
-      outline="none"
-      border="none"
+      variant="unstyled"
+      p="12px 16px"
       autoComplete="off"
       role="combobox"
       spellCheck="false"
       aria-expanded={showing}
       aria-controls={KBAR_LISTBOX}
       aria-activedescendant={getListboxItemId(activeIndex)}
-      value={search}
+      value={input}
       placeholder={placeholder}
       onChange={(event) => {
+        const { value } = event.target;
+        setInput(value);
         props.onChange?.(event);
-        query.setSearch(event.target.value);
-        options?.callbacks?.onQueryChange?.(event.target.value);
+        query.setSearch(value);
+        options?.callbacks?.onQueryChange?.(value);
       }}
       onKeyDown={(event) => {
         props.onKeyDown?.(event);
@@ -82,3 +82,5 @@ export function SearchInput(
     />
   );
 }
+
+export default SearchInput;

@@ -12,7 +12,7 @@ import {
 import { Box, Kbd, Text, useColorModeValue } from "@chakra-ui/react";
 import { useTwemoji, useVisibilityWhilePrint } from "hooks";
 import { useTranslation } from "react-i18next";
-import { SearchInput } from "./SearchInput";
+import SearchInput from "./SearchInput";
 import useActions from "./useActions";
 
 function RenderResults() {
