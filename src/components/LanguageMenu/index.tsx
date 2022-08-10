@@ -16,7 +16,8 @@ import "./style.css";
 function LanguageMenu() {
   const menuRef = useTwemoji<HTMLDivElement>();
   const { i18n } = useTranslation();
-  const bg = useColorModeValue("gray.200", "whiteAlpha.200");
+  const bg = useColorModeValue("blackAlpha.300", "whiteAlpha.300");
+  const hoverBg = useColorModeValue("blackAlpha.200", "whiteAlpha.200");
   const currentLanguage = i18n.language;
   const { CONFIG } = window;
   const { languages } = CONFIG;
@@ -38,7 +39,8 @@ function LanguageMenu() {
             <MenuItem
               icon={<Box as="span">{icon}</Box>}
               key={languageKey}
-              bg={languageKey === currentLanguage ? bg : undefined}
+              _hover={{ bg: hoverBg }}
+              bg={languageKey === currentLanguage ? bg : "transparent"}
               onClick={() => i18n.changeLanguage(languageKey)}
             >
               {description}

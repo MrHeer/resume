@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import React from "react";
 import {
   ActionId,
   ActionImpl,
@@ -7,20 +7,13 @@ import {
   KBarPositioner,
   KBarProvider,
   KBarResults,
-  KBarSearch,
   useMatches,
 } from "kbar";
-import useActions from "./useActions";
 import { Box, Kbd, Text, useColorModeValue } from "@chakra-ui/react";
 import { useTwemoji, useVisibilityWhilePrint } from "hooks";
 import { useTranslation } from "react-i18next";
-
-const searchStyle: CSSProperties = {
-  padding: "12px 16px",
-  background: "transparent",
-  width: "100%",
-  outline: "none",
-};
+import { SearchInput } from "./SearchInput";
+import useActions from "./useActions";
 
 function RenderResults() {
   const { results, rootActionId } = useMatches();
@@ -64,7 +57,7 @@ const ResultItem = React.forwardRef(
     ref: React.Ref<HTMLDivElement>
   ) => {
     const itemRef = useTwemoji<HTMLDivElement>();
-    const bg = useColorModeValue("gray.200", "whiteAlpha.200");
+    const bg = useColorModeValue("blackAlpha.300", "whiteAlpha.300");
     const borderLeftColor = useColorModeValue("black", "white");
 
     const ancestors = React.useMemo(() => {
@@ -152,8 +145,7 @@ function CommandBar() {
           backdropBlur="8px"
         >
           <KBarAnimator>
-            <KBarSearch
-              style={searchStyle}
+            <SearchInput
               defaultPlaceholder={t("kBarSearchDefaultPlaceholder")}
             />
             <RenderResults />
