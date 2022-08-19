@@ -3,15 +3,20 @@
 - Mobile：[+86 176 2303 0229](<tel:(+86)17623030229>)
 - Email：[hlm52pk@163.com](mailto:hlm52pk@163.com)
 - WeChat：Mr\_\_Heer
+- Github：[MrHeer](https://github.com/MrHeer)
 
 ---
 
-#### 🧑‍💻 About me
+#### 🧑‍💻 About Me
 
-- He Linming / Male / 1996
+- He Linming / Male
 - Bachelor / Changsha University of Science & Technology / Electronic Information Science and Technology
 - Work experience: 5 years
-- Github：[https://github.com/MrHeer](https://github.com/MrHeer)
+
+---
+
+#### ✨ Certification
+
 - [Responsive Web Design Developer Certification](https://www.freecodecamp.org/certification/mrheer/responsive-web-design)
 - [JavaScript Algorithms and Data Structures Developer Certification](https://www.freecodecamp.org/certification/mrheer/javascript-algorithms-and-data-structures)
 
