@@ -1,9 +1,21 @@
-import { Flex } from "@chakra-ui/react";
+import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react";
 import { useVisibilityWhilePrint } from "hooks";
 
 import LanguageMenu from "../LanguageMenu";
 import ColorSwitchButton from "../ColorSwitchButton";
 import CommandButton from "../CommandButton";
+import { getCommandKey } from "utils";
+
+function Placeholder() {
+  const commandKey = getCommandKey();
+  const textColor = useColorModeValue("gray.400", "gray.600");
+
+  return (
+    <Box visibility={["hidden", "hidden", "visible"]}>
+      <Text color={textColor}>{commandKey} + K</Text>
+    </Box>
+  );
+}
 
 function Header() {
   const headerRef = useVisibilityWhilePrint<HTMLDivElement>();
@@ -13,7 +25,7 @@ function Header() {
       ref={headerRef}
       as="header"
       position="fixed"
-      justify="flex-end"
+      justify="space-between"
       top={0}
       left={0}
       right={0}
@@ -21,9 +33,12 @@ function Header() {
       gap={2}
       zIndex={2}
     >
-      <LanguageMenu />
-      <ColorSwitchButton />
-      <CommandButton />
+      <Placeholder />
+      <Flex>
+        <LanguageMenu />
+        <ColorSwitchButton />
+        <CommandButton />
+      </Flex>
     </Flex>
   );
 }

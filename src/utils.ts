@@ -15,3 +15,16 @@ export function resolveURL(url: string) {
     return `${protocol}//${host}${PUBLIC_URL}/${url}`;
   }
 }
+
+export function isMacOS() {
+  const { userAgent } = navigator;
+  return userAgent.includes("Mac OS");
+}
+
+export function getCommandKey() {
+  if (isMacOS()) {
+    return "Command";
+  } else {
+    return "Ctrl";
+  }
+}
