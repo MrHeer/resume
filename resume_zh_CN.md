@@ -3,15 +3,20 @@
 - 手机：[+86 176 2303 0229](<tel:(+86)17623030229>)
 - 邮箱：[hlm52pk@163.com](mailto:hlm52pk@163.com)
 - 微信号：Mr\_\_Heer
+- Github：[MrHeer](https://github.com/MrHeer)
 
 ---
 
 #### 🧑‍💻 个人信息
 
-- 何林明 / 男 / 1996
+- 何林明 / 男
 - 本科 / 长沙理工大学 / 电子信息科学与技术
 - 工作年限：5 年
-- Github：[https://github.com/MrHeer](https://github.com/MrHeer)
+
+---
+
+#### ✨ 相关证书
+
 - [Responsive Web Design Developer Certification](https://www.freecodecamp.org/certification/mrheer/responsive-web-design)
 - [JavaScript Algorithms and Data Structures Developer Certification](https://www.freecodecamp.org/certification/mrheer/javascript-algorithms-and-data-structures)
 
