@@ -3,7 +3,6 @@
 - 手机：[+86 176 2303 0229](<tel:(+86)17623030229>)
 - 邮箱：[hlm52pk@163.com](mailto:hlm52pk@163.com)
 - 微信号：Mr\_\_Heer
-- Github：[MrHeer](https://github.com/MrHeer)
 
 ---
 
