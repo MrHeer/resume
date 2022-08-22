@@ -7,7 +7,7 @@
   "author": "MrHeer <hlm52pk@163.com>",
   "license": "MIT",
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "pnpm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
