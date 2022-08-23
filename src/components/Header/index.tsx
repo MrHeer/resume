@@ -34,7 +34,7 @@ function Header() {
       zIndex={2}
     >
       <Placeholder />
-      <Flex>
+      <Flex gap={2}>
         <LanguageMenu />
         <ColorSwitchButton />
         <CommandButton />
