@@ -25,6 +25,16 @@
 
 ### Hangzhou Shujian Technology Co., Ltd ( 2020-05 ~ Today )
 
+#### MetaBuild
+
+The tool enables offline project schedule management. It is divided into three major modules: _Planning_, _Materials_ and _Inventory_ Management to achieve quantifiable project schedule management and help the construction industry build intelligently.
+
+#### Beijing Urban Construction Project Management Platform
+
+It is a project management platform serving Beijing Urban Construction and its subordinate projects. The main functions cover: project progress, stuff, material, log, document and report management. Show the overview of each module through visualization technology.
+
+---
+
 - Design advanced filtering functionality similar to **Notion** (advanced dynamic forms and complex data structures [ReScript Variant](https://rescript-lang.org/docs/manual/latest/variant))
 - Design `UndoManager` to manage state history and thus implement `undo` `redo` functionality
 - Develop common Hooks and Components
