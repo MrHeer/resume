@@ -57,7 +57,7 @@ It is a project management platform serving Beijing Urban Construction and its s
 #### Anwei Unicom Big Data
 
 - I was mainly responsible for maintaining the big data platform in this project, I developed a platform monitoring tool during the period, with the help of Huawei leaders, I was able to read the relevant data of the platform, then analyze the data through `Python`, and finally generate a web page, through this monitoring tool can greatly improve the efficiency of operation and maintenance
-- Anhui Mobile asked me for a visual data page, and through self-learning `React` and `Ant Design`, I was able to develop the front-end page quickly. I also used `EChart` to solve the data visualization requirement from the leader
+- Anhui Mobile asked me for a visual data page, and through self-learning `React` and `Ant Design`, I was able to develop the front-end page quickly. I also used `ECharts` to solve the data visualization requirement from the leader
 
 #### Hunan Mobile Crawler
 
