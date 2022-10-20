@@ -40,19 +40,25 @@
 
 #### MetaBuild
 
-The tool enables offline project schedule management. It is divided into three major modules: _Planning_, _Materials_ and _Inventory_ Management to achieve quantifiable project schedule management and help the construction industry build intelligently. The software is based on the idea of `Local First` and supports localized editing. It also supports collaborative editing through `CRDT` and `RxDB`, etc.
+The tool enables offline project schedule management. It is divided into three major modules: _Planning_, _Materials_ and _Inventory_ Management to achieve quantifiable project schedule management and help the construction industry build intelligently. The software is based on the idea of **Local First** and supports localized editing. It also supports collaborative editing through `CRDT` and `RxDB`, etc.
 
 - Design advanced filtering functionality similar to **Notion** (advanced dynamic forms and complex data structures [ReScript Variant](https://rescript-lang.org/docs/manual/latest/variant)), Allows users to customize various filtering logic without the need for custom development of various filtering functions, greatly enhancing the development efficiency of the team.
 - Design `UndoManager` to manage state history and thus implement `undo` `redo` functionality. It can be integrated with state management, providing `useUndoCallback` and `useAtomCallback` together using a unified API, which makes it possible for users to quickly apply it to their projects without learning costs.
-- Encapsulating `tree` to handle tree structures provides a number of common methods to handle tree-structured data, allowing teams to improve development efficiency.
+- Encapsulating `tree` to handle tree structures provides a number of common methods to handle tree-structured data, allowing teams to improve development efficiency, reduced a lot of duplicate code.
+- Encapsulating `contextFactory` to quickly create `React.Context`, reducing **90%** of repetitive code
+
+  ```ts
+  const [Provider, context, contextUpdater] = contextFactory(initialContext);
+  ```
+
 - Develop common Hooks and Components
   - `useResize` - Handles drag events and implements `ResizableLayout` through it. Make it easy to change the size of the layout by dragging.
   - `useSyncScroll` - synchronous scrolling of multiple containers, very simple API. Enables easy synchronized scrolling of multiple containers.
   - `useObserver` - implements a cross-component communication via the observer pattern. Easy to implement cross-component state management.
   - `MotionList` - a list with motion effects, with delete add move etc, Make every interaction look very dynamic
 - Use `framer-motion` `react-spring` [`FLIP`](https://aerotwist.com/blog/flip-your-animations/) and other motion technologies to enhance the user experience.
-- Use `Recoil` `Jotai` to manage global state and update UI atomically, reduce unnecessary `rerender` of components and improve App performance.
-- Use `RxDB` `Electron` to enhance the `Local-First` experience.
+- Use `Recoil` `Jotai` to manage global state and update UI atomically, reduce unnecessary **rerender** of components and improve App performance.
+- Use `RxDB` `Electron` to enhance the **Local-First** experience.
 - Use `D3.js` to draw Gantt graphs.
 - Use [`Virtual`](https://tanstack.com/virtual/v3) scrolling technology to improve scrolling performance and support smooth display of large amounts of data.
 
