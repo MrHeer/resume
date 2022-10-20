@@ -14,6 +14,19 @@
 
 ---
 
+## 🛠 Skills
+
+- TypeScript / ReScript
+- OOP / FP
+- React / Angular
+- Recoil / Jotai / Redux
+- Ramda / Lodash / D3
+- pnpm / yarn / npm
+- Git
+- Jest / Enzyme
+
+---
+
 ## ✨ Certification
 
 - [Responsive Web Design Developer Certification](https://www.freecodecamp.org/certification/mrheer/responsive-web-design)
@@ -27,26 +40,25 @@
 
 #### MetaBuild
 
-The tool enables offline project schedule management. It is divided into three major modules: _Planning_, _Materials_ and _Inventory_ Management to achieve quantifiable project schedule management and help the construction industry build intelligently.
+The tool enables offline project schedule management. It is divided into three major modules: _Planning_, _Materials_ and _Inventory_ Management to achieve quantifiable project schedule management and help the construction industry build intelligently. The software is based on the idea of `Local First` and supports localized editing. It also supports collaborative editing through `CRDT` and `RxDB`, etc.
+
+- Design advanced filtering functionality similar to **Notion** (advanced dynamic forms and complex data structures [ReScript Variant](https://rescript-lang.org/docs/manual/latest/variant)), Allows users to customize various filtering logic without the need for custom development of various filtering functions, greatly enhancing the development efficiency of the team.
+- Design `UndoManager` to manage state history and thus implement `undo` `redo` functionality. It can be integrated with state management, providing `useUndoCallback` and `useAtomCallback` together using a unified API, which makes it possible for users to quickly apply it to their projects without learning costs.
+- Encapsulating `tree` to handle tree structures provides a number of common methods to handle tree-structured data, allowing teams to improve development efficiency.
+- Develop common Hooks and Components
+  - `useResize` - Handles drag events and implements `ResizableLayout` through it. Make it easy to change the size of the layout by dragging.
+  - `useSyncScroll` - synchronous scrolling of multiple containers, very simple API. Enables easy synchronized scrolling of multiple containers.
+  - `useObserver` - implements a cross-component communication via the observer pattern. Easy to implement cross-component state management.
+  - `MotionList` - a list with motion effects, with delete add move etc, Make every interaction look very dynamic
+- Use `framer-motion` `react-spring` [`FLIP`](https://aerotwist.com/blog/flip-your-animations/) and other motion technologies to enhance the user experience.
+- Use `Recoil` `Jotai` to manage global state and update UI atomically, reduce unnecessary `rerender` of components and improve App performance.
+- Use `RxDB` `Electron` to enhance the `Local-First` experience.
+- Use `D3.js` to draw Gantt graphs.
+- Use [`Virtual`](https://tanstack.com/virtual/v3) scrolling technology to improve scrolling performance and support smooth display of large amounts of data.
 
 #### Beijing Urban Construction Project Management Platform
 
 It is a project management platform serving Beijing Urban Construction and its subordinate projects. The main functions cover: project progress, stuff, material, log, document and report management. Show the overview of each module through visualization technology.
-
----
-
-- Design advanced filtering functionality similar to **Notion** (advanced dynamic forms and complex data structures [ReScript Variant](https://rescript-lang.org/docs/manual/latest/variant))
-- Design `UndoManager` to manage state history and thus implement `undo` `redo` functionality
-- Develop common Hooks and Components
-  - `useResize` - Handles drag events and implements `ResizableLayout` through it
-  - `useSyncScroll` - synchronous scrolling of multiple containers, very simple API
-  - `useObserver` - implements a cross-component communication via the observer pattern
-  - `MotionList` - a list with motion effects, with delete add move etc.
-- Use `framer-motion` `react-spring` [`FLIP`](https://aerotwist.com/blog/flip-your-animations/) and other motion technologies to enhance the user experience
-- Use `Recoil` `Jotai` to manage global state and update UI atomically
-- Use `RxDB` `Electron` to enhance the localization experience
-- Use `D3.js` to draw Gantt graphs
-- Use [`Virtual`](https://tanstack.com/virtual/v3) technology to improve scrolling performance
 
 ### Hangzhou tongxuema Technology Co., Ltd ( 2019-09 ~ 2020-04 )
 
@@ -89,13 +101,3 @@ It is a project management platform serving Beijing Urban Construction and its s
 - [ ] _Code Complete: A Practical Handbook of Software Construction_
 
 ---
-
-## 🛠 Skills
-
-- Language：TypeScript / ReScript
-- Thought：OOP / FP
-- Framework：React
-- State：Recoil / Jotai
-- Tools：pnpm / yarn / npm
-- VCS：Git
-- Test：Jest / Enzyme
