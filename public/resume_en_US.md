@@ -48,7 +48,7 @@ The tool enables offline project schedule management. It is divided into three m
 - Encapsulating `contextFactory` to quickly create `React.Context`, reducing **90%** of repetitive code
 
   ```ts
-  const [Provider, context, contextUpdater] = contextFactory(initialContext);
+  const [Provider, useValue, useValueUpdater] = contextFactory(initialValue);
   ```
 
 - Develop common Hooks and Components

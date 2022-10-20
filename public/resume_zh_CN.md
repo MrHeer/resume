@@ -48,7 +48,7 @@
 - 封装 `contextFactory` 来快速创建 `React.Context`，减少了 **90%** 的重复代码
 
   ```ts
-  const [Provider, context, contextUpdater] = contextFactory(initialContext);
+  const [Provider, useValue, useValueUpdater] = contextFactory(initialValue);
   ```
 
 - 封装了常用的 Hook 和 Component
