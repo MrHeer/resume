@@ -45,7 +45,7 @@ The tool enables offline project schedule management. It is divided into three m
 - Design advanced filtering functionality similar to **Notion** (advanced dynamic forms and complex data structures [ReScript Variant](https://rescript-lang.org/docs/manual/latest/variant)), Allows users to customize various filtering logic without the need for custom development of various filtering functions, greatly enhancing the development efficiency of the team.
 - Design `UndoManager` to manage state history and thus implement `undo` `redo` functionality. It can be integrated with state management, providing `useUndoCallback` and `useAtomCallback` together using a unified API, which makes it possible for users to quickly apply it to their projects without learning costs.
 - Encapsulating `tree` to handle tree structures provides a number of common methods to handle tree-structured data, allowing teams to improve development efficiency, reduced a lot of duplicate code.
-- Encapsulating `contextFactory` to quickly create `React.Context`, reducing **90%** of repetitive code
+- Encapsulating `contextFactory` to quickly create `React.Context`, reducing **90%** of repetitive code.
 
   ```ts
   const [Provider, useValue, useValueUpdater] = contextFactory(initialValue);
