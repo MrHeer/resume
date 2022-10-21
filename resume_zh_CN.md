@@ -16,10 +16,10 @@
 
 ## 🛠 技能清单
 
-- TypeScript / ReScript
+- TypeScript / ReScript / Java / Dart / Rust / Go / C
 - OOP / FP
-- React / Angular
-- Recoil / Jotai / Redux
+- React / Angular / Vue / Flutter
+- Recoil / Jotai / Redux / MobX
 - Ramda / Lodash / D3
 - pnpm / yarn / npm
 - Git
