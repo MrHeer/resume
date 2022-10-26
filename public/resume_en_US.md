@@ -20,10 +20,10 @@
 - OOP / FP
 - React / Angular / Vue / Flutter
 - Recoil / Jotai / Redux / MobX
-- Ramda / Lodash / D3
+- Ramda / Lodash / D3 / fp-ts
 - pnpm / yarn / npm
 - Git
-- Jest / Enzyme
+- Jest / Enzyme / Testing Library
 
 ---
 
