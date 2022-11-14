@@ -40,12 +40,12 @@
 
 #### MetaBuild
 
-The tool enables offline project schedule management. It is divided into three major modules: _Planning_, _Materials_ and _Inventory_ Management to achieve quantifiable project schedule management and help the construction industry build intelligently. The software is based on the idea of **Local First** and supports localized editing. It also supports collaborative editing through `CRDT` and `RxDB`, etc.
+The tool enables offline project schedule management. It divided into three major modules: _Planning_, _Materials_ and _Inventory_ Management to achieve quantifiable project schedule management and help the construction industry build intelligently. The software based on the idea of **Local First** and supports localized editing. It also supports collaborative editing through `CRDT` and `RxDB`, etc.
 
-- Design advanced filtering functionality similar to **Notion** (advanced dynamic forms and complex data structures [ReScript Variant](https://rescript-lang.org/docs/manual/latest/variant)), Allows users to customize various filtering logic without the need for custom development of various filtering functions, greatly enhancing the development efficiency of the team.
-- Design `UndoManager` to manage state history and thus implement `undo` `redo` functionality. It can be integrated with state management, providing `useUndoCallback` and `useAtomCallback` together using a unified API, which makes it possible for users to quickly apply it to their projects without learning costs.
-- Encapsulating `tree` to handle tree structures provides a number of common methods to handle tree-structured data, allowing teams to improve development efficiency, reduced a lot of duplicate code.
-- Encapsulating `contextFactory` to quickly create `React.Context`, reducing **90%** of repetitive code.
+- Design advanced filtering functionality like **Notion** (advanced dynamic forms and complex data structures [ReScript Variant](https://rescript-lang.org/docs/manual/latest/variant)), Allows users to customize filtering logic without the need for custom development of filtering functions, greatly enhancing the development efficiency of the team.
+- Design `UndoManager` to manage state history for `undo` `redo` functionality. It can integrated with state management, providing `useUndoCallback` and `useAtomCallback` together using a unified API, which makes it possible for users to apply it to their projects without learning costs.
+- Encapsulating `tree` to handle tree structures provides common methods to handle tree-structured data, allowing teams to improve development efficiency and reduced a lot of duplicate code.
+- Encapsulating `contextFactory` to create `React.Context`, reducing **90%** of repetitive code.
 
   ```ts
   const [Provider, useValue, useValueUpdater] = contextFactory(initialValue);
@@ -53,18 +53,18 @@ The tool enables offline project schedule management. It is divided into three m
 
 - Develop common Hooks and Components
   - `useResize` - Handles drag events and implements `ResizableLayout` through it. Make it easy to change the size of the layout by dragging.
-  - `useSyncScroll` - synchronous scrolling of multiple containers, very simple API. Enables easy synchronized scrolling of multiple containers.
-  - `useObserver` - implements a cross-component communication via the observer pattern. Easy to implement cross-component state management.
-  - `MotionList` - a list with motion effects, with delete add move etc, Make every interaction look very dynamic
+  - `useSyncScroll` - synchronous scrolling of containers, simple API. Enables easy synchronized scrolling of containers.
+  - `useObserver` - implements a cross-component communication via the observer pattern. Easy to cross-component state management.
+  - `MotionList` - a list with motion effects, with _delete_, _add_, _move_, etc, Make every interaction look dynamic
 - Use `framer-motion` `react-spring` [`FLIP`](https://aerotwist.com/blog/flip-your-animations/) and other motion technologies to enhance the user experience.
-- Use `Recoil` `Jotai` to manage global state and update UI atomically, reduce unnecessary **rerender** of components and improve App performance.
+- Use `Recoil` `Jotai` to manage the global state and update UI atomically, reduce unnecessary **rerender** of components and improve App performance.
 - Use `RxDB` `Electron` to enhance the **Local-First** experience.
 - Use `D3.js` to draw Gantt graphs.
 - Use [`Virtual`](https://tanstack.com/virtual/v3) scrolling technology to improve scrolling performance and support smooth display of large amounts of data.
 
 #### Beijing Urban Construction Project Management Platform
 
-It is a project management platform serving Beijing Urban Construction and its subordinate projects. The main functions cover: project progress, stuff, material, log, document and report management. Show the overview of each module through visualization technology.
+A project management platform serving Beijing Urban Construction and its subordinate projects. The main functions cover project progress, stuffs, material, log, document, and report management. Show the overview of each module through visualization technology.
 
 ### [Hangzhou tongxuema Technology Co., Ltd](http://www.hzcoding.com/) ( 2019-09 ~ 2020-04 )
 
@@ -74,13 +74,13 @@ It is a project management platform serving Beijing Urban Construction and its s
 
 #### Anwei Unicom Big Data
 
-- I was mainly responsible for maintaining the big data platform in this project, I developed a platform monitoring tool during the period, with the help of Huawei leaders, I was able to read the relevant data of the platform, then analyze the data through `Python`, and finally generate a web page, through this monitoring tool can greatly improve the efficiency of operation and maintenance
-- Anhui Mobile asked me for a visual data page, and through self-learning `React` and `Ant Design`, I was able to develop the front-end page quickly. I also used `ECharts` to solve the data visualization requirement from the leader
+- I was mainly responsible for maintaining the big data platform in this project, I developed a platform monitoring tool during the period, and with the help of Huawei leaders, I was able to read the relevant data of the platform, then analyze the data through `Python`, and generate a web page, through this monitoring tool can greatly improve the efficiency of operation and maintenance
+- Anhui Mobile asked me for a visual data page, and through self-learning `React` and `Ant Design`, I was able to develop the front-end page. I also used `ECharts` to solve the data visualization from the leader
 
 #### Hunan Mobile Crawler
 
 - Independent of the front-end development tasks, I worked with the back-end staff to keep the front and back separate through a `RESTful` style interface
-- Quickly developed the front-end interface using `Ant Design`.
+- Developed the front-end interface using `Ant Design`.
 
 ### Hunan Source Technology Development Co., Ltd ( 2018-01 ~ 2018-07 )
 
@@ -91,8 +91,8 @@ It is a project management platform serving Beijing Urban Construction and its s
 
 ## ❤️ Contributions
 
-- [Ant Design](https://github.com/ant-design/ant-design): a set of enterprise UI design language and `React` component library. Distilled from the interaction language and visual style of enterprise-class middle and backend products. High quality `React` components out of the box. I've been following the project for a long time, solving problems on an ongoing basis, and currently ranking in the top **50** contributors. I've had the pleasure of being a **Collaborator** of the library
-- [Mark Text](https://github.com/marktext/marktext): a simple and elegant open source `Markdown` editor, focused on speed and usability. Available for Linux, macOS and Windows. I've been following the project for a long time, consistently solving problems, and currently have a top **5** contribution ranking.
+- [Ant Design](https://github.com/ant-design/ant-design): a set of enterprise UI design language and `React` component library. Distilled from the interaction language and visual style of enterprise-class middle and backend products. High-quality `React` components out of the box. I've been following the project for a long time, solving problems on an ongoing basis, and ranking in the top **50** contributors. I've had the pleasure of being a **Collaborator** at the library
+- [Mark Text](https://github.com/marktext/marktext): a simple and elegant open source `Markdown` editor, focused on speed and usability. Available for Linux, macOS, and Windows. I've been following the project for a long time, consistently solving problems, and have a top **5** contribution ranking.
 
 ---
 
