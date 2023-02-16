@@ -8,11 +8,22 @@ export type Language = {
 };
 
 export type Config = {
-  defaultLanguageKey: string;
+  /**
+   * @description language to use if translations in user language are not available.
+   */
+  fallbackLanguageKey: string;
   languages: Array<Language>;
   mobile: string;
   email: string;
+
+  /**
+   * @description your username of Twitter
+   */
   twitter?: string;
+
+  /**
+   * @description your username of GitHub
+   */
   github?: string;
 };
 

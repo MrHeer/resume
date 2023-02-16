@@ -19,7 +19,7 @@ export function initI18n(config: Config) {
     // init i18next
     // for all options read: https://www.i18next.com/overview/configuration-options
     .init({
-      fallbackLng: config.defaultLanguageKey,
+      fallbackLng: config.fallbackLanguageKey,
       supportedLngs: LANGUAGE_KEYS,
       backend: {
         loadPath: `${PUBLIC_URL}/locales/{{lng}}/{{ns}}.json`,
