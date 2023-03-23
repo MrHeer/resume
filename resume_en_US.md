@@ -36,7 +36,20 @@
 
 ## 🌈 Experience
 
-### [Hangzhou Shujian Technology Co., Ltd](http://sbuild.cn/) ( 2020-05 ~ Today )
+### [Hangzhou Guofen Creative Design Co., Ltd](https://jiangziai.com/login) ( 2022-12 ~ 2023-03 ) **Head of Front-end**
+
+#### Jiangzi Design
+
+It based on `Canvas` and provides an intelligent online design platform. Generate a design drawing of a specified size by entering keywords or uploading images, and provide basic editing functions such as editing text, modifying colors, changing transparency, and moving position. The main technology stacks used are `React`, `Redux` and `Konva`
+
+- Use `TypeScript` to refactor the project to make it more stable
+- Refactoring state structure to reduce unnecessary rendering and optimize performance. Optimization methods include the use of flatter data structures, finer `selectors`, smaller components
+- Write development documents, introduce review mechanisms, and standardize the development process
+- Develop the drag creation function, select the shape to drawn, and drag on the canvas to complete the creation. The data structure of the shape stored uniformly using the `path` string, which can increase the variety of shapes
+- Develop PSD import function, use [ag-psd](https://github.com/Agamnentzar/ag-psd) to parse PSD files, use **pipeline patterns** to process data structures, and convert them into canvas board data structures. Use `Web Worker` to let the import process execute in the background to improve performance and user experience
+- Design pen tool so users can create custom shapes. It mainly uses Canvas's `bezierCurveTo` API to draw curves, and `React Context` to achieve local state management
+
+### [Hangzhou Shujian Technology Co., Ltd](https://sbuild.cn/) ( 2020-05 ~ 2022-12 ) **Senior Front-end Engineer**
 
 #### MetaBuild
 
@@ -66,11 +79,11 @@ The tool enables offline project schedule management. It divided into three majo
 
 A project management platform serving Beijing Urban Construction and its subordinate projects. The main functions cover project progress, stuffs, material, log, document, and report management. Show the overview of each module through visualization technology.
 
-### [Hangzhou tongxuema Technology Co., Ltd](http://www.hzcoding.com/) ( 2019-09 ~ 2020-04 )
+### [Hangzhou tongxuema Technology Co., Ltd](http://www.hzcoding.com/) ( 2019-09 ~ 2020-04 ) **Algorithm Instructor**
 
 - I am in charge of daily teaching in this company, mainly in `C++ / Scratch / Algorithms`. I am also good at using [`visualization`](https://visualgo.net/en) techniques to show the principles of algorithms in my classes to make it easier for students to understand them.
 
-### [Tuowei Information System Co., Ltd](https://www.talkweb.com.cn/) ( 2018-07 ~ 2019-07 )
+### [Tuowei Information System Co., Ltd](https://www.talkweb.com.cn/) ( 2018-07 ~ 2019-07 ) **Software Engineer**
 
 #### Anwei Unicom Big Data
 
@@ -82,7 +95,7 @@ A project management platform serving Beijing Urban Construction and its subordi
 - Independent of the front-end development tasks, I worked with the back-end staff to keep the front and back separate through a `RESTful` style interface
 - Developed the front-end interface using `Ant Design`.
 
-### Hunan Source Technology Development Co., Ltd ( 2018-01 ~ 2018-07 )
+### Hunan Source Technology Development Co., Ltd ( 2018-01 ~ 2018-07 ) **Software Engineer**
 
 - Maintain the `Jave Web / Spring` web platform
 - Develop `task distribution` and `location punching` functions for `Android` and `iOS` platforms
