@@ -31,7 +31,6 @@ export const theme: Components = {
       </CodeHighlighter>
     ) : (
       <Code {...restProps} className={className} style={style} rounded="md">
-        {" "}
         {children}
       </Code>
     );
