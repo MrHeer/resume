@@ -1,5 +1,6 @@
 import { Components } from "react-markdown";
 import { Code, Divider, Link, ListItem } from "@chakra-ui/react";
+import CodeHighlighter from "./CodeHighlighter";
 
 type GetCoreProps = {
   children?: React.ReactNode;
@@ -22,20 +23,15 @@ export const theme: Components = {
     );
   },
   code: (props) => {
-    const { inline, children, className } = props;
-
-    if (inline) {
-      return <Code rounded="md">{children}</Code>;
-    }
-
-    return (
-      <Code
-        className={className}
-        whiteSpace="break-spaces"
-        display="block"
-        w="full"
-        p={2}
-      >
+    const { node, inline, className, children, style, ...restProps } = props;
+    const match = /language-(\w+)/.exec(className || "");
+    return !inline && match ? (
+      <CodeHighlighter {...restProps} language={match[1]} PreTag="div">
+        {String(children).replace(/\n$/, "")}
+      </CodeHighlighter>
+    ) : (
+      <Code {...restProps} className={className} style={style} rounded="md">
+        {" "}
         {children}
       </Code>
     );
