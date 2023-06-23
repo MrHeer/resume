@@ -23,14 +23,14 @@ export const theme: Components = {
     );
   },
   code: (props) => {
-    const { node, inline, className, children, style, ...restProps } = props;
+    const { inline, className, children } = props;
     const match = /language-(\w+)/.exec(className || "");
     return !inline && match ? (
-      <CodeHighlighter {...restProps} language={match[1]} PreTag="div">
+      <CodeHighlighter language={match[1]} PreTag="div">
         {String(children).replace(/\n$/, "")}
       </CodeHighlighter>
     ) : (
-      <Code {...restProps} className={className} style={style} rounded="md">
+      <Code className={className} rounded="md">
         {children}
       </Code>
     );
