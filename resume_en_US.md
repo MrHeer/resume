@@ -29,8 +29,10 @@
 
 ## ✨ Certification
 
-- [Responsive Web Design Developer Certification](https://www.freecodecamp.org/certification/mrheer/responsive-web-design)
-- [JavaScript Algorithms and Data Structures Developer Certification](https://www.freecodecamp.org/certification/mrheer/javascript-algorithms-and-data-structures)
+- [Responsive Web Design](https://www.freecodecamp.org/certification/mrheer/responsive-web-design)
+- [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/certification/mrheer/javascript-algorithms-and-data-structures)
+- [Front End Development Libraries](https://www.freecodecamp.org/certification/mrheer/front-end-development-libraries)
+- [Data Visualization](https://www.freecodecamp.org/certification/mrheer/data-visualization)
 
 ---
 
