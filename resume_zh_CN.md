@@ -60,7 +60,7 @@
 - 设计类似于 **Notion** 的高级筛选功能（高级动态表单和复杂数据结构 [ReScript Variant](https://rescript-lang.org/docs/manual/latest/variant)），让用户可以自定义各种筛选逻辑，不需要定制开发各种筛选功能，极大的提升了团队的开发效率
 - 设计 `UndoManager` 用来管理状态历史，从而实现 `undo` `redo` 功能。它和状态管理能够有机结合，提供的 `useUndoCallback` 与 `useAtomCallback` 保持 **100%** 一致的 API，这使得使用者没有学习成本，能够快速应用到项目中
 - 封装 `tree` 来处理树形结构，提供了大量的常用的方法来处理树形结构的数据，使得团队提升了开发效率，减少了大量重复代码
-- 封装 `contextFactory` 来快速创建 `React.Context`，减少了 **90%** 的重复代码
+- 封装 [`contextFactory`](https://gist.github.com/MrHeer/f009afee88d84dbd02a2476d20b4a3a9) 来快速创建 `React.Context`，减少了 **90%** 的重复代码
 
   ```ts
   const [Provider, useValue, useValueUpdater] = contextFactory(initialValue);
