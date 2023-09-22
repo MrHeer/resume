@@ -115,6 +115,9 @@ devDependencies:
   "@testing-library/user-event":
     specifier: ^14.3.0
     version: 14.4.3(@testing-library/dom@8.20.0)
+  "@types/dom-view-transitions":
+    specifier: ^1.0.1
+    version: registry.npmmirror.com/@types/dom-view-transitions@1.0.1
   "@types/jest":
     specifier: ^28.1.6
     version: 28.1.8
@@ -18155,6 +18158,17 @@ packages:
       }
     name: "@types/aria-query"
     version: 5.0.1
+    dev: true
+
+  registry.npmmirror.com/@types/dom-view-transitions@1.0.1:
+    resolution:
+      {
+        integrity: sha512-A9S1ijj/4MX06I1W/6on8lhaYyq1Ir7gaOvfllW1o4RzVWW88HAeqX0pUx9VgOLnNpdiGeUW2CTkg18p5LWIrA==,
+        registry: https://registry.npm.taobao.org/,
+        tarball: https://registry.npmmirror.com/@types/dom-view-transitions/-/dom-view-transitions-1.0.1.tgz,
+      }
+    name: "@types/dom-view-transitions"
+    version: 1.0.1
     dev: true
 
   registry.npmmirror.com/@types/hast@2.3.4:
