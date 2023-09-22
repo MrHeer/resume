@@ -42,7 +42,7 @@
 
 #### Jiangzi Design
 
-It based on `Canvas` and provides an intelligent online design platform. Generate a design drawing of a specified size by entering keywords or uploading images, and provide basic editing functions such as editing text, modifying colors, changing transparency, and moving position. The main technology stacks used are `React`, `Redux` and `Konva`
+It based on `Canvas` and provides an intelligent online design platform. Generate a design drawing of a specified size by entering keywords or uploading images, and provide basic editing functions such as editing text, modifying colors, changing transparency, and moving position. The main technology stacks used are `React`, `Redux` and `Konva`.
 
 - Use `TypeScript` to refactor the project to make it more stable
 - Refactoring state structure to reduce unnecessary rendering and optimize performance. Optimization methods include the use of flatter data structures, finer `selectors`, smaller components
@@ -57,25 +57,25 @@ It based on `Canvas` and provides an intelligent online design platform. Generat
 
 The tool enables offline project schedule management. It divided into three major modules: _Planning_, _Materials_ and _Inventory_ Management to achieve quantifiable project schedule management and help the construction industry build intelligently. The software based on the idea of **Local First** and supports localized editing. It also supports collaborative editing through `CRDT` and `RxDB`, etc.
 
-- Design advanced filtering functionality like **Notion** (advanced dynamic forms and complex data structures [ReScript Variant](https://rescript-lang.org/docs/manual/latest/variant)), Allows users to customize filtering logic without the need for custom development of filtering functions, greatly enhancing the development efficiency of the team.
-- Design `UndoManager` to manage state history for `undo` `redo` functionality. It can integrated with state management, providing `useUndoCallback` and `useAtomCallback` together using a unified API, which makes it possible for users to apply it to their projects without learning costs.
-- Encapsulating `tree` to handle tree structures provides common methods to handle tree-structured data, allowing teams to improve development efficiency and reduced a lot of duplicate code.
-- Encapsulating [`contextFactory`](https://gist.github.com/MrHeer/f009afee88d84dbd02a2476d20b4a3a9) to create `React.Context`, reducing **90%** of repetitive code.
+- Design advanced filtering functionality like **Notion** (advanced dynamic forms and complex data structures [ReScript Variant](https://rescript-lang.org/docs/manual/latest/variant)), Allows users to customize filtering logic without the need for custom development of filtering functions, greatly enhancing the development efficiency of the team
+- Design `UndoManager` to manage state history for `undo` `redo` functionality. It can integrated with state management, providing `useUndoCallback` and `useAtomCallback` together using a unified API, which makes it possible for users to apply it to their projects without learning costs
+- Encapsulating `tree` to handle tree structures provides common methods to handle tree-structured data, allowing teams to improve development efficiency and reduced a lot of duplicate code
+- Encapsulating [`contextFactory`](https://gist.github.com/MrHeer/f009afee88d84dbd02a2476d20b4a3a9) to create `React.Context`, reducing **90%** of repetitive code
 
   ```ts
   const [Provider, useValue, useValueUpdater] = contextFactory(initialValue);
   ```
 
 - Develop common Hooks and Components
-  - `useResize` - Handles drag events and implements `ResizableLayout` through it. Make it easy to change the size of the layout by dragging.
-  - `useSyncScroll` - synchronous scrolling of containers, simple API. Enables easy synchronized scrolling of containers.
-  - `useObserver` - implements a cross-component communication via the observer pattern. Easy to cross-component state management.
+  - `useResize` - Handles drag events and implements `ResizableLayout` through it. Make it easy to change the size of the layout by dragging
+  - `useSyncScroll` - synchronous scrolling of containers, simple API. Enables easy synchronized scrolling of containers
+  - `useObserver` - implements a cross-component communication via the observer pattern. Easy to cross-component state management
   - `MotionList` - a list with motion effects, with _delete_, _add_, _move_, etc, Make every interaction look dynamic
-- Use `framer-motion` `react-spring` [`FLIP`](https://aerotwist.com/blog/flip-your-animations/) and other motion technologies to enhance the user experience.
-- Use `Recoil` `Jotai` to manage the global state and update UI atomically, reduce unnecessary **rerender** of components and improve App performance.
-- Use `RxDB` `Electron` to enhance the **Local-First** experience.
-- Use `D3.js` to draw Gantt graphs.
-- Use [`Virtual`](https://tanstack.com/virtual/v3) scrolling technology to improve scrolling performance and support smooth display of large amounts of data.
+- Use `framer-motion` `react-spring` [`FLIP`](https://aerotwist.com/blog/flip-your-animations/) and other motion technologies to enhance the user experience
+- Use `Recoil` `Jotai` to manage the global state and update UI atomically, reduce unnecessary **rerender** of components and improve App performance
+- Use `RxDB` `Electron` to enhance the **Local-First** experience
+- Use `D3.js` to draw Gantt graphs
+- Use [`Virtual`](https://tanstack.com/virtual/v3) scrolling technology to improve scrolling performance and support smooth display of large amounts of data
 
 #### Beijing Urban Construction Project Management Platform
 
@@ -83,7 +83,7 @@ A project management platform serving Beijing Urban Construction and its subordi
 
 ### [Hangzhou tongxuema Technology Co., Ltd](http://www.hzcoding.com/) ( 2019-09 ~ 2020-04 ) **Algorithm Instructor**
 
-- I am in charge of daily teaching in this company, mainly in `C++ / Scratch / Algorithms`. I am also good at using [`visualization`](https://visualgo.net/en) techniques to show the principles of algorithms in my classes to make it easier for students to understand them.
+- I am in charge of daily teaching in this company, mainly in `C++ / Scratch / Algorithms`. I am also good at using [`visualization`](https://visualgo.net/en) techniques to show the principles of algorithms in my classes to make it easier for students to understand them
 
 ### [Tuowei Information System Co., Ltd](https://www.talkweb.com.cn/) ( 2018-07 ~ 2019-07 ) **Software Engineer**
 
@@ -95,7 +95,7 @@ A project management platform serving Beijing Urban Construction and its subordi
 #### Hunan Mobile Crawler
 
 - Independent of the front-end development tasks, I worked with the back-end staff to keep the front and back separate through a `RESTful` style interface
-- Developed the front-end interface using `Ant Design`.
+- Developed the front-end interface using `Ant Design`
 
 ### Hunan Source Technology Development Co., Ltd ( 2018-01 ~ 2018-07 ) **Software Engineer**
 
@@ -107,7 +107,7 @@ A project management platform serving Beijing Urban Construction and its subordi
 ## ❤️ Contributions
 
 - [Ant Design](https://github.com/ant-design/ant-design): a set of enterprise UI design language and `React` component library. Distilled from the interaction language and visual style of enterprise-class middle and backend products. High-quality `React` components out of the box. I've been following the project for a long time, solving problems on an ongoing basis, and ranking in the top **50** contributors. I've had the pleasure of being a **Collaborator** at the library
-- [Mark Text](https://github.com/marktext/marktext): a simple and elegant open source `Markdown` editor, focused on speed and usability. Available for Linux, macOS, and Windows. I've been following the project for a long time, consistently solving problems, and have a top **5** contribution ranking.
+- [Mark Text](https://github.com/marktext/marktext): a simple and elegant open source `Markdown` editor, focused on speed and usability. Available for Linux, macOS, and Windows. I've been following the project for a long time, consistently solving problems, and have a top **5** contribution ranking
 
 ---
 
@@ -120,5 +120,3 @@ A project management platform serving Beijing Urban Construction and its subordi
 - [x] _Mostly adequate guide to FP_
 - [ ] _Algorithms_
 - [ ] _Code Complete: A Practical Handbook of Software Construction_
-
----
