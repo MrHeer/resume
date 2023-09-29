@@ -38,8 +38,9 @@ export const useSwitchColor = () => {
             clipPath,
           },
           {
-            duration: 500,
-            easing: "ease-out",
+            duration: 1000,
+            // ref: https://github.com/emilkowalski/vaul/blob/main/src/style.css#L4
+            easing: "cubic-bezier(0.32, 0.72, 0, 1)",
             pseudoElement: "::view-transition-new(root)",
           }
         );
