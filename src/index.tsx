@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { ColorModeScript } from "@chakra-ui/react";
-import { initConfig } from "config";
+import { ConfigProvider, fetchConfig } from "config";
 import { theme } from "theme";
 import { initI18n } from "i18n";
 import App from "App";
@@ -9,15 +9,16 @@ import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 
 async function startApp() {
-  const config = await initConfig();
-  window.CONFIG = config;
+  const config = await fetchConfig();
   initI18n(config);
   const container = document.getElementById("root") as HTMLElement;
   const root = createRoot(container);
   root.render(
     <StrictMode>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      <App />
+      <ConfigProvider config={config}>
+        <App />
+      </ConfigProvider>
     </StrictMode>
   );
 

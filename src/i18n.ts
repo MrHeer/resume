@@ -30,5 +30,3 @@ export function initI18n(config: Config) {
       },
     });
 }
-
-export default i18n;

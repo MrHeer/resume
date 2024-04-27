@@ -8,7 +8,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-import { getLanguageOption } from "config";
+import { useConfig, useCurrentLanguage } from "config";
 import { useTwemoji } from "hooks";
 
 import "./style.css";
@@ -18,9 +18,8 @@ function LanguageMenu() {
   const { i18n } = useTranslation();
   const bg = useColorModeValue("blackAlpha.300", "whiteAlpha.300");
   const hoverBg = useColorModeValue("blackAlpha.200", "whiteAlpha.200");
-  const currentLanguage = i18n.language;
-  const { CONFIG } = window;
-  const { languages } = CONFIG;
+  const currentLanguage = useCurrentLanguage();
+  const { languages } = useConfig();
 
   return (
     <Box ref={menuRef}>
@@ -30,7 +29,7 @@ function LanguageMenu() {
           variant="ghost"
           icon={
             <Box className="twemoji-icon" as="span">
-              {getLanguageOption(currentLanguage).icon}
+              {currentLanguage.icon}
             </Box>
           }
         />
@@ -40,7 +39,9 @@ function LanguageMenu() {
               icon={<Box as="span">{icon}</Box>}
               key={languageKey}
               _hover={{ bg: hoverBg }}
-              bg={languageKey === currentLanguage ? bg : "transparent"}
+              bg={
+                languageKey === currentLanguage.languageKey ? bg : "transparent"
+              }
               onClick={() => i18n.changeLanguage(languageKey)}
             >
               {description}

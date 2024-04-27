@@ -1,5 +1,6 @@
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { Icon, useColorMode } from "@chakra-ui/react";
+import { useConfig } from "config";
 import { Action, useRegisterActions } from "kbar";
 import { useTranslation } from "react-i18next";
 import { MdCall, MdEmail, MdLanguage, MdPrint } from "react-icons/md";
@@ -13,7 +14,7 @@ import {
 export default function useActions() {
   const { setColorMode, toggleColorMode } = useColorMode();
   const { t, i18n } = useTranslation();
-  const { CONFIG } = window;
+  const config = useConfig();
 
   const actions: Action[] = [
     {
@@ -23,7 +24,7 @@ export default function useActions() {
       keywords: "call mobile hello",
       section: t("navigation"),
       icon: <Icon as={MdCall} />,
-      perform: () => window.open(`tel:${CONFIG.mobile}`, "_blank"),
+      perform: () => window.open(`tel:${config.mobile}`, "_blank"),
     },
     {
       id: "email",
@@ -32,9 +33,9 @@ export default function useActions() {
       keywords: "email hello",
       section: t("navigation"),
       icon: <Icon as={MdEmail} />,
-      perform: () => window.open(`mailto:${CONFIG.email}`, "_blank"),
+      perform: () => window.open(`mailto:${config.email}`, "_blank"),
     },
-    CONFIG.twitter === undefined
+    config.twitter === undefined
       ? undefined
       : {
           id: "twitter",
@@ -44,9 +45,9 @@ export default function useActions() {
           section: t("navigation"),
           icon: <Icon as={VscTwitter} />,
           perform: () =>
-            window.open(`https://twitter.com/${CONFIG.twitter}`, "_blank"),
+            window.open(`https://twitter.com/${config.twitter}`, "_blank"),
         },
-    CONFIG.github === undefined
+    config.github === undefined
       ? undefined
       : {
           id: "github",
@@ -56,7 +57,7 @@ export default function useActions() {
           section: t("navigation"),
           icon: <Icon as={VscGithub} />,
           perform: () =>
-            window.open(`https://github.com/${CONFIG.github}`, "_blank"),
+            window.open(`https://github.com/${config.github}`, "_blank"),
         },
     {
       id: "print",
@@ -108,7 +109,7 @@ export default function useActions() {
       section: t("preferences"),
       icon: <Icon as={MdLanguage} />,
     },
-    ...window.CONFIG.languages.map(
+    ...config.languages.map(
       ({ languageKey, icon, description }) =>
         ({
           id: languageKey,

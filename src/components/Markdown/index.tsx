@@ -3,20 +3,17 @@ import ReactMarkdown from "react-markdown";
 import ChakraUIRenderer from "chakra-ui-markdown-renderer";
 import remarkGfm from "remark-gfm";
 import { useTwemoji } from "hooks";
-import { useTranslation } from "react-i18next";
 import { useAsync } from "react-use";
 import { resolveURL } from "utils";
-import { getLanguageOption } from "config";
+import { useCurrentLanguage } from "config";
 import { theme } from "./theme";
 
 import "./style.css";
 
 function Markdown() {
   const ref = useTwemoji<HTMLDivElement>();
-  const { i18n } = useTranslation();
-
-  const currentLanguage = i18n.language;
-  const url = resolveURL(getLanguageOption(currentLanguage).resumeUrl);
+  const currentLanguage = useCurrentLanguage();
+  const url = resolveURL(currentLanguage.resumeUrl);
 
   const { value: markdown, loading } = useAsync(async () => {
     const response = await fetch(url);
