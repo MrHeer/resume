@@ -13,7 +13,7 @@ import { useTwemoji } from "hooks";
 
 import "./style.css";
 
-function LanguageMenu() {
+export function LanguageMenu() {
   const menuRef = useTwemoji<HTMLDivElement>();
   const { i18n } = useTranslation();
   const bg = useColorModeValue("blackAlpha.300", "whiteAlpha.300");
@@ -52,5 +52,3 @@ function LanguageMenu() {
     </Box>
   );
 }
-
-export default LanguageMenu;

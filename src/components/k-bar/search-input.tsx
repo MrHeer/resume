@@ -5,7 +5,7 @@ import { Input, InputProps } from "@chakra-ui/react";
 export const KBAR_LISTBOX = "kbar-listbox";
 export const getListboxItemId = (id: number) => `kbar-listbox-item-${id}`;
 
-function SearchInput(
+export function SearchInput(
   props: InputProps & {
     defaultPlaceholder?: string;
   }
@@ -82,5 +82,3 @@ function SearchInput(
     />
   );
 }
-
-export default SearchInput;

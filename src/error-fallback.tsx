@@ -10,7 +10,7 @@ import {
 import { FallbackProps } from "react-error-boundary";
 import { useTranslation } from "react-i18next";
 
-function ErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
+export function ErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
   const { t } = useTranslation();
 
   return (
@@ -34,5 +34,3 @@ function ErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
     </Container>
   );
 }
-
-export default ErrorFallback;

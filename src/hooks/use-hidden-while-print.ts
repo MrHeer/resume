@@ -9,7 +9,7 @@ function hidden(ele: HTMLElement) {
   ele.style.visibility = "hidden";
 }
 
-export function useVisibilityWhilePrint<E extends HTMLElement>() {
+export function useHiddenWhilePrint<E extends HTMLElement>() {
   const ele = useRef<E>(null!);
 
   useEvent("beforeprint", () => {

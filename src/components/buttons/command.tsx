@@ -3,7 +3,7 @@ import { useKBar } from "kbar";
 import { BiCommand } from "react-icons/bi";
 import { getCommandKey } from "utils";
 
-function CommandButton() {
+export function CommandButton() {
   const { query } = useKBar();
   const commandKey = getCommandKey();
 
@@ -17,5 +17,3 @@ function CommandButton() {
     />
   );
 }
-
-export default CommandButton;

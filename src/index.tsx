@@ -4,9 +4,9 @@ import { ColorModeScript } from "@chakra-ui/react";
 import { ConfigProvider, fetchConfig } from "config";
 import { theme } from "theme";
 import { initI18n } from "i18n";
-import App from "App";
-import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
-import reportWebVitals from "./reportWebVitals";
+import { App } from "app";
+import * as serviceWorkerRegistration from "./service-worker-registration";
+import { reportWebVitals } from "./report-web-vitals";
 
 async function startApp() {
   const config = await fetchConfig();

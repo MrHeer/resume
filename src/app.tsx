@@ -2,12 +2,12 @@ import { Suspense } from "react";
 import { ChakraProvider, Progress } from "@chakra-ui/react";
 import { ErrorBoundary } from "react-error-boundary";
 import { Header, KBar, Main } from "components";
-import ErrorFallback from "ErrorFallback";
+import { ErrorFallback } from "error-fallback";
 import { theme } from "theme";
 
-import "App.css";
+import "app.css";
 
-function App() {
+export function App() {
   return (
     <ChakraProvider theme={theme}>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
@@ -21,5 +21,3 @@ function App() {
     </ChakraProvider>
   );
 }
-
-export default App;

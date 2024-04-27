@@ -11,7 +11,7 @@ import {
   VscTwitter,
 } from "react-icons/vsc";
 
-export default function useActions() {
+export function useActions() {
   const { setColorMode, toggleColorMode } = useColorMode();
   const { t, i18n } = useTranslation();
   const config = useConfig();

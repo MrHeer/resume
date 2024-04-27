@@ -1,7 +1,7 @@
 import { IconButton } from "@chakra-ui/react";
 import { DownloadIcon } from "@chakra-ui/icons";
 
-function DownloadButton() {
+export function DownloadButton() {
   return (
     <IconButton
       aria-label="Download resume"
@@ -11,5 +11,3 @@ function DownloadButton() {
     />
   );
 }
-
-export default DownloadButton;

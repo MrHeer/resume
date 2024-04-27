@@ -1,8 +1,8 @@
 import { IconButton, useColorModeValue } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { useSwitchColor } from "hooks/useSwitchColor";
+import { useSwitchColor } from "hooks";
 
-function ColorSwitchButton() {
+export function ColorSwitchButton() {
   const switchColor = useSwitchColor();
 
   const text = useColorModeValue("light", "dark");
@@ -17,5 +17,3 @@ function ColorSwitchButton() {
     />
   );
 }
-
-export default ColorSwitchButton;

@@ -10,10 +10,10 @@ import {
   useMatches,
 } from "kbar";
 import { Box, Kbd, Text, useColorModeValue } from "@chakra-ui/react";
-import { useTwemoji, useVisibilityWhilePrint } from "hooks";
+import { useTwemoji } from "hooks";
 import { useTranslation } from "react-i18next";
-import SearchInput from "./SearchInput";
-import useActions from "./useActions";
+import { SearchInput } from "./search-input";
+import { useActions } from "./use-actions";
 
 function RenderResults() {
   const { results, rootActionId } = useMatches();
@@ -126,7 +126,6 @@ const ResultItem = React.forwardRef(
 ResultItem.displayName = "ResultItem";
 
 function CommandBar() {
-  const kbarRef = useVisibilityWhilePrint<HTMLDivElement>();
   const { t } = useTranslation();
 
   useActions();
@@ -135,7 +134,6 @@ function CommandBar() {
     <KBarPortal>
       <KBarPositioner>
         <Box
-          ref={kbarRef}
           shadow="dark-lg"
           maxWidth="600px"
           w="full"
@@ -160,7 +158,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-function KBar({ children }: Props) {
+export function KBar({ children }: Props) {
   return (
     <KBarProvider>
       <CommandBar />
@@ -168,5 +166,3 @@ function KBar({ children }: Props) {
     </KBarProvider>
   );
 }
-
-export default KBar;

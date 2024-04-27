@@ -10,7 +10,7 @@ import { theme } from "./theme";
 
 import "./style.css";
 
-function Markdown() {
+export function Markdown() {
   const ref = useTwemoji<HTMLDivElement>();
   const currentLanguage = useCurrentLanguage();
   const url = resolveURL(currentLanguage.resumeUrl);
@@ -41,5 +41,3 @@ function Markdown() {
     </SkeletonText>
   );
 }
-
-export default Markdown;

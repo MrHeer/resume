@@ -1,3 +1,3 @@
-export { default as Header } from "./Header";
-export { default as KBar } from "./KBar";
-export { default as Main } from "./Main";
+export { Header } from "./header";
+export { KBar } from "./k-bar";
+export { Main } from "./main";

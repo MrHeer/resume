@@ -8,7 +8,7 @@ import {
   oneLight as light,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-function CodeHighlighter(props: SyntaxHighlighterProps) {
+export function CodeHighlighter(props: SyntaxHighlighterProps) {
   const style = useColorModeValue(light, dark);
 
   return (
@@ -19,5 +19,3 @@ function CodeHighlighter(props: SyntaxHighlighterProps) {
     />
   );
 }
-
-export default CodeHighlighter;

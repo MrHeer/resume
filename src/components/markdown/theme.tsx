@@ -1,6 +1,6 @@
 import { Components } from "react-markdown";
 import { Code, Divider, Link, ListItem } from "@chakra-ui/react";
-import CodeHighlighter from "./CodeHighlighter";
+import { CodeHighlighter } from "./code-highlighter";
 
 type GetCoreProps = {
   children?: React.ReactNode;
