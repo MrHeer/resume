@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useKBar, VisualState } from "kbar";
 import { Input, InputProps } from "@chakra-ui/react";
 
@@ -26,24 +26,20 @@ export function SearchInput(
     showing: state.visualState === VisualState.showing,
   }));
 
-  const [input, setInput] = React.useState(search);
-
-  const ownRef = React.useRef<HTMLInputElement>(null);
+  const [inputValue, setInputValue] = useState(search);
+  useEffect(() => {
+    query.setSearch(inputValue);
+  }, [inputValue, query]);
 
   const { defaultPlaceholder, ...rest } = props;
 
-  // avoid chinese input exception
-  React.useEffect(() => {
-    setInput(search);
-  }, [search]);
-
-  React.useEffect(() => {
+  useEffect(() => {
     query.setSearch("");
-    ownRef.current?.focus();
+    query.getInput().focus();
     return () => query.setSearch("");
   }, [currentRootActionId, query]);
 
-  const placeholder = React.useMemo((): string => {
+  const placeholder = useMemo((): string => {
     const defaultText = defaultPlaceholder ?? "Type a command or search…";
     return currentRootActionId && actions[currentRootActionId]
       ? actions[currentRootActionId].name
@@ -53,7 +49,7 @@ export function SearchInput(
   return (
     <Input
       {...rest}
-      ref={ownRef}
+      ref={query.inputRefSetter}
       autoFocus
       variant="unstyled"
       p="12px 16px"
@@ -63,14 +59,12 @@ export function SearchInput(
       aria-expanded={showing}
       aria-controls={KBAR_LISTBOX}
       aria-activedescendant={getListboxItemId(activeIndex)}
-      value={input}
+      value={inputValue}
       placeholder={placeholder}
       onChange={(event) => {
-        const { value } = event.target;
-        setInput(value);
         props.onChange?.(event);
-        query.setSearch(value);
-        options?.callbacks?.onQueryChange?.(value);
+        setInputValue(event.target.value);
+        options?.callbacks?.onQueryChange?.(event.target.value);
       }}
       onKeyDown={(event) => {
         props.onKeyDown?.(event);
