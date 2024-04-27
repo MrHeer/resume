@@ -11,7 +11,7 @@ import {
 } from "react-icons/vsc";
 
 export default function useActions() {
-  const { colorMode, setColorMode, toggleColorMode } = useColorMode();
+  const { setColorMode, toggleColorMode } = useColorMode();
   const { t, i18n } = useTranslation();
   const { CONFIG } = window;
 
@@ -120,5 +120,5 @@ export default function useActions() {
     ),
   ].filter((action): action is Action => action !== undefined);
 
-  useRegisterActions(actions, [colorMode, i18n.language]);
+  useRegisterActions(actions, [toggleColorMode, i18n.language]);
 }

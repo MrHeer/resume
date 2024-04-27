@@ -12,7 +12,7 @@ const blurStyle: SystemStyleObject = {
 
 const config: ThemeConfig = {
   initialColorMode: "system",
-  useSystemColorMode: false,
+  useSystemColorMode: true,
 };
 
 const Button: ComponentStyleConfig = {
