@@ -1,5 +1,4 @@
 import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react";
-import { useHiddenWhilePrint } from "hooks";
 import { getCommandKey } from "utils";
 
 import { LanguageMenu } from "../language-menu";
@@ -17,11 +16,13 @@ function Placeholder() {
 }
 
 export function Header() {
-  const headerRef = useHiddenWhilePrint<HTMLDivElement>();
-
   return (
     <Flex
-      ref={headerRef}
+      sx={{
+        "@media print": {
+          visibility: "hidden",
+        },
+      }}
       as="header"
       position="fixed"
       justify="space-between"
