@@ -125,10 +125,10 @@ A project management platform serving Beijing Urban Construction and its subordi
 
 ## 📖 Reading
 
-- [x] _Clean Code: A Handbook of Agile Software Craftsmanship_
-- [x] _Designing Data-Intensive Applications_
-- [x] _Dive Into Design Patterns_
-- [x] _Dive Into Refactoring_
-- [x] _Mostly adequate guide to FP_
-- [x] _Algorithms_
-- [x] _Code Complete: A Practical Handbook of Software Construction_
+- _Algorithms_
+- _Code Complete: A Practical Handbook of Software Construction_
+- _Clean Code: A Handbook of Agile Software Craftsmanship_
+- _Designing Data-Intensive Applications_
+- _Dive Into Design Patterns_
+- _Dive Into Refactoring_
+- _Mostly adequate guide to FP_
