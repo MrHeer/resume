@@ -7,7 +7,7 @@
 
 ---
 
-## 🧑‍💻 About Me
+## 🧑‍💻 About
 
 - He Linming / Male
 - Bachelor / Changsha University of Science & Technology / Electronic Information Science and Technology
@@ -15,7 +15,20 @@
 
 ---
 
-## 🛠 Skills
+## ✨ Course
+
+- [Algorithms, Part I | Coursera](https://www.coursera.org/learn/algorithms-part1)
+- [Algorithms, Part II | Coursera](https://www.coursera.org/learn/algorithms-part2)
+- [Interactive 3D Graphics](https://learn.udacity.com/courses/cs291)
+- [Linear Algebra Refresher Course](https://learn.udacity.com/courses/ud953)
+- [Responsive Web Design](https://www.freecodecamp.org/certification/mrheer/responsive-web-design)
+- [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/certification/mrheer/javascript-algorithms-and-data-structures)
+- [Front End Development Libraries](https://www.freecodecamp.org/certification/mrheer/front-end-development-libraries)
+- [Data Visualization](https://www.freecodecamp.org/certification/mrheer/data-visualization)
+
+---
+
+## 🛠 Skill
 
 - TypeScript / ReScript / Java / Dart / Rust / Go / C
 - OOP / FP
@@ -25,15 +38,6 @@
 - pnpm / yarn / npm
 - Git
 - Jest / Enzyme / Testing Library
-
----
-
-## ✨ Certification
-
-- [Responsive Web Design](https://www.freecodecamp.org/certification/mrheer/responsive-web-design)
-- [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/certification/mrheer/javascript-algorithms-and-data-structures)
-- [Front End Development Libraries](https://www.freecodecamp.org/certification/mrheer/front-end-development-libraries)
-- [Data Visualization](https://www.freecodecamp.org/certification/mrheer/data-visualization)
 
 ---
 
@@ -105,19 +109,26 @@ A project management platform serving Beijing Urban Construction and its subordi
 
 ---
 
-## ❤️ Contributions
+## ❤️ Contribution
 
 - [Ant Design](https://github.com/ant-design/ant-design): a set of enterprise UI design language and `React` component library. Distilled from the interaction language and visual style of enterprise-class middle and backend products. High-quality `React` components out of the box. I've been following the project for a long time, solving problems on an ongoing basis, and ranking in the top **50** contributors. I've had the pleasure of being a **Collaborator** at the library
 - [Mark Text](https://github.com/marktext/marktext): a simple and elegant open source `Markdown` editor, focused on speed and usability. Available for Linux, macOS, and Windows. I've been following the project for a long time, consistently solving problems, and have a top **5** contribution ranking
 
 ---
 
+## 🧗🏼 Adventure
+
+- [Advent of Code 2023](https://adventofcode.com/2023)
+- [Advent of Typescript 2023 | TypeHero](https://typehero.dev/aot-2023)
+
+---
+
 ## 📖 Reading
 
-- [x] _Clean Code: A Handbook of Agile Software Craftsmanship_
-- [x] _Designing Data-Intensive Applications_
-- [x] _Dive Into Design Patterns_
-- [x] _Dive Into Refactoring_
-- [x] _Mostly adequate guide to FP_
-- [ ] _Algorithms_
-- [ ] _Code Complete: A Practical Handbook of Software Construction_
+- _Algorithms_
+- _Code Complete: A Practical Handbook of Software Construction_
+- _Clean Code: A Handbook of Agile Software Craftsmanship_
+- _Designing Data-Intensive Applications_
+- _Dive Into Design Patterns_
+- _Dive Into Refactoring_
+- _Mostly adequate guide to FP_

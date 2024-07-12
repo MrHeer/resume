@@ -15,6 +15,19 @@
 
 ---
 
+## ✨ 在线课程
+
+- [Algorithms, Part I | Coursera](https://www.coursera.org/learn/algorithms-part1)
+- [Algorithms, Part II | Coursera](https://www.coursera.org/learn/algorithms-part2)
+- [Interactive 3D Graphics](https://learn.udacity.com/courses/cs291)
+- [Linear Algebra Refresher Course](https://learn.udacity.com/courses/ud953)
+- [Responsive Web Design](https://www.freecodecamp.org/certification/mrheer/responsive-web-design)
+- [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/certification/mrheer/javascript-algorithms-and-data-structures)
+- [Front End Development Libraries](https://www.freecodecamp.org/certification/mrheer/front-end-development-libraries)
+- [Data Visualization](https://www.freecodecamp.org/certification/mrheer/data-visualization)
+
+---
+
 ## 🛠 技能清单
 
 - TypeScript / ReScript / Java / Dart / Rust / Go / C
@@ -25,15 +38,6 @@
 - pnpm / yarn / npm
 - Git
 - Jest / Enzyme / Testing Library
-
----
-
-## ✨ 相关证书
-
-- [Responsive Web Design](https://www.freecodecamp.org/certification/mrheer/responsive-web-design)
-- [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/certification/mrheer/javascript-algorithms-and-data-structures)
-- [Front End Development Libraries](https://www.freecodecamp.org/certification/mrheer/front-end-development-libraries)
-- [Data Visualization](https://www.freecodecamp.org/certification/mrheer/data-visualization)
 
 ---
 
@@ -112,12 +116,19 @@
 
 ---
 
+## 🧗🏼 冒险旅程
+
+- [Advent of Code 2023](https://adventofcode.com/2023)
+- [Advent of Typescript 2023 | TypeHero](https://typehero.dev/aot-2023)
+
+---
+
 ## 📖 阅读清单
 
-- [x] _Clean Code: A Handbook of Agile Software Craftsmanship_
-- [x] _Designing Data-Intensive Applications_
-- [x] _Dive Into Design Patterns_
-- [x] _Dive Into Refactoring_
-- [x] _Mostly adequate guide to FP_
-- [ ] _Algorithms_
-- [ ] _Code Complete: A Practical Handbook of Software Construction_
+- _Algorithms_
+- _Code Complete: A Practical Handbook of Software Construction_
+- _Clean Code: A Handbook of Agile Software Craftsmanship_
+- _Designing Data-Intensive Applications_
+- _Dive Into Design Patterns_
+- _Dive Into Refactoring_
+- _Mostly adequate guide to FP_
