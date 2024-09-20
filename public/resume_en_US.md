@@ -119,7 +119,7 @@ A project management platform serving Beijing Urban Construction and its subordi
 ## 🧗🏼 Adventure
 
 - [Advent of Code 2023](https://adventofcode.com/2023)
-- [Advent of Typescript 2023 | TypeHero](https://typehero.dev/aot-2023)
+- [Advent of TypeScript 2023 | TypeHero](https://typehero.dev/aot-2023)
 
 ---
 
