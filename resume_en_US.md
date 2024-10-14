@@ -43,6 +43,40 @@
 
 ## 🌈 Experience
 
+### What am I doing during the gap period? ( 2023-03 ~ Now )
+
+#### Road Trip
+
+- The large loop line in Jiangsu, Zhejiang and Shanghai
+- The small loop line in western Sichuan
+- Jiuzhaigou - Ruoergai prairie
+
+#### Open Source
+
+- [Advent of Code 2023](https://github.com/MrHeer/advent-of-code)
+
+  Advent of Code is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language you like
+
+- [Advent of TypeScript 2023 | TypeHero](https://typehero.dev/aot-2023)
+
+  A challenge about the `TypeScript` type system. You need to use the `TypeScript` type system to complete the daily questions.
+
+- [matrix](https://github.com/MrHeer/matrix)
+
+  A vector and matrix calculation library built with `Rust`
+
+- [Image Locker](https://github.com/MrHeer/image-locker)
+
+  A picture encryption tool built with `React` uses the `AES-256-GCM` encryption algorithm to encrypt pictures.
+
+- Countdown
+
+  A countdown widget.
+
+  [countdown-gpui](https://github.com/MrHeer/countdown-gpui) - Built with [`GPUI`](https://www.gpui.rs/)
+
+  [countdown](https://github.com/MrHeer/countdown) - Built with [`Flutter`](https://www.gpui.rs/)
+
 ### [Hangzhou Guofen Creative Design Co., Ltd](https://jiangziai.com/login) ( 2022-12 ~ 2023-03 ) **Head of Front-end**
 
 #### Jiangzi Design
