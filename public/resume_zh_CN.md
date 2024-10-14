@@ -75,7 +75,7 @@
 
   [countdown-gpui](https://github.com/MrHeer/countdown-gpui) - 使用 [`GPUI`](https://www.gpui.rs/) 构建
 
-  [countdown](https://github.com/MrHeer/countdown) - 使用 [`Flutter`](https://www.gpui.rs/) 构建
+  [countdown](https://github.com/MrHeer/countdown) - 使用 `Flutter` 构建
 
 ### [杭州果粉创意设计有限公司](https://jiangziai.com/login) ( 2022 年 12 月 ~ 2023 年 3 月 ) **前端负责人**
 
