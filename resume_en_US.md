@@ -75,7 +75,7 @@
 
   [countdown-gpui](https://github.com/MrHeer/countdown-gpui) - Built with [`GPUI`](https://www.gpui.rs/)
 
-  [countdown](https://github.com/MrHeer/countdown) - Built with [`Flutter`](https://www.gpui.rs/)
+  [countdown](https://github.com/MrHeer/countdown) - Built with `Flutter`
 
 ### [Hangzhou Guofen Creative Design Co., Ltd](https://jiangziai.com/login) ( 2022-12 ~ 2023-03 ) **Head of Front-end**
 
