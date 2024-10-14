@@ -67,7 +67,7 @@
 
 - [Image Locker](https://github.com/MrHeer/image-locker)
 
-  使用 `React` 构建的一个图片加密工具，利用 AES-256-GCM` 加密算法来加密图片
+  使用 `React` 构建的一个图片加密工具，利用 `AES-256-GCM` 加密算法来加密图片
 
 - Countdown
 
