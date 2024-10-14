@@ -43,6 +43,40 @@
 
 ## 🌈 工作经历
 
+### 空窗期我在干什么？ ( 2023 年 3 月 ~ 现在 )
+
+#### 自驾游
+
+- 江浙沪大环线
+- 川西小环线
+- 九寨沟 - 诺尔盖大草原
+
+#### 开源项目
+
+- [Advent of Code 2023](https://github.com/MrHeer/advent-of-code)
+
+  一个小型编程谜题的 Advent 日历，适用于各种技能和技能水平，可以用您喜欢的任何编程语言解决
+
+- [Advent of TypeScript 2023 | TypeHero](https://typehero.dev/aot-2023)
+
+  一个关于 `TypeScript` 类型系统的挑战，你需要使用 `TypeScript` 的类型系统完成每天的题目
+
+- [matrix](https://github.com/MrHeer/matrix)
+
+  使用 `Rust` 构建的向量和矩阵计算库
+
+- [Image Locker](https://github.com/MrHeer/image-locker)
+
+  使用 `React` 构建的一个图片加密工具，利用 AES-256-GCM` 加密算法来加密图片
+
+- Countdown
+
+  一个倒计时小工具
+
+  [countdown-gpui](https://github.com/MrHeer/countdown-gpui) - 使用 [`GPUI`](https://www.gpui.rs/) 构建
+
+  [countdown](https://github.com/MrHeer/countdown) - 使用 [`Flutter`](https://www.gpui.rs/) 构建
+
 ### [杭州果粉创意设计有限公司](https://jiangziai.com/login) ( 2022 年 12 月 ~ 2023 年 3 月 ) **前端负责人**
 
 #### 匠紫设计
