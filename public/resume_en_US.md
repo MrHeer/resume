@@ -51,6 +51,14 @@
 - The small loop line in western Sichuan
 - Jiuzhaigou - Ruoergai prairie
 
+#### Game
+
+- Sekiro: Shadows Die Twice(Platinum)
+- Black Myth: Wukong(Platinum)
+- ELDEN RING
+- Red Dead Redemption 2
+- Grand Theft Auto V
+
 #### Open Source
 
 - [Advent of Code 2023](https://github.com/MrHeer/advent-of-code)
