@@ -9,9 +9,10 @@
 
 ## 🧑‍💻 About
 
-- He Linming / Male
-- Bachelor / Changsha University of Science & Technology / Electronic Information Science and Technology
-- Work experience: 5 years
+- He Linming
+- Bachelor
+- Changsha University of Science & Technology
+- Electronic Information Science and Technology
 
 ---
 
