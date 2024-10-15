@@ -10,7 +10,7 @@ export function CommandButton() {
   return (
     <IconButton
       title={`${commandKey} + K`}
-      aria-label={`Open KBar`}
+      aria-label="Open KBar"
       onClick={query.toggle}
       icon={<Icon as={BiCommand} />}
       variant="ghost"

@@ -15,6 +15,13 @@ export type Config = {
    */
   fallbackLanguageKey: string;
   languages: Array<Language>;
+
+  /**
+   * @description these are used to generate your vCard QR code
+   */
+  lastName: string;
+  firstName: string;
+  jobTitle: string;
   mobile: string;
   email: string;
 

@@ -2,7 +2,7 @@ import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react";
 import { getCommandKey } from "utils";
 
 import { LanguageMenu } from "../language-menu";
-import { ColorSwitchButton, CommandButton } from "../buttons";
+import { ColorSwitchButton, CommandButton, ShareButton } from "../buttons";
 
 function Placeholder() {
   const commandKey = getCommandKey();
@@ -36,6 +36,7 @@ export function Header() {
       <Placeholder />
       <Flex gap={2}>
         <LanguageMenu />
+        <ShareButton />
         <ColorSwitchButton />
         <CommandButton />
       </Flex>
