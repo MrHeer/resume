@@ -13,5 +13,6 @@
   "light": "明亮",
   "dark": "暗黑",
   "changeLanguage": "更改语言…",
-  "kBarSearchDefaultPlaceholder": "输入一个命令或者搜索…"
+  "kBarSearchDefaultPlaceholder": "输入一个命令或者搜索…",
+  "share": "分享"
 }

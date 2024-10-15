@@ -13,5 +13,6 @@
   "light": "Light",
   "dark": "Darkt",
   "changeLanguage": "Change language…",
-  "kBarSearchDefaultPlaceholder": "Type a command or search…"
+  "kBarSearchDefaultPlaceholder": "Type a command or search…",
+  "share": "Share"
 }
