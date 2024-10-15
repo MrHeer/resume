@@ -1,8 +1,4 @@
 import {
-  Card,
-  CardBody,
-  CardHeader,
-  HStack,
   IconButton,
   Modal,
   ModalBody,
@@ -11,6 +7,11 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
   useDisclosure,
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
@@ -18,9 +19,11 @@ import { QRCodeSVG } from "qrcode.react";
 import { useConfig } from "config";
 import VCard from "vcard-creator";
 import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 
 export function ShareButton() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { t } = useTranslation();
   const { firstName, lastName, jobTitle, mobile, email, github, twitter } =
     useConfig();
   const vCardText = useMemo(() => {
@@ -49,26 +52,27 @@ export function ShareButton() {
         onClick={onOpen}
       />
 
-      <Modal isOpen={isOpen} onClose={onClose} isCentered>
+      <Modal size="xs" isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Share</ModalHeader>
+          <ModalHeader>{t("share")}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <HStack gap={10}>
-              <Card>
-                <CardHeader>Resume</CardHeader>
-                <CardBody>
+            <Tabs align="center" variant="soft-rounded">
+              <TabList>
+                <Tab>Resume</Tab>
+                <Tab>vCard</Tab>
+              </TabList>
+
+              <TabPanels>
+                <TabPanel>
                   <QRCodeSVG value={url} />
-                </CardBody>
-              </Card>
-              <Card>
-                <CardHeader>vCard</CardHeader>
-                <CardBody>
+                </TabPanel>
+                <TabPanel>
                   <QRCodeSVG value={vCardText} />
-                </CardBody>
-              </Card>
-            </HStack>
+                </TabPanel>
+              </TabPanels>
+            </Tabs>
           </ModalBody>
           <ModalFooter />
         </ModalContent>
