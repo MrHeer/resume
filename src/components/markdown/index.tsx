@@ -30,7 +30,6 @@ export function Markdown() {
     >
       <div ref={ref}>
         <ReactMarkdown
-          key={markdown}
           components={ChakraUIRenderer(theme)}
           remarkPlugins={[remarkGfm]}
           linkTarget="_blank"
