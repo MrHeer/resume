@@ -44,7 +44,38 @@
 
 ## 🌈 Experience
 
-### What am I doing during the gap period? ( 2023-03 ~ Now )
+### [AstridDAO](https://astriddao.xyz/) ( 2025-02 ~ 2025-04 ) **Frontend Engineer**
+
+#### [ACS Internal Dashboard](https://acs-dashboard.pages.dev/)
+
+- **Technology Stack and Achievements**: Led the development of the ACS internal dashboard system based on the Vue3 framework. This dashboard utilizes table visualization technology to accurately achieve real-time monitoring of the company's internal project and server data.
+
+  - **UI Component Development**: Utilized [`shadcn/vue`](https://www.shadcn-vue.com/) to build highly customized user interface components, ensuring the smoothness of interface interaction and the professionalism of visual presentation.
+  - **Data Processing**: With the help of [`tanstack/vue-query`](https://tanstack.com/query/latest/docs/framework/vue/overview), efficient data query logic was implemented. Paired with [`@tanstack/vue-table`](https://tanstack.com/table/latest/docs/introduction), high-performance rendering of complex tables was completed, significantly improving the efficiency and accuracy of data display.
+
+#### [Bagua parlay](https://main.d2rykx3eujf1l0.amplifyapp.com/)
+
+- **Technology Stack and Achievements**: Was responsible for the development of the Bagua parlay platform based on Vue3. Through the combination of tables and charts, comprehensive monitoring and analysis of various [Poly Market](https://polymarket.com/) event data were carried out.
+
+- **UI Component Development**: Used [`shadcn/vue`](https://www.shadcn-vue.com/) to build a responsive and aesthetically pleasing user interface, optimizing the user operation experience.
+- **Data Processing and Display**: Employed [`tanstack/vue-query`](https://tanstack.com/query/latest/docs/framework/vue/overview) and `@tanstack/vue-table`](https://tanstack.com/table/latest/docs/introduction) to complete rapid data query and table rendering. At the same time, the [`View Transition API`](https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API) was introduced, greatly enhancing the smoothness of the user experience during page switching and data loading.
+
+#### [AI Buddhism Vue](https://main.d3ml2ogfsxpkrk.amplifyapp.com/)
+
+- **Technology Stack and Achievements**: Completed the development of the prototype of an AI chat software based on Vue3. This prototype has rich dynamic effects and interactive designs, providing users with an immersive experience.
+
+  - **UI Component Development**: Utilized [`shadcn/vue`](https://www.shadcn-vue.com/) to create a simple and intuitive user interface, ensuring the convenience of operation.
+  - **Wallet Function Integration**: With the assistance of [`AppKit`](https://reown.com/appkit), the development of wallet-related components was completed, realizing secure and convenient payment and account management functions.
+  - **Animation and Transition Effects**: Adopted [`motion`](https://motion.dev/docs/vue) to construct delicate animation and transition effects, enhancing the visual appeal and interactive fun of the software.
+
+#### [AI Buddhism Flutter](https://main.d3l91sjomlbpp7.amplifyapp.com/)
+
+- **Technology Stack and Achievements**: Undertook the full-stack design and development of an AI chat and Buddhist scripture reading software based on Flutter, creating a one-stop religious culture service platform.
+
+  - **UI Component Development**: Utilized [`Forui`](https://forui.dev/) to build user interface components with a unique style, taking into account both aesthetics and practicality.
+  - **Backend Interaction**: Through [`graphql_flutter`](https://pub.dev/packages/graphql_flutter), efficient data interaction with the backend was achieved, ensuring real-time data synchronization and accurate data transmission, and providing users with a smooth usage experience.
+
+### What am I doing during the gap period? ( 2023-03 ~ 2025-02 )
 
 #### Road Trip
 
@@ -68,7 +99,7 @@
 
 - [Advent of TypeScript 2023 | TypeHero](https://typehero.dev/aot-2023)
 
-  A challenge about the `TypeScript` type system. You need to use the `TypeScript` type system to complete the daily questions.
+  A challenge about the `TypeScript` type system. You need to use the `TypeScript` type system to complete the daily questions
 
 - [matrix](https://github.com/MrHeer/matrix)
 
@@ -76,11 +107,11 @@
 
 - [Image Locker](https://github.com/MrHeer/image-locker)
 
-  A picture encryption tool built with `React` uses the `AES-256-GCM` encryption algorithm to encrypt pictures.
+  A picture encryption tool built with `React` uses the `AES-256-GCM` encryption algorithm to encrypt pictures
 
 - Countdown
 
-  A countdown widget.
+  A countdown widget
 
   [countdown-gpui](https://github.com/MrHeer/countdown-gpui) - Built with [`GPUI`](https://www.gpui.rs/)
 
@@ -90,7 +121,7 @@
 
 #### Jiangzi Design
 
-It based on `Canvas` and provides an intelligent online design platform. Generate a design drawing of a specified size by entering keywords or uploading images, and provide basic editing functions such as editing text, modifying colors, changing transparency, and moving position. The main technology stacks used are `React`, `Redux` and `Konva`.
+It based on `Canvas` and provides an intelligent online design platform. Generate a design drawing of a specified size by entering keywords or uploading images, and provide basic editing functions such as editing text, modifying colors, changing transparency, and moving position. The main technology stacks used are `React`, `Redux` and `Konva`
 
 - Use `TypeScript` to refactor the project to make it more stable
 - Refactoring state structure to reduce unnecessary rendering and optimize performance. Optimization methods include the use of flatter data structures, finer `selectors`, smaller components
@@ -103,7 +134,7 @@ It based on `Canvas` and provides an intelligent online design platform. Generat
 
 #### MetaBuild
 
-The tool enables offline project schedule management. It divided into three major modules: _Planning_, _Materials_ and _Inventory_ Management to achieve quantifiable project schedule management and help the construction industry build intelligently. The software based on the idea of **Local First** and supports localized editing. It also supports collaborative editing through `CRDT` and `RxDB`, etc.
+The tool enables offline project schedule management. It divided into three major modules: _Planning_, _Materials_ and _Inventory_ Management to achieve quantifiable project schedule management and help the construction industry build intelligently. The software based on the idea of **Local First** and supports localized editing. It also supports collaborative editing through `CRDT` and `RxDB`, etc
 
 - Design advanced filtering functionality like **Notion** (advanced dynamic forms and complex data structures [ReScript Variant](https://rescript-lang.org/docs/manual/latest/variant)), Allows users to customize filtering logic without the need for custom development of filtering functions, greatly enhancing the development efficiency of the team
 - Design `UndoManager` to manage state history for `undo` `redo` functionality. It can integrated with state management, providing `useUndoCallback` and `useAtomCallback` together using a unified API, which makes it possible for users to apply it to their projects without learning costs
@@ -127,7 +158,7 @@ The tool enables offline project schedule management. It divided into three majo
 
 #### Beijing Urban Construction Project Management Platform
 
-A project management platform serving Beijing Urban Construction and its subordinate projects. The main functions cover project progress, stuffs, material, log, document, and report management. Show the overview of each module through visualization technology.
+A project management platform serving Beijing Urban Construction and its subordinate projects. The main functions cover project progress, stuffs, material, log, document, and report management. Show the overview of each module through visualization technology
 
 ### [Hangzhou tongxuema Technology Co., Ltd](http://www.hzcoding.com/) ( 2019-09 ~ 2020-04 ) **Algorithm Instructor**
 
