@@ -44,7 +44,38 @@
 
 ## 🌈 工作经历
 
-### 空窗期我在干什么？ ( 2023 年 3 月 ~ 现在 )
+### [成都晚春科技有限公司](https://astriddao.xyz/) ( 2025 年 2 月 ~ 2025 年 4 月 ) **前端工程师**
+
+#### [ACS Internal Dashboard](https://acs-dashboard.pages.dev/)
+
+- **技术栈与成果**：主导基于 Vue3 框架的 ACS 内部看板系统开发，该看板运用表格可视化技术，精准实现对公司内部项目及服务器数据的实时监控。
+
+  - **UI 组件开发**：运用 [`shadcn/vue`](https://www.shadcn-vue.com/) 构建高度定制化的用户界面组件，确保界面交互的流畅性与视觉呈现的专业性。
+  - **数据处理**：借助 [`tanstack/vue-query`](https://tanstack.com/query/latest/docs/framework/vue/overview) 实现高效的数据查询逻辑，搭配 [`@tanstack/vue-table`](https://tanstack.com/table/latest/docs/introduction) 完成复杂表格的高性能渲染，显著提升数据展示的效率与准确性。
+
+#### [Bagua parlay](https://main.d2rykx3eujf1l0.amplifyapp.com/)
+
+- **技术栈与成果**：负责基于 Vue3 的 Bagua parlay 平台开发，通过表格与图表相结合的方式，对各类 [Poly Market](https://polymarket.com/) 事件数据进行全面监控与分析。
+
+- **UI 组件开发**：利用 [`shadcn/vue`](https://www.shadcn-vue.com/) 搭建响应式且美观的用户界面，优化用户操作体验。
+- **数据处理与展示**：运用 [`tanstack/vue-query`](https://tanstack.com/query/latest/docs/framework/vue/overview) 和 `@tanstack/vue-table`](https://tanstack.com/table/latest/docs/introduction) 完成数据的快速查询与表格渲染，同时引入 [`View Transition API`](https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API)，极大提升了页面切换及数据加载时的用户体验流畅度。
+
+#### [AI Buddhism Vue](https://main.d3ml2ogfsxpkrk.amplifyapp.com/)
+
+- **技术栈与成果**：完成基于 Vue3 的 AI 聊天软件原型开发，该原型具备丰富的动态效果与交互设计，为用户提供沉浸式体验。
+
+  - **UI 组件开发**：运用 [`shadcn/vue`](https://www.shadcn-vue.com/) 打造简洁直观的用户界面，确保操作便捷性。
+  - **钱包功能集成**：借助 [`AppKit`](https://reown.com/appkit) 完成钱包相关组件的开发，实现安全便捷的支付及账户管理功能。
+  - **动画与过渡效果**：采用 [`motion`](https://motion.dev/docs/vue) 构建细腻的动画与过渡效果，增强软件的视觉吸引力与交互趣味性。
+
+#### [AI Buddhism Flutter](https://main.d3l91sjomlbpp7.amplifyapp.com/)
+
+- **技术栈与成果**：承担基于 Flutter 的 AI 聊天及佛经阅读软件的全栈设计与开发工作，打造一站式的宗教文化服务平台。
+
+  - **UI 组件开发**：运用 [`Forui`](https://forui.dev/) 构建具有独特风格的用户界面组件，兼顾美观与实用性。
+  - **后端交互**：通过 [`graphql_flutter`](https://pub.dev/packages/graphql_flutter) 实现与后端的高效数据交互，确保数据的实时同步与准确传输，为用户提供流畅的使用体验。
+
+### 空窗期我在干什么？ ( 2023 年 3 月 ~ 2025 年 2 月 )
 
 #### 自驾游
 
@@ -90,7 +121,7 @@
 
 #### 匠紫设计
 
-该工具以 `Canvas` 为基础，提供一个智能化在线设计平台。通过输入关键字或者上传图片生成指定尺寸的设计图，并提供编辑文字，修改颜色，变换透明度，移动位置等基础编辑功能。主要使用的技术栈有 `React`, `Redux` 和 `Konva`。
+该工具以 `Canvas` 为基础，提供一个智能化在线设计平台。通过输入关键字或者上传图片生成指定尺寸的设计图，并提供编辑文字，修改颜色，变换透明度，移动位置等基础编辑功能。主要使用的技术栈有 `React`, `Redux` 和 `Konva`
 
 - 使用 `TypeScript` 重构项目，让项目更加稳定
 - 重构状态结构，减少不必要的渲染，优化性能。优化手段包括使用更扁平的数据结构，更精细的 `Selector`，更小的组件
@@ -103,7 +134,7 @@
 
 #### 元筑工具
 
-该工具实现离线化项目进度计划管理。其中分为 _计划编制_、_物资管理_ 和 _清单管理_ 三大模块，实现可量化的项目进度管理，帮助建筑行业智能建造。软件基于 **Local First** 的思想，支持本地化编辑。同时通过 `CRDT` 和 `RxDB` 等实现了协同编辑功能。
+该工具实现离线化项目进度计划管理。其中分为 _计划编制_、_物资管理_ 和 _清单管理_ 三大模块，实现可量化的项目进度管理，帮助建筑行业智能建造。软件基于 **Local First** 的思想，支持本地化编辑。同时通过 `CRDT` 和 `RxDB` 等实现了协同编辑功能
 
 - 设计类似于 **Notion** 的高级筛选功能（高级动态表单和复杂数据结构 [ReScript Variant](https://rescript-lang.org/docs/manual/latest/variant)），让用户可以自定义各种筛选逻辑，不需要定制开发各种筛选功能，极大的提升了团队的开发效率
 - 设计 `UndoManager` 用来管理状态历史，从而实现 `undo` `redo` 功能。它和状态管理能够有机结合，提供的 `useUndoCallback` 与 `useAtomCallback` 保持 **100%** 一致的 API，这使得使用者没有学习成本，能够快速应用到项目中
@@ -127,11 +158,11 @@
 
 #### 北京城建工程管理平台
 
-服务于北京城建机关及其下属项目的工程管理平台。主要功能涵盖：项目进度、人员、物料、日志、文件和报表管理。通过可视化技术展示各个模块总览概况。
+服务于北京城建机关及其下属项目的工程管理平台。主要功能涵盖：项目进度、人员、物料、日志、文件和报表管理。通过可视化技术展示各个模块总览概况
 
 ### [杭州童学码科技有限公司](http://www.hzcoding.com/) ( 2019 年 9 月 ~ 2020 年 4 月 ) **算法讲师**
 
-我在此公司负责日常教学工作，主要教学的内容为 `C++ / Scratch / 算法`。在上课也善于使用 [`可视化`](https://visualgo.net/en) 技术来展示算法的原理，使得学生更加容易理解。
+我在此公司负责日常教学工作，主要教学的内容为 `C++ / Scratch / 算法`。在上课也善于使用 [`可视化`](https://visualgo.net/en) 技术来展示算法的原理，使得学生更加容易理解
 
 ### [拓维信息系统股份有限公司](https://www.talkweb.com.cn/) ( 2018 年 7 月 ~ 2019 年 7 月 ) **软件工程师**
 
