@@ -57,8 +57,8 @@
 
 - **Technology Stack and Achievements**: Was responsible for the development of the Bagua parlay platform based on Vue3. Through the combination of tables and charts, comprehensive monitoring and analysis of various [Poly Market](https://polymarket.com/) event data were carried out.
 
-- **UI Component Development**: Used [`shadcn/vue`](https://www.shadcn-vue.com/) to build a responsive and aesthetically pleasing user interface, optimizing the user operation experience.
-- **Data Processing and Display**: Employed [`tanstack/vue-query`](https://tanstack.com/query/latest/docs/framework/vue/overview) and `@tanstack/vue-table`](https://tanstack.com/table/latest/docs/introduction) to complete rapid data query and table rendering. At the same time, the [`View Transition API`](https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API) was introduced, greatly enhancing the smoothness of the user experience during page switching and data loading.
+  - **UI Component Development**: Used [`shadcn/vue`](https://www.shadcn-vue.com/) to build a responsive and aesthetically pleasing user interface, optimizing the user operation experience.
+  - **Data Processing and Display**: Employed [`tanstack/vue-query`](https://tanstack.com/query/latest/docs/framework/vue/overview) and `@tanstack/vue-table`](https://tanstack.com/table/latest/docs/introduction) to complete rapid data query and table rendering. At the same time, the [`View Transition API`](https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API) was introduced, greatly enhancing the smoothness of the user experience during page switching and data loading.
 
 #### [AI Buddhism Vue](https://main.d3ml2ogfsxpkrk.amplifyapp.com/)
 
