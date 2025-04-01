@@ -58,7 +58,7 @@
 - **技术栈与成果**：负责基于 Vue3 的 Bagua parlay 平台开发，通过表格与图表相结合的方式，对各类 [Poly Market](https://polymarket.com/) 事件数据进行全面监控与分析。
 
   - **UI 组件开发**：利用 [`shadcn/vue`](https://www.shadcn-vue.com/) 搭建响应式且美观的用户界面，优化用户操作体验。
-  - **数据处理与展示**：运用 [`tanstack/vue-query`](https://tanstack.com/query/latest/docs/framework/vue/overview) 和 `@tanstack/vue-table`](https://tanstack.com/table/latest/docs/introduction) 完成数据的快速查询与表格渲染，同时引入 [`View Transition API`](https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API)，极大提升了页面切换及数据加载时的用户体验流畅度。
+  - **数据处理与展示**：运用 [`tanstack/vue-query`](https://tanstack.com/query/latest/docs/framework/vue/overview) 和 [`@tanstack/vue-table`](https://tanstack.com/table/latest/docs/introduction) 完成数据的快速查询与表格渲染，同时引入 [`View Transition API`](https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API)，极大提升了页面切换及数据加载时的用户体验流畅度。
 
 #### [AI Buddhism Vue](https://main.d3ml2ogfsxpkrk.amplifyapp.com/)
 
