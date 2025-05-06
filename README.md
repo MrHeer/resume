@@ -6,11 +6,22 @@ Display resume in markdown format.
 
 ## Table of Contents
 
+- [Features](#features)
 - [Install](#install)
 - [Usage](#usage)
 - [Maintainers](#maintainers)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Features
+
+- Markdown format
+- Shareable resume(link/vcard)
+- Dark mode
+- Internationalization
+- Responsive design
+- Command palette
+- Printable
 
 ## Install
 
