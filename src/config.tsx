@@ -22,7 +22,7 @@ export type Config = {
   lastName: string;
   firstName: string;
   jobTitle: string;
-  mobile: string;
+  phone: string;
   email: string;
 
   /**

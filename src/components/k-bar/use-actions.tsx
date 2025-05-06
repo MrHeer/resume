@@ -24,7 +24,7 @@ export function useActions() {
       keywords: "call mobile hello",
       section: t("navigation"),
       icon: <Icon as={MdCall} />,
-      perform: () => window.open(`tel:${config.mobile}`, "_blank"),
+      perform: () => window.open(`tel:${config.phone}`, "_blank"),
     },
     {
       id: "email",

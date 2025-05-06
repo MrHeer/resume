@@ -24,13 +24,13 @@ import { useTranslation } from "react-i18next";
 export function ShareButton() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { t } = useTranslation();
-  const { firstName, lastName, jobTitle, mobile, email, github, twitter } =
+  const { firstName, lastName, jobTitle, phone, email, github, twitter } =
     useConfig();
   const vCardText = useMemo(() => {
     const vCard = new VCard()
       .addName(lastName, firstName)
       .addJobtitle(jobTitle)
-      .addPhoneNumber(mobile)
+      .addPhoneNumber(phone)
       .addEmail(email);
     if (github) {
       vCard.addSocial(`https://github.com/${github}`, "GitHub", github);
@@ -39,7 +39,7 @@ export function ShareButton() {
       vCard.addSocial(`https://x.com/${twitter}`, "Twitter", twitter);
     }
     return vCard.buildVCard();
-  }, [firstName, lastName, jobTitle, mobile, email, github, twitter]);
+  }, [firstName, lastName, jobTitle, phone, email, github, twitter]);
 
   const url = window.location.href;
 
