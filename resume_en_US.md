@@ -1,6 +1,6 @@
 ## 📧 Contract
 
-- Mobile: [+86 176 2303 0229](<tel:(+86)17623030229>)
+- Phone: [+86 176 2303 0229](tel:+8617623030229)
 - Email: [hlm52pk@163.com](mailto:hlm52pk@163.com)
 - WeChat: Mr\_\_Heer
 - GitHub: [MrHeer](https://github.com/MrHeer)
