@@ -59,7 +59,7 @@
 
   Developed a desktop screenshot tool using the Flutter cross-platform framework, implemented personalized editing functions such as margins, rounded corners, and shadows, integrated a color extraction algorithm, and automatically generated gradient backgrounds.
 
-- [zed-moonbit](https://github.com/zed-moonbit)
+- [zed-moonbit](https://github.com/quirk-lab/zed-moonbit)
 
   Developed a `Zed` editor plugin based on the Rust language to implement syntax highlighting and intelligent completion functions for the [`MoonBit`](https://www.moonbitlang.cn) language.
 

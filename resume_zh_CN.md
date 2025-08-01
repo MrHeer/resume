@@ -59,7 +59,7 @@
 
   使用 `Flutter` 跨平台框架开发桌面截图工具，实现边距、圆角、阴影等个性化编辑功能，集成颜色提取算法，自动生成渐变背景
 
-- [zed-moonbit](https://github.com/zed-moonbit)
+- [zed-moonbit](https://github.com/quirk-lab/zed-moonbit)
 
   基于 `Rust` 语言开发 `Zed` 编辑器插件，实现 [`MoonBit`](https://www.moonbitlang.cn) 语言的语法高亮、智能补全功能
 
