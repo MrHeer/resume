@@ -18,26 +18,34 @@
 
 ## ✨ Online Courses
 
-- [Algorithms, Part I | Coursera](https://www.coursera.org/learn/algorithms-part1) (Mastered basic algorithms and data structures, completed over 10 programming practices)
-- [Algorithms, Part II | Coursera](https://www.coursera.org/learn/algorithms-part2) (In-depth study of graph theory and string algorithms, implemented 5 complex algorithm cases)
-- [Linear Algebra Refresher Course](https://learn.udacity.com/courses/ud953) (Strengthened the foundation of matrix operations, applied in graphics and data computing)
-- [Responsive Web Design](https://www.freecodecamp.org/certification/mrheer/responsive-web-design) (Systematically learned responsive layouts and obtained official certification)
-- [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/certification/mrheer/javascript-algorithms-and-data-structures) (Proficient in JS algorithm implementation, completed over 40 algorithm challenges)
-- [Front End Development Libraries](https://www.freecodecamp.org/certification/mrheer/front-end-development-libraries) (Mastered the application of mainstream front-end libraries and built 3 comprehensive projects)
-- [Data Visualization](https://www.freecodecamp.org/certification/mrheer/data-visualization) (Implemented complex data visualization using `D3.js` and completed 5 interactive charts)
+- **Algorithms & Data Structures**: [Coursera - Algorithms Part I & II](https://www.coursera.org/learn/algorithms-part1) (Completed 15+ programming practices, in-depth study of graph theory and string algorithms)
+- **Front-end Certifications**: [freeCodeCamp](https://www.freecodecamp.org/certification/mrheer/) (Responsive Design, JS Algorithms, React Libraries, Data Visualization, 50+ challenges completed)
+- **Linear Algebra**: [Udacity - Linear Algebra Refresher](https://learn.udacity.com/courses/ud953)
 
 ---
 
-## 🛠 Skills List
+## 🛠 Tech Stack
 
-- **Programming Languages**: TypeScript / Dart / Rust / ReScript / Java / Go / C
-- **Programming Paradigms**: OOP (Object-Oriented Programming) / FP (Functional Programming)
-- **Front-end Frameworks**: React / Flutter / Vue / Angular
+### Front-end Development
+
+- **Frameworks**: React / Next.js / Vue 3 / Angular / Flutter
 - **State Management**: Recoil / Jotai / Redux / MobX
-- **Tool Libraries**: Ramda / Lodash / D3 / fp-ts
-- **Package Management**: pnpm / yarn / npm
-- **Version Control**: Git (Proficient in branch management, Rebase, Cherry-pick)
-- **Testing Tools**: Jest / Enzyme / Testing Library
+- **UI Components**: shadcn/ui (React + Vue), Ant Design, Forui
+- **Visualization**: D3.js, ECharts
+- **Animation**: motion / react-spring / FLIP
+
+### Engineering
+
+- **Languages**: TypeScript / Dart / Rust / ReScript / Java / Go / C
+- **Utilities**: Ramda / Lodash / fp-ts
+- **Testing**: Jest / Enzyme / Testing Library
+- **Build Tools**: pnpm / yarn / npm / Turborepo
+
+### Infrastructure
+
+- **Version Control**: Git (branch management, Rebase, Cherry-pick)
+- **Runtimes**: Tokio (async), Electron
+- **Database**: RxDB (Local First)
 
 ---
 
@@ -150,39 +158,21 @@ Turborepo Monorepo project that aggregates multiple large language model APIs an
 
 - [Jiangzi](https://jiangziai.com)
 
-  An intelligent online design platform based on Canvas, supporting keyword/image-generated design drawings and multi-dimensional editing. Technology stack: `React` + `Redux` + `Konva`.
+  An intelligent online design platform based on `React` + `Redux` + `Konva`, supporting keyword/image-generated design drawings and multi-dimensional editing.
 
-  - Led the TypeScript refactoring, eliminated 70% of potential type errors, and improved project stability by 40%.
-  - Reconstructed the state structure (flat data + fine-grained `Selector`), reduced page rendering time by 60%, and improved operation response speed by 50%.
-  - Established development documentation and Code Review mechanisms, improving team collaboration efficiency by 30%.
-  - Designed the drag-and-drop creation function, uniformly used `path` strings to store shape data, reducing the development cost of new shape types by 80%.
-  - Implemented the PSD import function: parsed files based on [ag-psd](https://github.com/Agamnentzar/ag-psd), converted data structures through the **pipeline pattern**, and combined with Web Worker for background processing, reducing the time-consuming of importing large files (100MB+) by 75%.
-  - Developed the pen tool: implemented curve drawing based on `bezierCurveTo`, managed local states through React Context, and improved user-defined shape creation efficiency by 40%.
+  - Led TypeScript refactoring, eliminated **70%** of potential type errors, improved project stability by **40%**
+  - Reconstructed state structure (flat data + fine-grained `Selector`), reduced page rendering time by **60%**, improved operation response speed by **50%**
+  - Designed drag-and-drop creation, uniformly using `path` strings for shape data, reducing new shape type development cost by **80%**
+  - Implemented PSD import: pipeline pattern for data transformation, Web Worker for background processing, reduced large file (100MB+) import time by **75%**
+  - Developed pen tool with `bezierCurveTo`, improved custom shape creation efficiency by **40%**
 
-- [ACS Internal Dashboard](https://acs-dashboard.pages.dev)
+- [AI Buddhism](https://main.d3l91sjomlbpp7.amplifyapp.com)
 
-  - Led the development of the ACS internal dashboard system based on the Vue3 framework, which uses table visualization technology to accurately monitor the company's internal projects and server data in real-time.
-  - Used [`shadcn/vue`](https://www.shadcn-vue.com) to build highly customized user interface components, ensuring the smoothness of interface interactions and the professionalism of visual presentation.
-  - Utilized [`tanstack/vue-query`](https://tanstack.com/query/latest/docs/framework/vue/overview) to implement efficient data query logic, combined with [`@tanstack/vue-table`](https://tanstack.com/table/latest/docs/introduction) to complete high-performance rendering of complex tables, significantly improving the efficiency and accuracy of data display.
+  Full-stack AI chat and Buddhist scripture reading app. Vue3 version with AppKit wallet integration; Flutter version using Forui, GraphQL for backend communication.
 
-- Bagua parlay
+- [ACS Dashboard](https://acs-dashboard.pages.dev) / Bagua Parlay
 
-  - Responsible for the development of the Bagua parlay platform based on Vue3, which comprehensively monitors and analyzes various [Poly Market](https://polymarket.com) event data through a combination of tables and charts.
-  - Used [`shadcn/vue`](https://www.shadcn-vue.com) to build a responsive and beautiful user interface, optimizing the user operation experience.
-  - Used [`tanstack/vue-query`](https://tanstack.com/query/latest/docs/framework/vue/overview) and [`@tanstack/vue-table`](https://tanstack.com/table/latest/docs/introduction) to complete rapid data query and table rendering, and introduced [`View Transition API`](https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API), which greatly improved the user experience fluency during page switching and data loading.
-
-- AI Buddhism Vue
-
-  - Completed the prototype development of an AI chat software based on Vue3, which has rich dynamic effects and interactive designs to provide users with an immersive experience.
-  - Used [`shadcn/vue`](https://www.shadcn-vue.com) to create a simple and intuitive user interface, ensuring operational convenience.
-  - Completed the development of wallet-related components with [`AppKit`](https://reown.com/appkit) to realize safe and convenient payment and account management functions.
-  - Used [`motion`](https://motion.dev/docs/vue) to build delicate animations and transition effects, enhancing the visual appeal and interactive interest of the software.
-
-- [AI Buddhism Flutter](https://main.d3l91sjomlbpp7.amplifyapp.com)
-
-  - Undertake the full-stack design and development of an AI chat and Buddhist scripture reading software based on Flutter, creating a one-stop religious and cultural service platform.
-  - Used [`Forui`](https://forui.dev) to build user interface components with unique styles, taking into account both beauty and practicality.
-  - Achieved efficient data interaction with the backend through [`graphql_flutter`](https://pub.dev/packages/graphql_flutter) to ensure real-time synchronization and accurate transmission of data, providing users with a smooth experience.
+  Data dashboard system based on `Vue3` + `shadcn/vue` + `tanstack/vue-query`, real-time monitoring of projects and server data. View Transition API for smooth page transitions.
 
 ### [Hangzhou Shujian Technology Co., Ltd.](https://sbuild.cn) (2020 ~ 2023) **Senior Front-end Engineer**
 
@@ -227,26 +217,20 @@ Independently responsible for front-end development, adopted `RESTful` interface
 
 ---
 
-## ❤️ Open Source Projects
+## ❤️ Open Source Contributions
 
-- [Ant Design](https://github.com/ant-design/ant-design): An enterprise-level UI design language and React component library. Refined from the interaction language and visual style of enterprise-level middle and back-end products. Out-of-the-box high-quality React components. I have long followed this project and continuously solved problems, and currently rank among the top 50 contributors. I was once honored to be a **Collaborator** of this library.
-- [Mark Text](https://github.com/marktext/marktext): A simple and elegant open-source Markdown editor, focusing on speed and usability. Available for Linux, macOS, and Windows. I have long followed this project and continuously solved problems, and currently rank among the top 5 contributors.
+- [Ant Design](https://github.com/ant-design/ant-design): **Top 50** contributor, former Collaborator
+- [Mark Text](https://github.com/marktext/marktext): **Top 5** contributor
 
 ---
 
-## 🧗🏼 Adventure Journey
+## 🧗🏼 Programming Challenges
 
-- [Advent of Code 2023](https://adventofcode.com/2023)
-- [Advent of TypeScript 2023 | TypeHero](https://typehero.dev/aot-2023)
+- [Advent of Code 2023](https://adventofcode.com/2023) - Completed all 25 days of programming puzzles in Rust
+- [Advent of TypeScript 2023 | TypeHero](https://typehero.dev/aot-2023) - Completed 25 days of TypeScript type system challenges
 
 ---
 
 ## 📖 Reading List
 
-- _Algorithms_
-- _Code Complete: A Practical Handbook of Software Construction_
-- _Clean Code: A Handbook of Agile Software Craftsmanship_
-- _Designing Data-Intensive Applications_
-- _Dive Into Design Patterns_
-- _Dive Into Refactoring_
-- _Mostly adequate guide to FP_
+_Algorithms_ · _Code Complete_ · _Clean Code_ · _Designing Data-Intensive Applications_ · _Dive Into Design Patterns_ · _Dive Into Refactoring_ · _Mostly Adequate Guide to FP_
