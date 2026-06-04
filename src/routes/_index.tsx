@@ -1,4 +1,5 @@
 import { createFileRoute, Outlet, redirect } from "@tanstack/react-router"
+import { ScrollArea } from "@/components/ui/scroll-area"
 
 export const Route = createFileRoute("/_index")({
   beforeLoad: () => {
@@ -9,9 +10,11 @@ export const Route = createFileRoute("/_index")({
 
 function Index() {
   return (
-    <main>
-      <header>Header Placeholder</header>
-      <Outlet />
+    <main className="h-screen">
+      <ScrollArea className="size-full">
+        <header>Header Placeholder</header>
+        <Outlet />
+      </ScrollArea>
     </main>
   )
 }
