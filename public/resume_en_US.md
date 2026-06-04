@@ -51,7 +51,20 @@
 
 ## 🌈 Work Experience
 
-### Shuihua Group (2024 ~ 2025) **Senior Front-end Engineer**
+### Shuihua Group (2025 ~ Now) **Senior Front-end Engineer**
+
+#### [Compute Platform](https://do.top)
+
+Turborepo Monorepo project that aggregates multiple large language model APIs and provides a unified calling interface.
+
+- Designed and led the entire front-end and back-end architecture: front-end based on **TanStack Start**, back-end based on **NestJS**, adopting microservices architecture design, clarifying service boundaries and communication protocols
+- Designed billing system architecture: recording usage based on API Key, supporting per-token and per-request billing
+- Designed API Key management mechanism: implementing key generation, permission control, usage statistics, and quota management
+- Designed GPU configuration management page: displaying GPU resource usage and supporting configuration modification
+- Implemented model detail page: displaying model parameters, performance metrics, and call statistics
+- Developed chat feature: integrating multi-model switching, context management, and streaming responses
+- Exposed gRPC services for internal system calls
+- Encapsulated Proto package: defining unified data structures and interface specifications
 
 #### Market Data
 
@@ -96,21 +109,7 @@ Channel configuration management system for managing channel parameter configura
 - Developed channel log page: displaying channel operation logs in real-time, supporting time range filtering
 - Implemented responsive layout: adapting to desktop and mobile
 
-#### LLM Aggregation Platform
-
-Turborepo Monorepo project that aggregates multiple large language model APIs and provides a unified calling interface.
-
-- Designed and led the entire front-end and back-end architecture: adopting microservices architecture design, clarifying service boundaries and communication protocols
-- Designed microservices back-end architecture: implementing message queuing based on RocketMQ to decouple model calls and response processing
-- Designed billing system architecture: recording usage based on API Key, supporting per-token and per-request billing
-- Designed API Key management mechanism: implementing key generation, permission control, usage statistics, and quota management
-- Designed GPU configuration management page: displaying GPU resource usage and supporting configuration modification
-- Implemented model detail page: displaying model parameters, performance metrics, and call statistics
-- Developed chat feature: integrating multi-model switching, context management, and streaming responses
-- Exposed gRPC services for internal system calls
-- Encapsulated Proto package: defining unified data structures and interface specifications
-
-### Independent Developer (2023 ~ Present)
+### Independent Developer (2023 ~ 2025)
 
 #### Quirk Lab
 
