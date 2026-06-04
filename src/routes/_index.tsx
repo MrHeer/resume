@@ -10,7 +10,7 @@ export const Route = createFileRoute("/_index")({
 function Index() {
   return (
     <main>
-      <header>Test</header>
+      <header>Header Placeholder</header>
       <Outlet />
     </main>
   )
