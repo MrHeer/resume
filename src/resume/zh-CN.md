@@ -238,4 +238,4 @@ Turborepo Monorepo 项目，聚合多个大语言模型 API，提供统一的调
 
 ## 📖 阅读清单
 
-《Algorithms》· 《Code Complete》· 《Clean Code》· 《Designing Data-Intensive Applications》· 《Dive Into Design Patterns》· 《Dive Into Refactoring》· 《Mostly Adequate Guide to FP》
+《Algorithms》 · 《Code Complete》 · 《Clean Code》 · 《Designing Data-Intensive Applications》 · 《Dive Into Design Patterns》 · 《Dive Into Refactoring》 · 《Mostly Adequate Guide to FP》
