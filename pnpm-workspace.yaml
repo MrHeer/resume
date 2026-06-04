@@ -1,3 +1,6 @@
 allowBuilds:
+  esbuild: true
   msw: true
   unrs-resolver: true
+overrides:
+  unified: 11.0.0
