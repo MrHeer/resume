@@ -31,7 +31,9 @@ export function Markdown({ content, className }: MarkdownProps) {
           if (href.startsWith("/")) {
             // Internal link - use your router's Link component
             return (
-              <Link to={href}>{domToReact(domNode.children as any, options)}</Link>
+              <Link to={href}>
+                {domToReact(domNode.children as any, options)}
+              </Link>
             )
           }
         }

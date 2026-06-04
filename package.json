@@ -17,6 +17,7 @@
     "@content-collections/core": "^0.15.1",
     "@content-collections/vite": "^0.3.0",
     "@fontsource-variable/inter": "^5.2.8",
+    "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4",
     "@tanstack/react-devtools": "latest",
     "@tanstack/react-router": "latest",
