@@ -9,91 +9,92 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/_index'
-import { Route as IndexIndexRouteImport } from './routes/_index.index'
-import { Route as IndexSlugRouteImport } from './routes/_index.$slug'
+import { Route as ResumeRouteImport } from './routes/_resume'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as ResumeSlugRouteImport } from './routes/_resume.$slug'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/_index',
+const ResumeRoute = ResumeRouteImport.update({
+  id: '/_resume',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexIndexRoute = IndexIndexRouteImport.update({
+const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => IndexRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-const IndexSlugRoute = IndexSlugRouteImport.update({
+const ResumeSlugRoute = ResumeSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
-  getParentRoute: () => IndexRoute,
+  getParentRoute: () => ResumeRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexIndexRoute
-  '/$slug': typeof IndexSlugRoute
+  '/': typeof IndexRoute
+  '/$slug': typeof ResumeSlugRoute
 }
 export interface FileRoutesByTo {
-  '/$slug': typeof IndexSlugRoute
-  '/': typeof IndexIndexRoute
+  '/': typeof IndexRoute
+  '/$slug': typeof ResumeSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/_index': typeof IndexRouteWithChildren
-  '/_index/$slug': typeof IndexSlugRoute
-  '/_index/': typeof IndexIndexRoute
+  '/': typeof IndexRoute
+  '/_resume': typeof ResumeRouteWithChildren
+  '/_resume/$slug': typeof ResumeSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths: '/' | '/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/$slug' | '/'
-  id: '__root__' | '/_index' | '/_index/$slug' | '/_index/'
+  to: '/' | '/$slug'
+  id: '__root__' | '/' | '/_resume' | '/_resume/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRouteWithChildren
+  IndexRoute: typeof IndexRoute
+  ResumeRoute: typeof ResumeRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/_index': {
-      id: '/_index'
+    '/_resume': {
+      id: '/_resume'
       path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof ResumeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/_index/': {
-      id: '/_index/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexIndexRouteImport
-      parentRoute: typeof IndexRoute
-    }
-    '/_index/$slug': {
-      id: '/_index/$slug'
+    '/_resume/$slug': {
+      id: '/_resume/$slug'
       path: '/$slug'
       fullPath: '/$slug'
-      preLoaderRoute: typeof IndexSlugRouteImport
-      parentRoute: typeof IndexRoute
+      preLoaderRoute: typeof ResumeSlugRouteImport
+      parentRoute: typeof ResumeRoute
     }
   }
 }
 
-interface IndexRouteChildren {
-  IndexSlugRoute: typeof IndexSlugRoute
-  IndexIndexRoute: typeof IndexIndexRoute
+interface ResumeRouteChildren {
+  ResumeSlugRoute: typeof ResumeSlugRoute
 }
 
-const IndexRouteChildren: IndexRouteChildren = {
-  IndexSlugRoute: IndexSlugRoute,
-  IndexIndexRoute: IndexIndexRoute,
+const ResumeRouteChildren: ResumeRouteChildren = {
+  ResumeSlugRoute: ResumeSlugRoute,
 }
 
-const IndexRouteWithChildren = IndexRoute._addFileChildren(IndexRouteChildren)
+const ResumeRouteWithChildren =
+  ResumeRoute._addFileChildren(ResumeRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRouteWithChildren,
+  IndexRoute: IndexRoute,
+  ResumeRoute: ResumeRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

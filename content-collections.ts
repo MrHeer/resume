@@ -9,7 +9,7 @@ function extractFrontMatter(content: string) {
 
 const resumes = defineCollection({
   name: "resumes",
-  directory: "./src/resume",
+  directory: "./resume",
   include: "*.md",
   schema: z.object({}),
   transform: ({ content, ...resume }) => {
