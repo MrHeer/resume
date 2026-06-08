@@ -27,12 +27,13 @@ export function Markdown({ result, className }: MarkdownProps) {
         }
 
         if (domNode.name === "img") {
-          // Add lazy loading to images
+          const isEmoji = domNode.attribs.class.includes("emoji")
+          const { class: _, ...rest } = domNode.attribs
           return (
             <img
-              {...domNode.attribs}
+              {...rest}
               loading="lazy"
-              className="rounded-lg shadow-md"
+              className={isEmoji ? "emoji" : "rounded-lg shadow-md"}
             />
           )
         }
