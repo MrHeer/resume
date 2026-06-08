@@ -11,7 +11,13 @@ const config = defineConfig({
     contentCollections(),
     devtools(),
     tailwindcss(),
-    tanstackStart(),
+    tanstackStart({
+      prerender: {
+        enabled: true,
+        crawlLinks: true,
+      },
+      pages: [{ path: "/zh-CN" }, { path: "/en-US" }],
+    }),
     viteReact(),
   ],
 })
