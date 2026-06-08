@@ -18,7 +18,7 @@ function Resume() {
 
   return (
     <article>
-      <Markdown content={resume.content} className="prose" />
+      <Markdown content={resume.content} className="markdown-body" />
     </article>
   )
 }
