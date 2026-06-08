@@ -176,9 +176,9 @@ function CommandButtonPlaceholder() {
 export function Header() {
   return (
     <ClientOnly>
-      <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between p-5 backdrop-blur-sm print:hidden">
+      <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-8 py-4 print:hidden">
         <CommandHint />
-        <div className="flex items-center gap-1">
+        <div className="ml-auto flex items-center gap-1 md:ml-0">
           <LanguageMenu />
           <ShareDialog />
           <ThemeToggle />
