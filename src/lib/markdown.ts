@@ -9,6 +9,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypeStringify from "rehype-stringify"
 import { visit } from "unist-util-visit"
 import { toString } from "hast-util-to-string"
+import twemoji from "twemoji"
 
 export type MarkdownHeading = {
   id: string
@@ -54,8 +55,15 @@ export async function renderMarkdown(content: string): Promise<MarkdownResult> {
     .use(rehypeStringify)
     .process(content)
 
+  const html = twemoji.parse(String(result), {
+    base: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/",
+    folder: "svg",
+    ext: ".svg",
+    className: "emoji",
+  })
+
   return {
-    markup: String(result),
+    markup: html,
     headings,
   }
 }
