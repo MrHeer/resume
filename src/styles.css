@@ -308,3 +308,47 @@
 .markdown-body :where(input[type="checkbox"]) {
   margin-right: 0.5em;
 }
+
+/* ── Print ── */
+@media print {
+  /* Hide header */
+  header {
+    display: none;
+  }
+
+  /* Override ScrollArea to reveal all content */
+  [data-slot="scroll-area"] {
+    overflow: visible !important;
+    position: static !important;
+    height: auto !important;
+  }
+
+  [data-slot="scroll-area-viewport"] {
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  [data-slot="scroll-area-scrollbar"] {
+    display: none !important;
+  }
+
+  /* Remove height constraint on main */
+  main.h-screen {
+    height: auto;
+  }
+
+  /*
+   * Shiki writes inline styles on <pre> (e.g. white-space:pre),
+   * so !important is required to override them when printing.
+   */
+  .markdown-body pre,
+  .markdown-body pre code {
+    overflow: visible !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+  }
+
+  .markdown-body table {
+    overflow: visible;
+  }
+}
