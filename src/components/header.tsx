@@ -169,13 +169,13 @@ function CommandButtonPlaceholder() {
 
 export function Header() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-8 py-4 print:hidden">
+    <header className="sticky top-0 z-50 flex items-center justify-between px-8 py-4 print:hidden">
       <LinearBlur
-        className="absolute inset-0 -z-10"
+        className="absolute inset-x-0 -z-10 h-32"
         side="top"
         steps={8}
-        strength={32}
-        falloffPercentage={100}
+        strength={64}
+        falloffPercentage={95}
       />
 
       <ClientOnly>
