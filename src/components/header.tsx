@@ -3,6 +3,7 @@ import { ClientOnly, Link, useParams } from "@tanstack/react-router"
 import { QRCodeSVG } from "qrcode.react"
 import VCard from "vcard-creator"
 import { SunIcon, MoonIcon, Share2Icon, CommandIcon } from "lucide-react"
+import { LinearBlur } from "progressive-blur"
 
 import { Twemoji } from "@/components/twemoji"
 import { Button } from "@/components/ui/button"
@@ -34,7 +35,7 @@ function CommandHint() {
 
   return (
     <span className="hidden items-center gap-1 text-sm text-muted-foreground md:inline-flex">
-      <span>{commandKey}</span>
+      <Kbd>{commandKey}</Kbd>
       <span>+</span>
       <Kbd>K</Kbd>
     </span>
@@ -159,15 +160,8 @@ function ShareDialog() {
 }
 
 function CommandButtonPlaceholder() {
-  const commandKey = getCommandKey()
-
   return (
-    <Button
-      variant="ghost"
-      size="icon"
-      aria-label={`Open command palette (${commandKey}+K)`}
-      disabled
-    >
+    <Button variant="ghost" size="icon" disabled>
       <CommandIcon />
     </Button>
   )
@@ -175,16 +169,24 @@ function CommandButtonPlaceholder() {
 
 export function Header() {
   return (
-    <ClientOnly>
-      <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-8 py-4 print:hidden">
+    <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-8 py-4 print:hidden">
+      <LinearBlur
+        className="absolute inset-0 -z-10"
+        side="top"
+        steps={8}
+        strength={32}
+        falloffPercentage={100}
+      />
+
+      <ClientOnly>
         <CommandHint />
-        <div className="ml-auto flex items-center gap-1 md:ml-0">
-          <LanguageMenu />
-          <ShareDialog />
-          <ThemeToggle />
-          <CommandButtonPlaceholder />
-        </div>
-      </header>
-    </ClientOnly>
+      </ClientOnly>
+      <div className="ml-auto flex items-center gap-1">
+        <LanguageMenu />
+        <ShareDialog />
+        <ThemeToggle />
+        <CommandButtonPlaceholder />
+      </div>
+    </header>
   )
 }
