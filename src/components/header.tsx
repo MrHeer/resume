@@ -173,9 +173,9 @@ export function Header() {
       <LinearBlur
         className="absolute inset-x-0 -z-10 h-32"
         side="top"
-        steps={8}
-        strength={64}
-        falloffPercentage={95}
+        steps={16}
+        strength={4}
+        falloffPercentage={50}
       />
 
       <ClientOnly>

@@ -8,46 +8,46 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from "./routes/__root"
-import { Route as ResumeRouteImport } from "./routes/_resume"
-import { Route as IndexRouteImport } from "./routes/index"
-import { Route as ResumeSlugRouteImport } from "./routes/_resume.$slug"
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as ResumeRouteImport } from './routes/_resume'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as ResumeSlugRouteImport } from './routes/_resume.$slug'
 
 const ResumeRoute = ResumeRouteImport.update({
-  id: "/_resume",
+  id: '/_resume',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
-  id: "/",
-  path: "/",
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ResumeSlugRoute = ResumeSlugRouteImport.update({
-  id: "/$slug",
-  path: "/$slug",
+  id: '/$slug',
+  path: '/$slug',
   getParentRoute: () => ResumeRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
-  "/": typeof IndexRoute
-  "/$slug": typeof ResumeSlugRoute
+  '/': typeof IndexRoute
+  '/$slug': typeof ResumeSlugRoute
 }
 export interface FileRoutesByTo {
-  "/": typeof IndexRoute
-  "/$slug": typeof ResumeSlugRoute
+  '/': typeof IndexRoute
+  '/$slug': typeof ResumeSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  "/": typeof IndexRoute
-  "/_resume": typeof ResumeRouteWithChildren
-  "/_resume/$slug": typeof ResumeSlugRoute
+  '/': typeof IndexRoute
+  '/_resume': typeof ResumeRouteWithChildren
+  '/_resume/$slug': typeof ResumeSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: "/" | "/$slug"
+  fullPaths: '/' | '/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: "/" | "/$slug"
-  id: "__root__" | "/" | "/_resume" | "/_resume/$slug"
+  to: '/' | '/$slug'
+  id: '__root__' | '/' | '/_resume' | '/_resume/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -55,26 +55,26 @@ export interface RootRouteChildren {
   ResumeRoute: typeof ResumeRouteWithChildren
 }
 
-declare module "@tanstack/react-router" {
+declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    "/_resume": {
-      id: "/_resume"
-      path: ""
-      fullPath: "/"
+    '/_resume': {
+      id: '/_resume'
+      path: ''
+      fullPath: '/'
       preLoaderRoute: typeof ResumeRouteImport
       parentRoute: typeof rootRouteImport
     }
-    "/": {
-      id: "/"
-      path: "/"
-      fullPath: "/"
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    "/_resume/$slug": {
-      id: "/_resume/$slug"
-      path: "/$slug"
-      fullPath: "/$slug"
+    '/_resume/$slug': {
+      id: '/_resume/$slug'
+      path: '/$slug'
+      fullPath: '/$slug'
       preLoaderRoute: typeof ResumeSlugRouteImport
       parentRoute: typeof ResumeRoute
     }
@@ -100,9 +100,9 @@ export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
 
-import type { getRouter } from "./router.tsx"
-import type { createStart } from "@tanstack/react-start"
-declare module "@tanstack/react-start" {
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
   interface Register {
     ssr: true
     router: Awaited<ReturnType<typeof getRouter>>
