@@ -101,7 +101,7 @@ function ThemeToggle() {
 }
 
 function ShareDialog() {
-  const { firstName, lastName, jobTitle, phone, email, github, twitter } =
+  const { firstName, lastName, jobTitle, phone, email, github, x } =
     personalInfo
 
   const resumeUrl = typeof window !== "undefined" ? window.location.href : ""
@@ -110,8 +110,8 @@ function ShareDialog() {
     const vCard = new VCard()
       .addName({ givenName: firstName, familyName: lastName })
       .addJobtitle(jobTitle)
-      .addPhoneNumber({ number: phone })
-      .addEmail({ address: email })
+      .addPhoneNumber({ number: phone, type: ["work"] })
+      .addEmail({ address: email, type: ["work"] })
     if (github) {
       vCard.addSocial({
         url: `https://github.com/${github}`,
@@ -119,15 +119,15 @@ function ShareDialog() {
         user: github,
       })
     }
-    if (twitter) {
+    if (x) {
       vCard.addSocial({
-        url: `https://x.com/${twitter}`,
-        type: "Twitter",
-        user: twitter,
+        url: `https://x.com/${x}`,
+        type: "X",
+        user: x,
       })
     }
     return vCard.toString()
-  }, [firstName, lastName, jobTitle, phone, email, github, twitter])
+  }, [firstName, lastName, jobTitle, phone, email, github, x])
 
   return (
     <Dialog>
@@ -140,17 +140,23 @@ function ShareDialog() {
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Share</DialogTitle>
+          <DialogTitle>分享</DialogTitle>
         </DialogHeader>
         <Tabs defaultValue="resume">
-          <TabsList variant="default" className="w-full">
-            <TabsTrigger value="resume">Resume</TabsTrigger>
-            <TabsTrigger value="vcard">vCard</TabsTrigger>
+          <TabsList className="m-auto">
+            <TabsTrigger className="min-w-24" value="resume">
+              简历
+            </TabsTrigger>
+            <TabsTrigger className="min-w-24" value="vcard">
+              名片
+            </TabsTrigger>
           </TabsList>
-          <TabsContent value="resume" className="flex justify-center pt-4">
-            <QRCodeSVG value={resumeUrl} size={200} level="M" />
+          <TabsContent value="resume" className="flex justify-center py-4">
+            <ClientOnly>
+              <QRCodeSVG value={resumeUrl} size={200} level="M" />
+            </ClientOnly>
           </TabsContent>
-          <TabsContent value="vcard" className="flex justify-center pt-4">
+          <TabsContent value="vcard" className="flex justify-center py-4">
             <QRCodeSVG value={vCardText} size={200} level="M" />
           </TabsContent>
         </Tabs>

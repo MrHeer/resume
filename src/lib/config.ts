@@ -10,5 +10,5 @@ export const personalInfo = {
   phone: "+86 176 2303 0229",
   email: "hlm52pk@163.com",
   github: "MrHeer",
-  twitter: "MrHeer",
+  x: "MrHeer",
 }
