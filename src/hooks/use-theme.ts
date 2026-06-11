@@ -51,9 +51,13 @@ export function useTheme() {
     return () => mql.removeEventListener("change", handler)
   }, [])
 
+  const setTheme = useCallback((newTheme: Theme) => {
+    setThemeState(newTheme)
+  }, [])
+
   const toggleTheme = useCallback(() => {
     setThemeState((prev) => (prev === "dark" ? "light" : "dark"))
   }, [])
 
-  return { theme, toggleTheme } as const
+  return { theme, setTheme, toggleTheme } as const
 }

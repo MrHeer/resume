@@ -24,6 +24,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Kbd } from "@/components/ui/kbd"
 import { languages, personalInfo } from "@/lib/config"
 import { useTheme } from "@/hooks/use-theme"
+import { useCommandPalette } from "@/components/command-palette"
 
 function getCommandKey() {
   if (typeof navigator === "undefined") return "Ctrl"
@@ -165,9 +166,16 @@ function ShareDialog() {
   )
 }
 
-function CommandButtonPlaceholder() {
+function CommandButton() {
+  const { open } = useCommandPalette()
+
   return (
-    <Button variant="ghost" size="icon" disabled>
+    <Button
+      variant="ghost"
+      size="icon"
+      aria-label="Open command palette"
+      onClick={open}
+    >
       <CommandIcon />
     </Button>
   )
@@ -191,7 +199,7 @@ export function Header() {
         <LanguageMenu />
         <ShareDialog />
         <ThemeToggle />
-        <CommandButtonPlaceholder />
+        <CommandButton />
       </div>
     </header>
   )
