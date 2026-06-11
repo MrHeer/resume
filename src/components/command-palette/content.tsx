@@ -1,0 +1,110 @@
+import { useState, useMemo, Fragment, useCallback } from "react"
+import { ArrowLeftIcon } from "lucide-react"
+import {
+  Command,
+  CommandInput,
+  CommandList,
+  CommandEmpty,
+  CommandGroup,
+  CommandItem,
+  CommandShortcut,
+} from "@/components/ui/command"
+import { Kbd } from "@/components/ui/kbd"
+import type { CommandAction } from "./types"
+import { groupBy } from "@/lib/utils"
+import { useCommandPalette } from "./context"
+
+export function CommandPaletteContent({
+  actions,
+}: {
+  actions: CommandAction[]
+}) {
+  const { close } = useCommandPalette()
+  const [search, setSearch] = useState("")
+  const [pages, setPages] = useState<string[]>([])
+  const page = pages[pages.length - 1]
+
+  const grouped = useMemo(
+    () =>
+      groupBy(
+        actions.filter((it) => it.page === page),
+        (a) => a.section
+      ),
+    [actions, page]
+  )
+
+  const goBack = useCallback(
+    () => setPages((prevPages) => prevPages.slice(0, -1)),
+    []
+  )
+
+  return (
+    <Command
+      onKeyDown={(e) => {
+        // Escape goes to previous page
+        // Backspace goes to previous page when search is empty
+        if (
+          (e.key === "Escape" && page) ||
+          (e.key === "Backspace" && !search)
+        ) {
+          e.stopPropagation()
+          e.preventDefault()
+          goBack()
+        }
+      }}
+    >
+      <CommandInput placeholder="输入命令或搜索…" onValueChange={setSearch} />
+      <CommandList>
+        <CommandEmpty>没有找到结果</CommandEmpty>
+
+        {page && (
+          <CommandGroup>
+            <CommandItem value="__back" onSelect={goBack}>
+              <ArrowLeftIcon />
+              <span>返回</span>
+            </CommandItem>
+          </CommandGroup>
+        )}
+
+        {Object.entries(grouped).map(([section, items]) => (
+          <Fragment key={section}>
+            <CommandGroup heading={section}>
+              {items.map((it) => (
+                <CommandItem
+                  key={it.id}
+                  value={it.id}
+                  keywords={it.keywords}
+                  onSelect={
+                    it.nextPage
+                      ? () =>
+                          setPages((prevPages) => [
+                            ...prevPages,
+                            it.nextPage as string,
+                          ])
+                      : () => {
+                          close()
+                          it.action?.()
+                        }
+                  }
+                >
+                  {it.icon}
+                  <span>{it.label}</span>
+                  {it.shortcut && (
+                    <CommandShortcut>
+                      {it.shortcut.map((key, i) => (
+                        <Fragment key={i}>
+                          {i > 0 && <span>+</span>}
+                          <Kbd>{key.toUpperCase()}</Kbd>
+                        </Fragment>
+                      ))}
+                    </CommandShortcut>
+                  )}
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          </Fragment>
+        ))}
+      </CommandList>
+    </Command>
+  )
+}
