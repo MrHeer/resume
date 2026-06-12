@@ -22,6 +22,7 @@ const themeScript = `(function () {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
     }
+    document.documentElement.style.colorScheme = theme;
   } catch (e) {}
 })()`
 
@@ -78,7 +79,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [manualTheme, setManualTheme] = useState<Theme | null>(null)
   const theme = manualTheme ?? domTheme
 
-  // Persist user's explicit choice to DOM class and localStorage
+  // Persist user's explicit choice to DOM class, colorScheme, and localStorage
   useEffect(() => {
     if (manualTheme === null) return
     const root = document.documentElement
@@ -87,6 +88,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     } else {
       root.classList.remove("dark")
     }
+    root.style.colorScheme = manualTheme
     try {
       localStorage.setItem("theme", manualTheme)
     } catch {
