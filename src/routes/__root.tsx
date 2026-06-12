@@ -1,8 +1,16 @@
-import { HeadContent, Scripts, createRootRoute } from "@tanstack/react-router"
+import {
+  HeadContent,
+  ScriptOnce,
+  Scripts,
+  createRootRoute,
+  useParams,
+} from "@tanstack/react-router"
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools"
 import { TanStackDevtools } from "@tanstack/react-devtools"
 
+import { themeScript } from "@/lib/theme-script"
 import appCss from "../styles.css?url"
+import { fallbackLanguage } from "@/lib/config"
 
 export const Route = createRootRoute({
   head: () => ({
@@ -35,12 +43,14 @@ export const Route = createRootRoute({
 })
 
 function RootDocument({ children }: { children: React.ReactNode }) {
+  const { slug } = useParams({ strict: false })
   return (
-    <html>
+    <html lang={slug || fallbackLanguage} suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>
       <body>
+        <ScriptOnce children={themeScript} />
         {children}
         <TanStackDevtools
           config={{
