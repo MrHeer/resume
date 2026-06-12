@@ -13,6 +13,17 @@ const en = {
     jobTitle: "Senior Frontend Engineer",
   },
 
+  error: {
+    title: "Something went wrong",
+    description:
+      "An unexpected error occurred. Please try refreshing the page.",
+  },
+
+  notFound: {
+    title: "404",
+    description: "The requested page could not be found.",
+  },
+
   palette: {
     call: {
       label: "Call",
@@ -80,6 +91,16 @@ export const translations = {
       firstName: "林明",
       lastName: "何",
       jobTitle: "高级前端工程师",
+    },
+
+    error: {
+      title: "出了点问题",
+      description: "发生了意外错误，请尝试刷新页面。",
+    },
+
+    notFound: {
+      title: "404",
+      description: "找不到请求的页面。",
     },
 
     palette: {

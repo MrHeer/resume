@@ -1,4 +1,34 @@
 import { Component } from "react"
+import { TriangleAlertIcon } from "lucide-react"
+
+import { useTranslation } from "@/hooks/use-local"
+import {
+  Empty,
+  EmptyHeader,
+  EmptyTitle,
+  EmptyDescription,
+  EmptyContent,
+  EmptyMedia,
+} from "@/components/ui/empty"
+
+function ErrorFallback() {
+  const t = useTranslation()
+
+  return (
+    <main className="container mx-auto p-4 pt-16">
+      <Empty>
+        <EmptyMedia variant="icon">
+          <TriangleAlertIcon />
+        </EmptyMedia>
+        <EmptyHeader>
+          <EmptyTitle>{t.error.title}</EmptyTitle>
+          <EmptyDescription>{t.error.description}</EmptyDescription>
+        </EmptyHeader>
+        <EmptyContent />
+      </Empty>
+    </main>
+  )
+}
 
 interface Props {
   children: React.ReactNode
@@ -21,18 +51,7 @@ export class ErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.error) {
-      return (
-        this.props.fallback ?? (
-          <main className="container mx-auto p-4 pt-16">
-            <h1 className="mb-2 text-2xl font-semibold">
-              Something went wrong
-            </h1>
-            <p className="text-muted-foreground">
-              An unexpected error occurred. Please try refreshing the page.
-            </p>
-          </main>
-        )
-      )
+      return this.props.fallback ?? <ErrorFallback />
     }
 
     return this.props.children
