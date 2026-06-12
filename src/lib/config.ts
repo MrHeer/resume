@@ -3,6 +3,8 @@ export const languages = [
   { slug: "en-US", label: "English", icon: "🇺🇸" },
 ] as const
 
+export const fallbackLanguage = "zh-CN"
+
 export const personalInfo = {
   firstName: "林明",
   lastName: "何",

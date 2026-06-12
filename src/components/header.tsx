@@ -45,7 +45,7 @@ function CommandHint() {
 
 function LanguageMenu() {
   const { slug } = useParams({ strict: false })
-  const currentSlug = slug || "zh-CN"
+  const currentSlug = slug || fallbackLanguage
 
   const currentLanguage = languages.find((l) => l.slug === currentSlug)
 
