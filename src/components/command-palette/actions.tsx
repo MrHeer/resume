@@ -1,5 +1,5 @@
 import { useMemo } from "react"
-import { useNavigate, useParams } from "@tanstack/react-router"
+import { useNavigate } from "@tanstack/react-router"
 import {
   PhoneIcon,
   MailIcon,
@@ -15,9 +15,10 @@ import { personalInfo, languages } from "@/lib/config"
 import { useTheme } from "@/hooks/use-theme"
 import { Twemoji } from "@/components/twemoji"
 import type { CommandAction } from "./types"
+import { useLocal } from "@/hooks/use-local"
 
 export function useCommandActions(): CommandAction[] {
-  const { slug } = useParams({ strict: false })
+  const { slug } = useLocal()
   const navigate = useNavigate()
   const { theme, setTheme, toggleTheme } = useTheme()
 

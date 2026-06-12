@@ -1,15 +1,11 @@
-import {
-  HeadContent,
-  Scripts,
-  createRootRoute,
-  useParams,
-} from "@tanstack/react-router"
+import { HeadContent, Scripts, createRootRoute } from "@tanstack/react-router"
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools"
 import { TanStackDevtools } from "@tanstack/react-devtools"
 
 import { ThemeProvider } from "@/components/theme-provider"
 import appCss from "../styles.css?url"
 import { fallbackLanguage } from "@/lib/config"
+import { useLocal } from "@/hooks/use-local"
 
 export const Route = createRootRoute({
   head: () => ({
@@ -42,9 +38,9 @@ export const Route = createRootRoute({
 })
 
 function RootDocument({ children }: { children: React.ReactNode }) {
-  const { slug } = useParams({ strict: false })
+  const { slug } = useLocal()
   return (
-    <html lang={slug || fallbackLanguage} suppressHydrationWarning>
+    <html lang={slug} suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>
