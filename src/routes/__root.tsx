@@ -18,7 +18,12 @@ export const Route = createRootRoute({
         content: "width=device-width, initial-scale=1",
       },
       {
-        title: "Resume",
+        title: "Resume | Linming He",
+      },
+      {
+        name: "description",
+        content:
+          "Linming He — Full-Stack Developer with expertise in React, TypeScript, Node.js, and cloud-native architectures. View my professional experience, projects, and contact information.",
       },
     ],
     links: [
