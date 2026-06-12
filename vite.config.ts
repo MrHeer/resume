@@ -6,7 +6,9 @@ import tailwindcss from "@tailwindcss/vite"
 import contentCollections from "@content-collections/vite"
 import fs from "node:fs"
 import path from "node:path"
+import { fileURLToPath } from "node:url"
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const resumeDir = path.resolve(__dirname, "resume")
 const pages = fs
   .readdirSync(resumeDir)

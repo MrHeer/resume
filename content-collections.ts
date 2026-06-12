@@ -11,7 +11,9 @@ const resumes = defineCollection({
   name: "resumes",
   directory: "./resume",
   include: "*.md",
-  schema: z.object({}),
+  schema: z.object({
+    content: z.string(),
+  }),
   transform: ({ content, ...resume }) => {
     const frontMatter = extractFrontMatter(content)
 
@@ -22,6 +24,7 @@ const resumes = defineCollection({
     return {
       ...resume,
       slug: resume._meta.path,
+      title: frontMatter.data.title,
       excerpt: frontMatter.excerpt,
       description: frontMatter.data.description,
       headerImage,
