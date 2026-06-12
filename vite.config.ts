@@ -26,6 +26,7 @@ const config = defineConfig({
       prerender: {
         enabled: true,
         crawlLinks: true,
+        autoSubfolderIndex: false,
       },
       pages,
     }),
