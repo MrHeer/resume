@@ -1,5 +1,5 @@
 import { useMemo } from "react"
-import { ClientOnly, Link, useParams } from "@tanstack/react-router"
+import { ClientOnly, Link } from "@tanstack/react-router"
 import { QRCodeSVG } from "qrcode.react"
 import VCard from "vcard-creator"
 import { SunIcon, MoonIcon, Share2Icon, CommandIcon } from "lucide-react"
@@ -22,9 +22,10 @@ import {
 } from "@/components/ui/dialog"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Kbd } from "@/components/ui/kbd"
-import { fallbackLanguage, languages, personalInfo } from "@/lib/config"
+import { languages, personalInfo } from "@/lib/config"
 import { useTheme } from "@/hooks/use-theme"
 import { useCommandPalette } from "@/components/command-palette"
+import { useLocal } from "@/hooks/use-local"
 
 function getCommandKey() {
   if (typeof navigator === "undefined") return "Ctrl"
@@ -44,11 +45,7 @@ function CommandHint() {
 }
 
 function LanguageMenu() {
-  const { slug: lang } = useParams({ strict: false })
-  const currentLang = lang || fallbackLanguage
-
-  const effectiveLanguage = languages.find((l) => l.slug === currentLang)
-
+  const language = useLocal()
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
@@ -56,11 +53,7 @@ function LanguageMenu() {
           <Button variant="ghost" size="icon" aria-label="Switch language" />
         }
       >
-        {effectiveLanguage && (
-          <Twemoji className="text-base leading-none">
-            {effectiveLanguage.icon}
-          </Twemoji>
-        )}
+        <Twemoji className="text-base leading-none">{language.icon}</Twemoji>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" sideOffset={8}>
         {languages.map(({ slug, icon, label }) => (
