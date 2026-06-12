@@ -53,7 +53,11 @@ export function CommandPaletteContent({
         }
       }}
     >
-      <CommandInput placeholder="输入命令或搜索…" onValueChange={setSearch} />
+      <CommandInput
+        placeholder="输入命令或搜索…"
+        value={search}
+        onValueChange={setSearch}
+      />
       <CommandList>
         <CommandEmpty>没有找到结果</CommandEmpty>
 
