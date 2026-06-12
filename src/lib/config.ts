@@ -1,9 +1,11 @@
-export const languages = [
+export const languageOptions = [
   { slug: "zh-CN", label: "中文", icon: "🇨🇳" },
   { slug: "en-US", label: "English", icon: "🇺🇸" },
 ] as const
 
-export const fallbackLanguage: (typeof languages)[number]["slug"] = "zh-CN"
+export type LanguageSlug = (typeof languageOptions)[number]["slug"]
+
+export const fallbackSlug: LanguageSlug = "zh-CN"
 
 export const personalInfo = {
   firstName: "林明",

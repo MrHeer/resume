@@ -4,7 +4,6 @@ import { TanStackDevtools } from "@tanstack/react-devtools"
 
 import { ThemeProvider } from "@/components/theme-provider"
 import appCss from "../styles.css?url"
-import { fallbackLanguage } from "@/lib/config"
 import { useLocal } from "@/hooks/use-local"
 
 export const Route = createRootRoute({
