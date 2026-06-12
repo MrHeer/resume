@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback } from "react"
-import { ArrowLeftIcon } from "lucide-react"
+import { ArrowLeftIcon, SearchXIcon } from "lucide-react"
 import {
   Command,
   CommandInput,
@@ -9,6 +9,13 @@ import {
   CommandItem,
   CommandShortcut,
 } from "@/components/ui/command"
+import {
+  Empty,
+  EmptyHeader,
+  EmptyTitle,
+  EmptyDescription,
+  EmptyMedia,
+} from "@/components/ui/empty"
 import { Kbd } from "@/components/ui/kbd"
 import type { CommandAction } from "./types"
 import { groupBy } from "@/lib/utils"
@@ -58,8 +65,18 @@ export function CommandPaletteContent({
         value={search}
         onValueChange={setSearch}
       />
-      <CommandList>
-        <CommandEmpty>没有找到结果</CommandEmpty>
+      <CommandList className="max-h-96">
+        <CommandEmpty>
+          <Empty>
+            <EmptyMedia variant="icon">
+              <SearchXIcon />
+            </EmptyMedia>
+            <EmptyHeader>
+              <EmptyTitle>没有找到结果</EmptyTitle>
+              <EmptyDescription>尝试使用不同的关键词搜索</EmptyDescription>
+            </EmptyHeader>
+          </Empty>
+        </CommandEmpty>
 
         {page && (
           <CommandGroup>
