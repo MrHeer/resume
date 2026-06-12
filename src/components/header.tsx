@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/dialog"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Kbd } from "@/components/ui/kbd"
-import { languages, personalInfo } from "@/lib/config"
+import { fallbackLanguage, languages, personalInfo } from "@/lib/config"
 import { useTheme } from "@/hooks/use-theme"
 import { useCommandPalette } from "@/components/command-palette"
 
@@ -44,10 +44,10 @@ function CommandHint() {
 }
 
 function LanguageMenu() {
-  const { slug } = useParams({ strict: false })
-  const currentSlug = slug || fallbackLanguage
+  const { slug: lang } = useParams({ strict: false })
+  const currentLang = lang || fallbackLanguage
 
-  const currentLanguage = languages.find((l) => l.slug === currentSlug)
+  const effectiveLanguage = languages.find((l) => l.slug === currentLang)
 
   return (
     <DropdownMenu>
@@ -56,9 +56,9 @@ function LanguageMenu() {
           <Button variant="ghost" size="icon" aria-label="Switch language" />
         }
       >
-        {currentLanguage && (
+        {effectiveLanguage && (
           <Twemoji className="text-base leading-none">
-            {currentLanguage.icon}
+            {effectiveLanguage.icon}
           </Twemoji>
         )}
       </DropdownMenuTrigger>
@@ -86,17 +86,17 @@ function LanguageMenu() {
 }
 
 function ThemeToggle() {
-  const { theme, toggleTheme } = useTheme()
-  const isDark = theme === "dark"
+  const { toggleTheme } = useTheme()
 
   return (
     <Button
       variant="ghost"
       size="icon"
-      aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
+      aria-label="Toggle theme"
       onClick={toggleTheme}
     >
-      {isDark ? <SunIcon /> : <MoonIcon />}
+      <SunIcon aria-hidden className="hidden [html.dark_&]:block" />
+      <MoonIcon aria-hidden className="block [html.dark_&]:hidden" />
     </Button>
   )
 }
