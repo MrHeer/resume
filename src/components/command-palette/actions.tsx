@@ -6,11 +6,11 @@ import {
   PrinterIcon,
   SunIcon,
   MoonIcon,
-  AtSignIcon,
   GlobeIcon,
   PaletteIcon,
   ArrowLeftRightIcon,
 } from "lucide-react"
+import { GithubIcon, XSocialIcon } from "@/components/icons"
 import { personalInfo, languageOptions } from "@/lib/config"
 import { useTheme } from "@/hooks/use-theme"
 import { Twemoji } from "@/components/twemoji"
@@ -46,7 +46,7 @@ export function useCommandActions(): CommandAction[] {
       {
         id: "github",
         label: "GitHub",
-        icon: <AtSignIcon />,
+        icon: <GithubIcon />,
         keywords: p.github.keywords,
         shortcut: ["g", "g"],
         section: p.sections.navigation,
@@ -56,7 +56,7 @@ export function useCommandActions(): CommandAction[] {
       {
         id: "x",
         label: "X",
-        icon: <AtSignIcon />,
+        icon: <XSocialIcon />,
         keywords: p.x.keywords,
         shortcut: ["g", "x"],
         section: p.sections.navigation,
