@@ -1,4 +1,4 @@
-import { useMemo } from "react"
+import { useMemo, useState, useEffect } from "react"
 import { ClientOnly, Link } from "@tanstack/react-router"
 import { QRCodeSVG } from "qrcode.react"
 import VCard from "vcard-creator"
@@ -23,7 +23,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Kbd } from "@/components/ui/kbd"
 import { languageOptions } from "@/lib/config"
-import { useTheme } from "@/hooks/use-theme"
+import { useTheme } from "@/components/theme-provider"
 import { useCommandPalette } from "@/components/command-palette"
 import { useLocal, useTranslation, usePersonalInfo } from "@/hooks/use-local"
 
@@ -99,7 +99,10 @@ function ShareDialog() {
   const { firstName, lastName, jobTitle, phone, email, github, x } =
     usePersonalInfo()
 
-  const resumeUrl = typeof window !== "undefined" ? window.location.href : ""
+  const [resumeUrl, setResumeUrl] = useState("")
+  useEffect(() => {
+    setResumeUrl(window.location.href)
+  }, [])
 
   const vCardText = useMemo(() => {
     const vCard = new VCard()

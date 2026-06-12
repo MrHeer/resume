@@ -16,7 +16,7 @@ export function Markdown({ result, className }: MarkdownProps) {
         if (domNode.name === "a") {
           // Handle links
           const href = domNode.attribs.href
-          if (href.startsWith("/")) {
+          if (href?.startsWith("/")) {
             // Internal link - use your router's Link component
             return (
               <Link to={href}>
@@ -27,7 +27,7 @@ export function Markdown({ result, className }: MarkdownProps) {
         }
 
         if (domNode.name === "img") {
-          const isEmoji = domNode.attribs.class.includes("emoji")
+          const isEmoji = domNode.attribs.class?.includes("emoji")
           const { class: _, ...rest } = domNode.attribs
           return (
             <img

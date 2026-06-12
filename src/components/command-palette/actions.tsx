@@ -12,7 +12,7 @@ import {
 } from "lucide-react"
 import { GithubIcon, XSocialIcon } from "@/components/icons"
 import { personalInfo, languageOptions } from "@/lib/config"
-import { useTheme } from "@/hooks/use-theme"
+import { useTheme } from "@/components/theme-provider"
 import { Twemoji } from "@/components/twemoji"
 import type { CommandAction } from "./types"
 import { useTranslation } from "@/hooks/use-local"
@@ -21,7 +21,7 @@ export function useCommandActions(): CommandAction[] {
   const t = useTranslation()
   const p = t.palette
   const navigate = useNavigate()
-  const { theme, setTheme, toggleTheme } = useTheme()
+  const { setTheme, toggleTheme } = useTheme()
 
   return useMemo(() => {
     return [
@@ -135,5 +135,5 @@ export function useCommandActions(): CommandAction[] {
         })
       ),
     ]
-  }, [t, p, theme, setTheme, toggleTheme, navigate])
+  }, [t, p, setTheme, toggleTheme, navigate])
 }
