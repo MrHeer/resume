@@ -1,6 +1,5 @@
 import {
   HeadContent,
-  ScriptOnce,
   Scripts,
   createRootRoute,
   useParams,
@@ -8,7 +7,7 @@ import {
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools"
 import { TanStackDevtools } from "@tanstack/react-devtools"
 
-import { themeScript } from "@/lib/theme-script"
+import { ThemeProvider } from "@/components/theme-provider"
 import appCss from "../styles.css?url"
 import { fallbackLanguage } from "@/lib/config"
 
@@ -50,8 +49,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        <ScriptOnce children={themeScript} />
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
         <TanStackDevtools
           config={{
             position: "bottom-right",
