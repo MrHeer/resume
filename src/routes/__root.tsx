@@ -31,6 +31,11 @@ export const Route = createRootRoute({
         rel: "stylesheet",
         href: appCss,
       },
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: `${import.meta.env.BASE_URL}favicon.ico`,
+      },
     ],
   }),
   shellComponent: RootDocument,

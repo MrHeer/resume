@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite dev --port 3000",
     "build": "vite build",
+    "postbuild": "npx tsx scripts/fix-base-path.ts",
     "preview": "vite preview",
     "test": "vitest run",
     "lint": "eslint",
