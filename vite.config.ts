@@ -16,6 +16,7 @@ const pages = fs
   .map((file) => ({ path: `/${path.basename(file, ".md")}` }))
 
 const config = defineConfig({
+  base: "/resume/",
   resolve: { tsconfigPaths: true },
   plugins: [
     contentCollections(),
