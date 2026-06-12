@@ -4,6 +4,7 @@
 @import "@fontsource-variable/inter";
 
 @custom-variant dark (&:is(.dark *));
+@custom-variant mac (&:is(html.mac *));
 
 @theme inline {
   --font-heading: var(--font-sans);

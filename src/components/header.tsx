@@ -1,5 +1,5 @@
 import { useMemo, useState, useEffect } from "react"
-import { ClientOnly, Link } from "@tanstack/react-router"
+import { ClientOnly, Link, ScriptOnce } from "@tanstack/react-router"
 import { QRCodeSVG } from "qrcode.react"
 import VCard from "vcard-creator"
 import { SunIcon, MoonIcon, Share2Icon, CommandIcon } from "lucide-react"
@@ -27,20 +27,21 @@ import { useTheme } from "@/components/theme-provider"
 import { useCommandPalette } from "@/components/command-palette"
 import { useLocal, useTranslation, usePersonalInfo } from "@/hooks/use-local"
 
-function getCommandKey() {
-  if (typeof navigator === "undefined") return "Ctrl"
-  return navigator.userAgent.includes("Mac OS") ? "⌘" : "Ctrl"
-}
+const platformScript = `!function(){document.documentElement.classList.toggle('mac',/Mac OS/.test(navigator.userAgent))}()`
 
 function CommandHint() {
-  const commandKey = getCommandKey()
-
   return (
-    <span className="hidden items-center gap-1 text-sm text-muted-foreground md:inline-flex">
-      <Kbd>{commandKey}</Kbd>
-      <span>+</span>
-      <Kbd>K</Kbd>
-    </span>
+    <>
+      <ScriptOnce>{platformScript}</ScriptOnce>
+      <span className="hidden items-center gap-1 text-sm text-muted-foreground md:inline-flex">
+        <Kbd>
+          <span className="inline mac:hidden">Ctrl</span>
+          <span className="hidden mac:inline">⌘</span>
+        </Kbd>
+        <span>+</span>
+        <Kbd>K</Kbd>
+      </span>
+    </>
   )
 }
 
@@ -188,10 +189,7 @@ export function Header() {
         strength={4}
         falloffPercentage={50}
       />
-
-      <ClientOnly>
-        <CommandHint />
-      </ClientOnly>
+      <CommandHint />
       <div className="ml-auto flex items-center gap-1">
         <LanguageMenu />
         <ShareDialog />
