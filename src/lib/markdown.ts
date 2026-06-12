@@ -35,6 +35,7 @@ export async function renderMarkdown(content: string): Promise<MarkdownResult> {
         light: "github-light",
         dark: "github-dark",
       },
+      defaultColor: "light-dark()",
     })
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings, {
