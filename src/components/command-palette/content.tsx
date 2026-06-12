@@ -34,13 +34,19 @@ export function CommandPaletteContent({
   const [pages, setPages] = useState<string[]>([])
   const page = pages[pages.length - 1]
 
-  const grouped = useMemo(
+  // When searching, show ALL terminal actions (no nextPage) across all pages.
+  // When not searching, show only actions belonging to the current page.
+  const actionsForFilter = useMemo(
     () =>
-      groupBy(
-        actions.filter((it) => it.page === page),
-        (a) => a.section
-      ),
-    [actions, page]
+      search
+        ? actions.filter((it) => !it.nextPage)
+        : actions.filter((it) => it.page === page),
+    [actions, page, search]
+  )
+
+  const grouped = useMemo(
+    () => groupBy(actionsForFilter, (a) => a.section),
+    [actionsForFilter]
   )
 
   const goBack = useCallback(
@@ -81,7 +87,7 @@ export function CommandPaletteContent({
           </Empty>
         </CommandEmpty>
 
-        {page && (
+        {page && !search && (
           <CommandGroup>
             <CommandItem value="__back" onSelect={goBack}>
               <ArrowLeftIcon />
