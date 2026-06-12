@@ -1,4 +1,4 @@
-import { useState, useMemo, Fragment, useCallback } from "react"
+import { useState, useMemo, useCallback } from "react"
 import { ArrowLeftIcon } from "lucide-react"
 import {
   Command,
@@ -67,42 +67,37 @@ export function CommandPaletteContent({
         )}
 
         {Object.entries(grouped).map(([section, items]) => (
-          <Fragment key={section}>
-            <CommandGroup heading={section}>
-              {items.map((it) => (
-                <CommandItem
-                  key={it.id}
-                  value={it.id}
-                  keywords={it.keywords}
-                  onSelect={
-                    it.nextPage
-                      ? () =>
-                          setPages((prevPages) => [
-                            ...prevPages,
-                            it.nextPage as string,
-                          ])
-                      : () => {
-                          close()
-                          it.action?.()
-                        }
-                  }
-                >
-                  {it.icon}
-                  <span>{it.label}</span>
-                  {it.shortcut && (
-                    <CommandShortcut>
-                      {it.shortcut.map((key, i) => (
-                        <Fragment key={i}>
-                          {i > 0 && <span>+</span>}
-                          <Kbd>{key.toUpperCase()}</Kbd>
-                        </Fragment>
-                      ))}
-                    </CommandShortcut>
-                  )}
-                </CommandItem>
-              ))}
-            </CommandGroup>
-          </Fragment>
+          <CommandGroup key={section} heading={section}>
+            {items.map((it) => (
+              <CommandItem
+                key={it.id}
+                value={it.id}
+                keywords={it.keywords}
+                onSelect={
+                  it.nextPage
+                    ? () =>
+                        setPages((prevPages) => [
+                          ...prevPages,
+                          it.nextPage as string,
+                        ])
+                    : () => {
+                        close()
+                        it.action?.()
+                      }
+                }
+              >
+                {it.icon}
+                <span>{it.label}</span>
+                {it.shortcut && (
+                  <CommandShortcut className="flex gap-1">
+                    {it.shortcut.map((key, index) => (
+                      <Kbd key={`${key}-${index}`}>{key.toUpperCase()}</Kbd>
+                    ))}
+                  </CommandShortcut>
+                )}
+              </CommandItem>
+            ))}
+          </CommandGroup>
         ))}
       </CommandList>
     </Command>

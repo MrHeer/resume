@@ -42,15 +42,6 @@ export function useCommandActions(): CommandAction[] {
         action: () => window.open(`mailto:${personalInfo.email}`, "_blank"),
       },
       {
-        id: "x",
-        label: "X",
-        icon: <AtSignIcon />,
-        keywords: ["twitter", "x", "social", "contact"],
-        shortcut: ["g", "t"],
-        section: "导航",
-        action: () => window.open(`https://x.com/${personalInfo.x}`, "_blank"),
-      },
-      {
         id: "github",
         label: "GitHub",
         icon: <AtSignIcon />,
@@ -59,6 +50,15 @@ export function useCommandActions(): CommandAction[] {
         section: "导航",
         action: () =>
           window.open(`https://github.com/${personalInfo.github}`, "_blank"),
+      },
+      {
+        id: "x",
+        label: "X",
+        icon: <AtSignIcon />,
+        keywords: ["x", "twitter", "social", "contact"],
+        shortcut: ["g", "x"],
+        section: "导航",
+        action: () => window.open(`https://x.com/${personalInfo.x}`, "_blank"),
       },
       {
         id: "print",
