@@ -20,12 +20,15 @@ import { Kbd } from "@/components/ui/kbd"
 import type { CommandAction } from "./types"
 import { groupBy } from "@/lib/utils"
 import { useCommandPalette } from "./context"
+import { useTranslation } from "@/hooks/use-local"
 
 export function CommandPaletteContent({
   actions,
 }: {
   actions: CommandAction[]
 }) {
+  const t = useTranslation()
+  const ui = t.palette.ui
   const { close } = useCommandPalette()
   const [search, setSearch] = useState("")
   const [pages, setPages] = useState<string[]>([])
@@ -61,7 +64,7 @@ export function CommandPaletteContent({
       }}
     >
       <CommandInput
-        placeholder="输入命令或搜索…"
+        placeholder={ui.searchPlaceholder}
         value={search}
         onValueChange={setSearch}
       />
@@ -72,8 +75,8 @@ export function CommandPaletteContent({
               <SearchXIcon />
             </EmptyMedia>
             <EmptyHeader>
-              <EmptyTitle>没有找到结果</EmptyTitle>
-              <EmptyDescription>尝试使用不同的关键词搜索</EmptyDescription>
+              <EmptyTitle>{ui.noResults}</EmptyTitle>
+              <EmptyDescription>{ui.noResultsHint}</EmptyDescription>
             </EmptyHeader>
           </Empty>
         </CommandEmpty>
@@ -82,7 +85,7 @@ export function CommandPaletteContent({
           <CommandGroup>
             <CommandItem value="__back" onSelect={goBack}>
               <ArrowLeftIcon />
-              <span>返回</span>
+              <span>{ui.back}</span>
             </CommandItem>
           </CommandGroup>
         )}

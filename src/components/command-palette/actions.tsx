@@ -15,11 +15,11 @@ import { personalInfo, languageOptions } from "@/lib/config"
 import { useTheme } from "@/hooks/use-theme"
 import { Twemoji } from "@/components/twemoji"
 import type { CommandAction } from "./types"
-import { useLocal, useTranslation } from "@/hooks/use-local"
+import { useTranslation } from "@/hooks/use-local"
 
 export function useCommandActions(): CommandAction[] {
-  const { slug } = useLocal()
   const t = useTranslation()
+  const p = t.palette
   const navigate = useNavigate()
   const { theme, setTheme, toggleTheme } = useTheme()
 
@@ -27,29 +27,29 @@ export function useCommandActions(): CommandAction[] {
     return [
       {
         id: "call",
-        label: t.call,
+        label: p.call.label,
         icon: <PhoneIcon />,
-        keywords: t.callKeywords,
+        keywords: p.call.keywords,
         shortcut: ["c"],
-        section: "导航",
+        section: p.sections.navigation,
         action: () => window.open(`tel:${personalInfo.phone}`, "_blank"),
       },
       {
         id: "email",
-        label: "发送邮件",
+        label: p.email.label,
         icon: <MailIcon />,
-        keywords: ["email", "mail", "e-mail"],
+        keywords: p.email.keywords,
         shortcut: ["e"],
-        section: "导航",
+        section: p.sections.navigation,
         action: () => window.open(`mailto:${personalInfo.email}`, "_blank"),
       },
       {
         id: "github",
         label: "GitHub",
         icon: <AtSignIcon />,
-        keywords: ["github", "code", "source", "repository", "sourcecode"],
+        keywords: p.github.keywords,
         shortcut: ["g", "g"],
-        section: "导航",
+        section: p.sections.navigation,
         action: () =>
           window.open(`https://github.com/${personalInfo.github}`, "_blank"),
       },
@@ -57,64 +57,64 @@ export function useCommandActions(): CommandAction[] {
         id: "x",
         label: "X",
         icon: <AtSignIcon />,
-        keywords: ["x", "twitter", "social", "contact"],
+        keywords: p.x.keywords,
         shortcut: ["g", "x"],
-        section: "导航",
+        section: p.sections.navigation,
         action: () => window.open(`https://x.com/${personalInfo.x}`, "_blank"),
       },
       {
         id: "print",
-        label: "打印",
+        label: p.print.label,
         icon: <PrinterIcon />,
-        keywords: ["print", "save"],
+        keywords: p.print.keywords,
         shortcut: ["p"],
-        section: "命令",
+        section: p.sections.commands,
         action: () => setTimeout(window.print, 300),
       },
       {
         id: "theme",
-        label: "更换主题…",
+        label: p.theme.label,
         icon: <PaletteIcon />,
-        keywords: ["interface", "color", "dark", "light"],
+        keywords: p.theme.keywords,
         nextPage: "theme",
-        section: "偏好设置",
+        section: p.sections.preferences,
       },
       {
         id: "toggleTheme",
-        label: "切换主题",
+        label: p.theme.toggle.label,
         icon: <ArrowLeftRightIcon />,
-        keywords: ["toggle", "theme"],
+        keywords: p.theme.toggle.keywords,
         shortcut: ["t", "t"],
-        section: "更换主题…",
+        section: p.theme.label,
         page: "theme",
         action: toggleTheme,
       },
       {
         id: "lightTheme",
-        label: "浅色主题",
+        label: p.theme.light.label,
         icon: <SunIcon />,
-        keywords: ["light", "theme"],
+        keywords: p.theme.light.keywords,
         shortcut: ["t", "l"],
-        section: "更换主题…",
+        section: p.theme.label,
         page: "theme",
         action: () => setTheme("light"),
       },
       {
         id: "darkTheme",
-        label: "深色主题",
+        label: p.theme.dark.label,
         icon: <MoonIcon />,
-        keywords: ["dark", "theme"],
+        keywords: p.theme.dark.keywords,
         shortcut: ["t", "d"],
-        section: "更换主题…",
+        section: p.theme.label,
         page: "theme",
         action: () => setTheme("dark"),
       },
       {
         id: "language",
-        label: "切换语言…",
+        label: p.language.label,
         icon: <GlobeIcon />,
-        keywords: ["language", "i18n"],
-        section: "偏好设置",
+        keywords: p.language.keywords,
+        section: p.sections.preferences,
         nextPage: "language",
       },
       ...languageOptions.map(
@@ -126,8 +126,8 @@ export function useCommandActions(): CommandAction[] {
               {lang.icon}
             </Twemoji>
           ),
-          keywords: [lang.label, "language", "i18n"],
-          section: "切换语言…",
+          keywords: [lang.label, ...p.language.keywords],
+          section: p.language.label,
           page: "language",
           action: () => {
             navigate({ to: "/$slug", params: { slug: lang.slug } })
@@ -135,5 +135,5 @@ export function useCommandActions(): CommandAction[] {
         })
       ),
     ]
-  }, [theme, setTheme, toggleTheme, navigate, slug])
+  }, [t, p, theme, setTheme, toggleTheme, navigate])
 }

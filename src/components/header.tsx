@@ -22,10 +22,10 @@ import {
 } from "@/components/ui/dialog"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Kbd } from "@/components/ui/kbd"
-import { languageOptions, personalInfo } from "@/lib/config"
+import { languageOptions } from "@/lib/config"
 import { useTheme } from "@/hooks/use-theme"
 import { useCommandPalette } from "@/components/command-palette"
-import { useLocal, useTranslation } from "@/hooks/use-local"
+import { useLocal, useTranslation, usePersonalInfo } from "@/hooks/use-local"
 
 function getCommandKey() {
   if (typeof navigator === "undefined") return "Ctrl"
@@ -97,7 +97,7 @@ function ThemeToggle() {
 function ShareDialog() {
   const t = useTranslation()
   const { firstName, lastName, jobTitle, phone, email, github, x } =
-    personalInfo
+    usePersonalInfo()
 
   const resumeUrl = typeof window !== "undefined" ? window.location.href : ""
 
@@ -135,15 +135,15 @@ function ShareDialog() {
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>{t.share}</DialogTitle>
+          <DialogTitle>{t.shareDialog.share}</DialogTitle>
         </DialogHeader>
         <Tabs defaultValue="resume">
           <TabsList className="m-auto">
             <TabsTrigger className="min-w-24" value="resume">
-              {t.resume}
+              {t.shareDialog.resume}
             </TabsTrigger>
             <TabsTrigger className="min-w-24" value="vcard">
-              {t.vCard}
+              {t.shareDialog.vCard}
             </TabsTrigger>
           </TabsList>
           <TabsContent value="resume" className="flex justify-center py-4">
