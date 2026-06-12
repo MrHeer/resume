@@ -22,10 +22,10 @@ import {
 } from "@/components/ui/dialog"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Kbd } from "@/components/ui/kbd"
-import { languages, personalInfo } from "@/lib/config"
+import { languageOptions, personalInfo } from "@/lib/config"
 import { useTheme } from "@/hooks/use-theme"
 import { useCommandPalette } from "@/components/command-palette"
-import { useLocal } from "@/hooks/use-local"
+import { useLocal, useTranslation } from "@/hooks/use-local"
 
 function getCommandKey() {
   if (typeof navigator === "undefined") return "Ctrl"
@@ -56,7 +56,7 @@ function LanguageMenu() {
         <Twemoji className="text-base leading-none">{language.icon}</Twemoji>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" sideOffset={8}>
-        {languages.map(({ slug, icon, label }) => (
+        {languageOptions.map(({ slug, icon, label }) => (
           <DropdownMenuItem
             key={slug}
             render={
@@ -95,6 +95,7 @@ function ThemeToggle() {
 }
 
 function ShareDialog() {
+  const t = useTranslation()
   const { firstName, lastName, jobTitle, phone, email, github, x } =
     personalInfo
 
@@ -134,15 +135,15 @@ function ShareDialog() {
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>分享</DialogTitle>
+          <DialogTitle>{t.share}</DialogTitle>
         </DialogHeader>
         <Tabs defaultValue="resume">
           <TabsList className="m-auto">
             <TabsTrigger className="min-w-24" value="resume">
-              简历
+              {t.resume}
             </TabsTrigger>
             <TabsTrigger className="min-w-24" value="vcard">
-              名片
+              {t.vCard}
             </TabsTrigger>
           </TabsList>
           <TabsContent value="resume" className="flex justify-center py-4">

@@ -11,14 +11,15 @@ import {
   PaletteIcon,
   ArrowLeftRightIcon,
 } from "lucide-react"
-import { personalInfo, languages } from "@/lib/config"
+import { personalInfo, languageOptions } from "@/lib/config"
 import { useTheme } from "@/hooks/use-theme"
 import { Twemoji } from "@/components/twemoji"
 import type { CommandAction } from "./types"
-import { useLocal } from "@/hooks/use-local"
+import { useLocal, useTranslation } from "@/hooks/use-local"
 
 export function useCommandActions(): CommandAction[] {
   const { slug } = useLocal()
+  const t = useTranslation()
   const navigate = useNavigate()
   const { theme, setTheme, toggleTheme } = useTheme()
 
@@ -26,9 +27,9 @@ export function useCommandActions(): CommandAction[] {
     return [
       {
         id: "call",
-        label: "拨打电话",
+        label: t.call,
         icon: <PhoneIcon />,
-        keywords: ["phone", "mobile", "call", "telephone"],
+        keywords: t.callKeywords,
         shortcut: ["c"],
         section: "导航",
         action: () => window.open(`tel:${personalInfo.phone}`, "_blank"),
@@ -116,7 +117,7 @@ export function useCommandActions(): CommandAction[] {
         section: "偏好设置",
         nextPage: "language",
       },
-      ...languages.map(
+      ...languageOptions.map(
         (lang): CommandAction => ({
           id: `lang-${lang.slug}`,
           label: lang.label,
