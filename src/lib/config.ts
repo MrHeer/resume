@@ -7,10 +7,8 @@ export type LanguageSlug = (typeof languageOptions)[number]["slug"]
 
 export const fallbackSlug: LanguageSlug = "zh-CN"
 
+/** Non-translatable personal info (phone, email, social handles stay the same across languages) */
 export const personalInfo = {
-  firstName: "林明",
-  lastName: "何",
-  jobTitle: "高级前端工程师",
   phone: "+86 176 2303 0229",
   email: "hlm52pk@163.com",
   github: "MrHeer",
