@@ -1,16 +1,14 @@
 import fs from "node:fs"
 import path from "node:path"
-import { fileURLToPath } from "node:url"
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const clientDir = path.resolve(__dirname, "../dist/client")
+const clientDir = path.resolve(import.meta.dirname, "../dist/client")
 
 /**
  * TanStack Start hardcodes `/__tsr/` in its static server function cache URLs,
  * which doesn't respect Vite's `base` config. This script replaces those paths
  * with the correct base-prefixed paths for the production build.
  */
-function fixBasePaths(base: string) {
+function fixBasePaths(base: string = "/") {
   if (base === "/") {
     console.log("Base is '/', no path fix needed.")
     return
@@ -24,12 +22,10 @@ function fixBasePaths(base: string) {
         walk(fullPath)
       } else if (entry.isFile() && entry.name.endsWith(".js")) {
         const content = fs.readFileSync(fullPath, "utf-8")
-        if (content.includes("/__tsr/")) {
-          const fixed = content.replace(/\/__tsr\//g, `${base}__tsr/`)
-          if (fixed !== content) {
-            fs.writeFileSync(fullPath, fixed, "utf-8")
-            console.log(`  Fixed: ${path.relative(clientDir, fullPath)}`)
-          }
+        const fixed = content.replace(/\/__tsr\//g, `${base}__tsr/`)
+        if (fixed !== content) {
+          fs.writeFileSync(fullPath, fixed, "utf-8")
+          console.log(`  Fixed: ${path.relative(clientDir, fullPath)}`)
         }
       }
     }
@@ -39,4 +35,5 @@ function fixBasePaths(base: string) {
   console.log("Base path fix complete.")
 }
 
-fixBasePaths("/resume/")
+const { default: config } = await import("../vite.config.ts")
+fixBasePaths(config.base)
