@@ -25,7 +25,9 @@ import { Kbd } from "@/components/ui/kbd"
 import { languageOptions } from "@/lib/config"
 import { useTheme } from "@/components/theme-provider"
 import { useCommandPalette } from "@/components/command-palette"
-import { useLocal, useTranslation, usePersonalInfo } from "@/hooks/use-local"
+import { useLocal } from "@/hooks/use-local"
+import { useTranslation } from "@/hooks/use-translation"
+import { usePersonalInfo } from "@/hooks/use-personal-info"
 
 const platformScript = `!function(){document.documentElement.classList.toggle('mac',/Mac OS/.test(navigator.userAgent))}()`
 

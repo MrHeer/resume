@@ -15,7 +15,7 @@ import { personalInfo, languageOptions } from "@/lib/config"
 import { useTheme } from "@/components/theme-provider"
 import { Twemoji } from "@/components/twemoji"
 import type { CommandAction } from "./types"
-import { useTranslation } from "@/hooks/use-local"
+import { useTranslation } from "@/hooks/use-translation"
 
 export function useCommandActions(): CommandAction[] {
   const t = useTranslation()

@@ -20,7 +20,7 @@ import { Kbd } from "@/components/ui/kbd"
 import type { CommandAction } from "./types"
 import { groupBy } from "@/lib/utils"
 import { useCommandPalette } from "./context"
-import { useTranslation } from "@/hooks/use-local"
+import { useTranslation } from "@/hooks/use-translation"
 
 export function CommandPaletteContent({
   actions,

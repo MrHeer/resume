@@ -1,6 +1,6 @@
 import { FileXIcon } from "lucide-react"
 
-import { useTranslation } from "@/hooks/use-local"
+import { useTranslation } from "@/hooks/use-translation"
 import {
   Empty,
   EmptyHeader,
