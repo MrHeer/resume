@@ -192,9 +192,7 @@ export function Header() {
       <LinearBlur
         className="absolute inset-x-0 -z-10 h-32"
         side="top"
-        steps={16}
         strength={4}
-        falloffPercentage={50}
       />
       <CommandHint />
       <div className="ml-auto flex items-center gap-1">
