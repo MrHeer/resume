@@ -24,8 +24,10 @@ export function useCommandActions(): CommandAction[] {
   const { setTheme, toggleTheme } = useTheme()
 
   return useMemo(() => {
-    return [
-      {
+    const personalActions: CommandAction[] = []
+
+    if (personalInfo.phone) {
+      personalActions.push({
         id: "call",
         label: p.call.label,
         icon: <PhoneIcon />,
@@ -33,8 +35,11 @@ export function useCommandActions(): CommandAction[] {
         shortcut: ["c"],
         section: p.sections.navigation,
         action: () => window.open(`tel:${personalInfo.phone}`, "_blank"),
-      },
-      {
+      })
+    }
+
+    if (personalInfo.email) {
+      personalActions.push({
         id: "email",
         label: p.email.label,
         icon: <MailIcon />,
@@ -42,8 +47,11 @@ export function useCommandActions(): CommandAction[] {
         shortcut: ["e"],
         section: p.sections.navigation,
         action: () => window.open(`mailto:${personalInfo.email}`, "_blank"),
-      },
-      {
+      })
+    }
+
+    if (personalInfo.github) {
+      personalActions.push({
         id: "github",
         label: "GitHub",
         icon: <GithubIcon />,
@@ -52,8 +60,11 @@ export function useCommandActions(): CommandAction[] {
         section: p.sections.navigation,
         action: () =>
           window.open(`https://github.com/${personalInfo.github}`, "_blank"),
-      },
-      {
+      })
+    }
+
+    if (personalInfo.x) {
+      personalActions.push({
         id: "x",
         label: "X",
         icon: <XSocialIcon />,
@@ -61,7 +72,11 @@ export function useCommandActions(): CommandAction[] {
         shortcut: ["g", "x"],
         section: p.sections.navigation,
         action: () => window.open(`https://x.com/${personalInfo.x}`, "_blank"),
-      },
+      })
+    }
+
+    return [
+      ...personalActions,
       {
         id: "print",
         label: p.print.label,
@@ -69,7 +84,7 @@ export function useCommandActions(): CommandAction[] {
         keywords: p.print.keywords,
         shortcut: ["p"],
         section: p.sections.commands,
-        action: () => setTimeout(window.print, 300),
+        action: () => setTimeout(() => window.print(), 300),
       },
       {
         id: "theme",

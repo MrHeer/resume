@@ -4,7 +4,7 @@ const en = {
   shareDialog: {
     share: "Share",
     resume: "Resume",
-    vCard: "VCard",
+    vCard: "vCard",
   },
 
   personal: {

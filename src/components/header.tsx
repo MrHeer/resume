@@ -111,8 +111,13 @@ function ShareDialog() {
     const vCard = new VCard()
       .addName({ givenName: firstName, familyName: lastName })
       .addJobtitle(jobTitle)
-      .addPhoneNumber({ number: phone, type: ["work"] })
-      .addEmail({ address: email, type: ["work"] })
+
+    if (phone) {
+      vCard.addPhoneNumber({ number: phone, type: ["work"] })
+    }
+    if (email) {
+      vCard.addEmail({ address: email, type: ["work"] })
+    }
     if (github) {
       vCard.addSocial({
         url: `https://github.com/${github}`,
