@@ -16,6 +16,22 @@ export const Route = createFileRoute("/_resume/$slug")({
     })
     return { ...resume, rendered }
   },
+  head: ({ loaderData }) => {
+    if (loaderData) {
+      return {
+        meta: [
+          {
+            title: loaderData.title,
+          },
+          {
+            name: "description",
+            content: loaderData.description,
+          },
+        ],
+      }
+    }
+    return {}
+  },
   component: Resume,
 })
 

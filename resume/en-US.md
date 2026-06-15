@@ -1,7 +1,6 @@
 ---
-title: "Linming He - Resume"
-published: "2025-01-01"
-authors: ["Linming He"]
+title: "Resume - Linming He"
+description: "Linming He — Full-Stack Developer with expertise in React, TypeScript, Node.js, and cloud-native architectures. View my professional experience, projects, and contact information."
 ---
 
 ## 📧 Contact Information

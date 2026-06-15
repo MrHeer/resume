@@ -1,7 +1,6 @@
 ---
-title: "何林明 - 简历"
-published: "2025-01-01"
-authors: ["何林明"]
+title: "简历 - 何林明"
+description: "何林明 — 全栈开发工程师，精通 React、TypeScript、Node.js 及云原生架构。了解我的职业经历、开源项目与联系方式。"
 ---
 
 ## 📧 联系方式

@@ -12,9 +12,11 @@ const resumes = defineCollection({
   directory: "./resume",
   include: "*.md",
   schema: z.object({
+    title: z.string(),
+    description: z.string(),
     content: z.string(),
   }),
-  transform: ({ content, ...resume }) => {
+  transform: ({ title, description, content, ...resume }) => {
     const frontMatter = extractFrontMatter(content)
 
     // Extract header image (first image in the document)
@@ -24,9 +26,9 @@ const resumes = defineCollection({
     return {
       ...resume,
       slug: resume._meta.path,
-      title: frontMatter.data.title,
+      title,
       excerpt: frontMatter.excerpt,
-      description: frontMatter.data.description,
+      description,
       headerImage,
       content: frontMatter.body,
     }
