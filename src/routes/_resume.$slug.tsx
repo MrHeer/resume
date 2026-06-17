@@ -1,6 +1,6 @@
 import { createFileRoute, redirect } from "@tanstack/react-router"
 import { Markdown } from "@/components/markdown"
-import { renderMarkdownServer } from "@/lib/markdown-server"
+import { renderMarkdown } from "@/server/markdown"
 import { allResumes } from "content-collections"
 
 export const Route = createFileRoute("/_resume/$slug")({
@@ -11,7 +11,7 @@ export const Route = createFileRoute("/_resume/$slug")({
     }
     // Static server function: rendered at build time, cached as static JSON.
     // Client navigations fetch only the target language's cached JSON file.
-    const rendered = await renderMarkdownServer({
+    const rendered = await renderMarkdown({
       data: { content: resume.content },
     })
     return { ...resume, rendered }

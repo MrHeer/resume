@@ -1,17 +1,19 @@
-import { unified } from "unified"
-import remarkParse from "remark-parse"
-import remarkGfm from "remark-gfm"
-import remarkRehype from "remark-rehype"
+import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypeRaw from "rehype-raw"
 import rehypeShiki from "@shikijs/rehype"
 import rehypeSlug from "rehype-slug"
-import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypeStringify from "rehype-stringify"
-import { visit } from "unist-util-visit"
-import { toString } from "hast-util-to-string"
+import remarkGfm from "remark-gfm"
+import remarkParse from "remark-parse"
+import remarkRehype from "remark-rehype"
 import twemoji from "twemoji"
+import { createServerFn } from "@tanstack/react-start"
+import { staticFunctionMiddleware } from "@tanstack/start-static-server-functions"
+import { toString } from "hast-util-to-string"
+import { unified } from "unified"
+import { visit } from "unist-util-visit"
 
-export type MarkdownHeading = {
+type MarkdownHeading = {
   id: string
   text: string
   level: number
@@ -22,7 +24,7 @@ export type MarkdownResult = {
   headings: Array<MarkdownHeading>
 }
 
-export async function renderMarkdown(content: string): Promise<MarkdownResult> {
+async function _renderMarkdown(content: string): Promise<MarkdownResult> {
   const headings: Array<MarkdownHeading> = []
 
   const result = await unified()
@@ -68,3 +70,20 @@ export async function renderMarkdown(content: string): Promise<MarkdownResult> {
     headings,
   }
 }
+
+/**
+ * Server function that renders markdown content.
+ * Uses staticFunctionMiddleware to cache the result as a static JSON file
+ * during build-time prerendering.
+ *
+ * This way:
+ * - Each language's rendered HTML is a separate static JSON file
+ * - Client only fetches the file for the language they switch to
+ * - No heavy Shiki/unified deps in client bundle
+ */
+export const renderMarkdown = createServerFn({ method: "POST" })
+  .middleware([staticFunctionMiddleware])
+  .validator((data: { content: string }) => data)
+  .handler(async ({ data }): Promise<MarkdownResult> => {
+    return _renderMarkdown(data.content)
+  })

@@ -1,6 +1,6 @@
 import parse, { domToReact, Element } from "html-react-parser"
 import type { HTMLReactParserOptions } from "html-react-parser"
-import type { MarkdownResult } from "@/lib/markdown"
+import type { MarkdownResult } from "@/server/markdown"
 import { Link } from "@tanstack/react-router"
 
 type MarkdownProps = {
