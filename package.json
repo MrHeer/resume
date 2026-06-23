@@ -12,6 +12,7 @@
     "lint": "eslint",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx}\"",
     "check": "prettier --check \"**/*.{ts,tsx,js,jsx}\"",
+    "pretypecheck": "tsx scripts/generate-content-collections.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
