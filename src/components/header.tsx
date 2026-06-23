@@ -49,11 +49,12 @@ function CommandHint() {
 
 function LanguageMenu() {
   const language = useLocal()
+  const t = useTranslation()
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
         render={
-          <Button variant="ghost" size="icon" aria-label="Switch language" />
+          <Button variant="ghost" size="icon" aria-label={t.header.languageMenu} />
         }
       >
         <Twemoji className="text-base leading-none">{language.icon}</Twemoji>
@@ -83,12 +84,13 @@ function LanguageMenu() {
 
 function ThemeToggle() {
   const { toggleTheme } = useTheme()
+  const t = useTranslation()
 
   return (
     <Button
       variant="ghost"
       size="icon"
-      aria-label="Toggle theme"
+      aria-label={t.header.themeToggle}
       onClick={toggleTheme}
     >
       <SunIcon aria-hidden className="hidden [html.dark_&]:block" />
@@ -139,7 +141,7 @@ function ShareDialog() {
     <Dialog>
       <DialogTrigger
         render={
-          <Button variant="ghost" size="icon" aria-label="Share resume" />
+          <Button variant="ghost" size="icon" aria-label={t.header.shareDialog} />
         }
       >
         <Share2Icon />
@@ -173,12 +175,13 @@ function ShareDialog() {
 
 function CommandButton() {
   const { open } = useCommandPalette()
+  const t = useTranslation()
 
   return (
     <Button
       variant="ghost"
       size="icon"
-      aria-label="Open command palette"
+      aria-label={t.header.commandPalette}
       onClick={open}
     >
       <CommandIcon />

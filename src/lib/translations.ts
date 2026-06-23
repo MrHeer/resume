@@ -75,6 +75,13 @@ const en = {
       back: "Back",
     },
   },
+
+  header: {
+    languageMenu: "Switch language",
+    themeToggle: "Toggle theme",
+    shareDialog: "Share resume",
+    commandPalette: "Open command palette",
+  },
 }
 
 type TranslationShape = typeof en
@@ -159,6 +166,13 @@ export const translations = {
         noResultsHint: "尝试使用不同的关键词搜索",
         back: "返回",
       },
+    },
+
+    header: {
+      languageMenu: "切换语言",
+      themeToggle: "切换主题",
+      shareDialog: "分享简历",
+      commandPalette: "打开命令面板",
     },
   },
   "en-US": en,
