@@ -7,8 +7,6 @@ import { allResumes } from "content-collections"
 import { usePersonalInfo } from "@/hooks/use-personal-info"
 import { useLocal } from "@/hooks/use-local"
 
-const SITE_ORIGIN = "https://mrheer.github.io"
-
 export const Route = createFileRoute("/_resume/$slug")({
   loader: async ({ params }) => {
     const resume = allResumes.find((it) => it.slug === params.slug)
@@ -22,7 +20,7 @@ export const Route = createFileRoute("/_resume/$slug")({
   },
   head: ({ loaderData }) => {
     if (loaderData) {
-      const pageUrl = `${SITE_ORIGIN}${import.meta.env.BASE_URL}${loaderData.slug}`
+      const pageUrl = `${import.meta.env.BASE_URL}${loaderData.slug}`
       return {
         meta: [
           { title: loaderData.title },
@@ -59,7 +57,7 @@ function Resume() {
       "@type": "Person",
       name: `${info.firstName} ${info.lastName}`,
       jobTitle: info.jobTitle,
-      url: `${SITE_ORIGIN}${import.meta.env.BASE_URL}${slug}`,
+      url: `${import.meta.env.BASE_URL}${slug}`,
       sameAs,
       ...(info.email ? { email: `mailto:${info.email}` } : {}),
       ...(info.phone ? { telephone: info.phone } : {}),
