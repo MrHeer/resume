@@ -87,7 +87,7 @@ export function useCommandActions(): CommandAction[] {
         action: () => {
           // Wait for the dialog's 100ms close animation (duration-100 +
           // data-closed:animate-out) to finish before opening the print dialog.
-          const el = document.querySelector("[data-slot=\"dialog-content\"]")
+          const el = document.querySelector('[data-slot="dialog-content"]')
           if (el) {
             let done = false
             const finish = () => {

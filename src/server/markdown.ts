@@ -24,7 +24,8 @@ export type MarkdownResult = {
   headings: Array<MarkdownHeading>
 }
 
-const TWEEMOJI_CDN = "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/"
+const TWEEMOJI_CDN =
+  "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/"
 
 /**
  * Replaces twemoji CDN image URLs with inline SVG data URIs.
@@ -34,7 +35,7 @@ const TWEEMOJI_CDN = "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/
 async function inlineTwemojiSvgs(html: string): Promise<string> {
   const svgBase = `${TWEEMOJI_CDN}svg/`
   const escaped = svgBase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
-  const re = new RegExp(escaped + '([a-z0-9-]+)\\.svg', 'g')
+  const re = new RegExp(escaped + "([a-z0-9-]+)\\.svg", "g")
 
   // Collect unique codepoints
   const codepoints = new Set<string>()
@@ -50,7 +51,9 @@ async function inlineTwemojiSvgs(html: string): Promise<string> {
       try {
         const res = await fetch(`${svgBase}${cp}.svg`)
         if (res.ok) return [cp, await res.text()] as const
-      } catch { /* fall back to CDN URL */ }
+      } catch {
+        /* fall back to CDN URL */
+      }
       return [cp, null] as const
     })
   )

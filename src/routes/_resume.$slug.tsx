@@ -35,9 +35,7 @@ export const Route = createFileRoute("/_resume/$slug")({
           { name: "twitter:title", content: loaderData.title },
           { name: "twitter:description", content: loaderData.description },
         ],
-        links: [
-          { rel: "canonical", href: pageUrl },
-        ],
+        links: [{ rel: "canonical", href: pageUrl }],
       }
     }
     return {}

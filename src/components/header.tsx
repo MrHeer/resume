@@ -54,7 +54,11 @@ function LanguageMenu() {
     <DropdownMenu>
       <DropdownMenuTrigger
         render={
-          <Button variant="ghost" size="icon" aria-label={t.header.languageMenu} />
+          <Button
+            variant="ghost"
+            size="icon"
+            aria-label={t.header.languageMenu}
+          />
         }
       >
         <Twemoji className="text-base leading-none">{language.icon}</Twemoji>
@@ -141,7 +145,11 @@ function ShareDialog() {
     <Dialog>
       <DialogTrigger
         render={
-          <Button variant="ghost" size="icon" aria-label={t.header.shareDialog} />
+          <Button
+            variant="ghost"
+            size="icon"
+            aria-label={t.header.shareDialog}
+          />
         }
       >
         <Share2Icon />
