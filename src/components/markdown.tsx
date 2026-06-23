@@ -29,10 +29,13 @@ export function Markdown({ result, className }: MarkdownProps) {
         if (domNode.name === "img") {
           const isEmoji = domNode.attribs.class?.includes("emoji")
           const { class: _, ...rest } = domNode.attribs
+          // Pass through width/height if present to prevent layout shift.
+          // Emoji images are sized by CSS (1em × 1em).
           return (
             <img
               {...rest}
               loading="lazy"
+              decoding="async"
               className={isEmoji ? "emoji" : "rounded-lg shadow-md"}
             />
           )

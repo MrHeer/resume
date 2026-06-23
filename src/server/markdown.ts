@@ -24,6 +24,47 @@ export type MarkdownResult = {
   headings: Array<MarkdownHeading>
 }
 
+const TWEEMOJI_CDN = "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/"
+
+/**
+ * Replaces twemoji CDN image URLs with inline SVG data URIs.
+ * Fetches each unique SVG once at build time, eliminating 25+ external
+ * requests at page load.
+ */
+async function inlineTwemojiSvgs(html: string): Promise<string> {
+  const svgBase = `${TWEEMOJI_CDN}svg/`
+  const escaped = svgBase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+  const re = new RegExp(escaped + '([a-z0-9-]+)\\.svg', 'g')
+
+  // Collect unique codepoints
+  const codepoints = new Set<string>()
+  for (const [, cp] of html.matchAll(re)) {
+    if (cp) codepoints.add(cp)
+  }
+  if (codepoints.size === 0) return html
+
+  // Fetch SVGs in parallel
+  const cache = new Map<string, string>()
+  const results = await Promise.all(
+    Array.from(codepoints).map(async (cp) => {
+      try {
+        const res = await fetch(`${svgBase}${cp}.svg`)
+        if (res.ok) return [cp, await res.text()] as const
+      } catch { /* fall back to CDN URL */ }
+      return [cp, null] as const
+    })
+  )
+  for (const [cp, svg] of results) {
+    if (svg) cache.set(cp, `data:image/svg+xml,${encodeURIComponent(svg)}`)
+  }
+  if (cache.size === 0) return html
+
+  return html.replace(re, (full, cp: string) => {
+    const dataUri = cache.get(cp)
+    return dataUri ? full.replace(`${svgBase}${cp}.svg`, dataUri) : full
+  })
+}
+
 async function _renderMarkdown(content: string): Promise<MarkdownResult> {
   const headings: Array<MarkdownHeading> = []
 
@@ -59,28 +100,21 @@ async function _renderMarkdown(content: string): Promise<MarkdownResult> {
     .process(content)
 
   const html = twemoji.parse(String(result), {
-    base: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/",
+    base: TWEEMOJI_CDN,
     folder: "svg",
     ext: ".svg",
     className: "emoji",
   })
 
+  // Inline emoji SVGs to eliminate 25+ CDN requests at page load
+  const inlined = await inlineTwemojiSvgs(html)
+
   return {
-    markup: html,
+    markup: inlined,
     headings,
   }
 }
 
-/**
- * Server function that renders markdown content.
- * Uses staticFunctionMiddleware to cache the result as a static JSON file
- * during build-time prerendering.
- *
- * This way:
- * - Each language's rendered HTML is a separate static JSON file
- * - Client only fetches the file for the language they switch to
- * - No heavy Shiki/unified deps in client bundle
- */
 export const renderMarkdown = createServerFn({ method: "POST" })
   .middleware([staticFunctionMiddleware])
   .validator((data: { content: string }) => data)
