@@ -18,6 +18,7 @@ export default [
     ignores: [
       "eslint.config.js",
       ".prettierrc",
+      "*.gen.ts",
       ".content-collections",
       "src/components/ui",
     ],
