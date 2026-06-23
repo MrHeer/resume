@@ -18,12 +18,11 @@ export const Route = createRootRoute({
         content: "width=device-width, initial-scale=1",
       },
       {
-        title: "Resume - Linming He",
+        title: "Resume",
       },
       {
         name: "description",
-        content:
-          "Linming He — Full-Stack Developer with expertise in React, TypeScript, Node.js, and cloud-native architectures.",
+        content: "A personal resume site.",
       },
     ],
     links: [
