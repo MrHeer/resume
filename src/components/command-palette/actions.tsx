@@ -84,7 +84,25 @@ export function useCommandActions(): CommandAction[] {
         keywords: p.print.keywords,
         shortcut: ["p"],
         section: p.sections.commands,
-        action: () => setTimeout(() => window.print(), 300),
+        action: () => {
+          // Wait for the dialog's 100ms close animation (duration-100 +
+          // data-closed:animate-out) to finish before opening the print dialog.
+          const el = document.querySelector("[data-slot=\"dialog-content\"]")
+          if (el) {
+            let done = false
+            const finish = () => {
+              if (done) return
+              done = true
+              el.removeEventListener("animationend", finish)
+              window.print()
+            }
+            el.addEventListener("animationend", finish)
+            // Safety fallback if animationend never fires
+            setTimeout(finish, 500)
+          } else {
+            window.print()
+          }
+        },
       },
       {
         id: "theme",
