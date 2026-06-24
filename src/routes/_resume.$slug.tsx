@@ -1,26 +1,50 @@
-import { useMemo } from "react"
 import { createFileRoute, redirect } from "@tanstack/react-router"
 import { Markdown } from "@/components/markdown"
 import { renderMarkdown } from "@/server/markdown"
 import { allResumes } from "content-collections"
-
-import { usePersonalInfo } from "@/hooks/use-personal-info"
-import { useLocal } from "@/hooks/use-local"
+import { fallbackSlug, personalInfo } from "@/lib/config"
+import { translations } from "@/lib/translations"
+import type { LanguageSlug } from "@/lib/config"
 
 export const Route = createFileRoute("/_resume/$slug")({
-  loader: async ({ params }) => {
+  beforeLoad: ({ params }) => {
     const resume = allResumes.find((it) => it.slug === params.slug)
     if (!resume) {
-      throw redirect({ to: "/" })
+      throw redirect({ to: "/$slug", params: { slug: fallbackSlug } })
     }
+    return { resume }
+  },
+  loader: async ({ context: { resume } }) => {
+    const { content, ...meta } = resume
     const rendered = await renderMarkdown({
-      data: { content: resume.content },
+      data: { content },
     })
-    return { ...resume, rendered }
+    return { ...meta, rendered }
   },
   head: ({ loaderData }) => {
     if (loaderData) {
       const pageUrl = `${import.meta.env.BASE_URL}${loaderData.slug}`
+      const locale = loaderData.slug as LanguageSlug
+      const t = translations[locale]
+      const sameAs = [
+        personalInfo.github
+          ? `https://github.com/${personalInfo.github}`
+          : null,
+        personalInfo.x ? `https://x.com/${personalInfo.x}` : null,
+      ].filter(Boolean) as string[]
+      const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: `${t.personal.firstName} ${t.personal.lastName}`,
+        jobTitle: t.personal.jobTitle,
+        url: pageUrl,
+        sameAs,
+        ...(personalInfo.email
+          ? { email: `mailto:${personalInfo.email}` }
+          : {}),
+        ...(personalInfo.phone ? { telephone: personalInfo.phone } : {}),
+      }
+
       return {
         meta: [
           { title: loaderData.title },
@@ -34,6 +58,12 @@ export const Route = createFileRoute("/_resume/$slug")({
           { name: "twitter:description", content: loaderData.description },
         ],
         links: [{ rel: "canonical", href: pageUrl }],
+        scripts: [
+          {
+            type: "application/ld+json",
+            children: JSON.stringify(jsonLd),
+          },
+        ],
       }
     }
     return {}
@@ -42,37 +72,11 @@ export const Route = createFileRoute("/_resume/$slug")({
 })
 
 function Resume() {
-  const resume = Route.useLoaderData()
-  const info = usePersonalInfo()
-  const { slug } = useLocal()
-
-  const jsonLd = useMemo(() => {
-    const sameAs = [
-      info.github ? `https://github.com/${info.github}` : null,
-      info.x ? `https://x.com/${info.x}` : null,
-    ].filter(Boolean) as string[]
-
-    return {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: `${info.firstName} ${info.lastName}`,
-      jobTitle: info.jobTitle,
-      url: `${import.meta.env.BASE_URL}${slug}`,
-      sameAs,
-      ...(info.email ? { email: `mailto:${info.email}` } : {}),
-      ...(info.phone ? { telephone: info.phone } : {}),
-    }
-  }, [info, slug])
+  const { rendered } = Route.useLoaderData()
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <article>
-        <Markdown result={resume.rendered} className="markdown-body" />
-      </article>
-    </>
+    <article>
+      <Markdown result={rendered} className="markdown-body" />
+    </article>
   )
 }
