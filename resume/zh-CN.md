@@ -174,7 +174,7 @@ Turborepo Monorepo 项目，聚合多个大语言模型 API，提供统一的调
 
   全栈 AI 聊天及佛经阅读应用。Vue3 版本集成 AppKit 钱包组件；Flutter 版本运用 Forui 构建 UI，通过 GraphQL 与后端交互
 
-- [ACS Dashboard](https://acs-dashboard.pages.dev) / Bagua Parlay
+- [ACS Dashboard](https://acs-dashboard.pages.dev)
 
   基于 `Vue3` + `shadcn/vue` + `tanstack/vue-query` 的数据看板系统，实时监控项目及服务器数据。运用 View Transition API 优化页面切换体验
 

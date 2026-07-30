@@ -174,7 +174,7 @@ Channel configuration management system for managing channel parameter configura
 
   Full-stack AI chat and Buddhist scripture reading app. Vue3 version with AppKit wallet integration; Flutter version using Forui, GraphQL for backend communication.
 
-- [ACS Dashboard](https://acs-dashboard.pages.dev) / Bagua Parlay
+- [ACS Dashboard](https://acs-dashboard.pages.dev)
 
   Data dashboard system based on `Vue3` + `shadcn/vue` + `tanstack/vue-query`, real-time monitoring of projects and server data. View Transition API for smooth page transitions.
 
