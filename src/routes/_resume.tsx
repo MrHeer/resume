@@ -10,7 +10,7 @@ export const Route = createFileRoute("/_resume")({
 function Layout() {
   return (
     <CommandPalette>
-      <main className="h-screen">
+      <main className="h-dvh">
         <ScrollArea className="size-full">
           <Header />
           <Outlet />

@@ -323,11 +323,6 @@ img.emoji {
     display: none !important;
   }
 
-  /* Remove height constraint on main */
-  main.h-screen {
-    height: auto;
-  }
-
   /*
    * Shiki writes inline styles on <pre> (e.g. white-space:pre),
    * so !important is required to override them when printing.
