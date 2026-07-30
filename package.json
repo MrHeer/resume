@@ -4,7 +4,9 @@
   "type": "module",
   "packageManager": "pnpm@11.1.3",
   "scripts": {
+    "predev": "tsx scripts/generate-twemoji-svgs.ts",
     "dev": "vite dev --port 3000",
+    "prebuild": "tsx scripts/generate-twemoji-svgs.ts",
     "build": "vite build",
     "postbuild": "tsx scripts/fix-base-path.ts",
     "preview": "vite preview",
@@ -12,7 +14,7 @@
     "lint": "eslint",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx}\"",
     "check": "prettier --check \"**/*.{ts,tsx,js,jsx}\"",
-    "pretypecheck": "tsx scripts/generate-content-collections.ts",
+    "pretypecheck": "tsx scripts/generate-content-collections.ts && tsx scripts/generate-twemoji-svgs.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

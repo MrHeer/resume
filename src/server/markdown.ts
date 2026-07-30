@@ -7,6 +7,12 @@ import remarkGfm from "remark-gfm"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
 import twemoji from "twemoji"
+import {
+  TWEEMOJI_CDN,
+  extractCodepoints,
+  fetchSvgs,
+  replaceImgsWithSvgs,
+} from "@/lib/twemoji-svg"
 import { createServerFn } from "@tanstack/react-start"
 import { staticFunctionMiddleware } from "@tanstack/start-static-server-functions"
 import { toString } from "hast-util-to-string"
@@ -24,48 +30,20 @@ export type MarkdownResult = {
   headings: Array<MarkdownHeading>
 }
 
-const TWEEMOJI_CDN =
-  "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/"
-
 /**
- * Replaces twemoji CDN image URLs with inline SVG data URIs.
+ * Replaces twemoji `<img>` tags with inline `<svg>` elements.
  * Fetches each unique SVG once at build time, eliminating 25+ external
  * requests at page load.
  */
 async function inlineTwemojiSvgs(html: string): Promise<string> {
-  const svgBase = `${TWEEMOJI_CDN}svg/`
-  const escaped = svgBase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
-  const re = new RegExp(escaped + "([a-z0-9-]+)\\.svg", "g")
-
-  // Collect unique codepoints
-  const codepoints = new Set<string>()
-  for (const [, cp] of html.matchAll(re)) {
-    if (cp) codepoints.add(cp)
-  }
+  const codepoints = extractCodepoints(html)
   if (codepoints.size === 0) return html
 
-  // Fetch SVGs in parallel
   const cache = new Map<string, string>()
-  const results = await Promise.all(
-    Array.from(codepoints).map(async (cp) => {
-      try {
-        const res = await fetch(`${svgBase}${cp}.svg`)
-        if (res.ok) return [cp, await res.text()] as const
-      } catch {
-        /* fall back to CDN URL */
-      }
-      return [cp, null] as const
-    })
-  )
-  for (const [cp, svg] of results) {
-    if (svg) cache.set(cp, `data:image/svg+xml,${encodeURIComponent(svg)}`)
-  }
+  await fetchSvgs(codepoints, cache)
   if (cache.size === 0) return html
 
-  return html.replace(re, (full, cp: string) => {
-    const dataUri = cache.get(cp)
-    return dataUri ? full.replace(`${svgBase}${cp}.svg`, dataUri) : full
-  })
+  return replaceImgsWithSvgs(html, cache)
 }
 
 async function _renderMarkdown(content: string): Promise<MarkdownResult> {
